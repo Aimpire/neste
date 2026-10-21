@@ -1,0 +1,142 @@
+<!doctype html><html lang="ur-Latn"><head><meta charset="utf-8">
+<title>Lot kya hai – animasjon</title>
+<!-- «Lot kya hai?» på Roman Urdu (#255-hull: ingen god lot-video funnet). Fasit: UTTREKK §3 (EURUSD $10 per pip per 1,00 lot;
+     lots = risiko $ / (stop pips × pip-verdi per lot), rund ned), samme eksempel som Lær-figuren «size» ($2 ÷ 20 pips ÷ $10 = 0,01).
+     Tap like synlig som gevinst (B-030). Eksempeltallene er eksempler, ikke anbefalinger. Tas opp med ../pip/ta_opp.js-mønsteret. -->
+<style>
+/* SKRIFT-START (tools/lag_skrift.py – ikke rediger for hånd) */
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(../skrift/montserrat-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(../skrift/montserrat-latin-ext.woff2) format('woff2');unicode-range:U+0100-017F,U+02BF,U+1E24-1E25,U+1E6C-1E6D,U+2190-2199,U+21BB,U+2212,U+221E,U+2248,U+2260,U+22EE-22EF}
+@font-face{font-family:'Noto Nastaliq Urdu';font-style:normal;font-weight:400 700;font-display:swap;src:url(../skrift/noto-nastaliq-urdu-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200F,U+2010-2011,U+204F,U+25CC}
+@font-face{font-family:'Noto Sans Devanagari';font-style:normal;font-weight:400 800;font-display:swap;src:url(../skrift/noto-sans-devanagari-devanagari.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF}
+@font-face{font-family:'Noto Naskh Arabic';font-style:normal;font-weight:400 700;font-display:swap;src:url(../skrift/noto-naskh-arabic-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200F,U+2010-2011,U+204F,U+25CC}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:800 900;font-stretch:72% 80%;font-display:swap;src:url(../skrift/archivo-smal-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:700 800;font-display:swap;src:url(../skrift/jetbrains-mono-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* SKRIFT-SLUTT */
+</style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;background:#070912;overflow:hidden;font-family:'Montserrat',sans-serif;color:#F4F2F8}
+.glod{position:absolute;inset:0;background:radial-gradient(700px 500px at 85% 0%,rgba(194,31,191,.26),transparent 62%),radial-gradient(800px 600px at 0% 100%,rgba(27,79,216,.28),transparent 60%),linear-gradient(180deg,#0A0D1C,#070912)}
+.inn{position:absolute;inset:0;padding:60px 72px}
+.topp{display:flex;align-items:center;gap:14px}.topp img{width:50px;height:50px}.merke{font:800 25px/1 'Montserrat';letter-spacing:.16em}.merke span{font-weight:600;opacity:.7}
+h1{margin-top:26px;font:900 104px/.95 'Archivo',sans-serif;font-stretch:72%}
+.scene{position:absolute;left:72px;right:72px;top:320px;opacity:0;transform:translateY(30px);transition:opacity .5s,transform .5s}
+.scene.vis{opacity:1;transform:none}
+.etikett{font:800 36px/1.2 'Montserrat';color:#5EE6D6}
+.under{margin-top:10px;font:700 32px/1.3 'Montserrat';color:#C9C6D6}
+/* scene 1: tre søyler */
+.soyler{margin-top:44px;display:grid;gap:26px}
+.rad{display:grid;grid-template-columns:200px 1fr 190px;align-items:center;gap:20px}
+.rad .lot{font:800 40px/1 'JetBrains Mono',monospace}
+.rad .spor{height:56px;border-radius:16px;background:rgba(255,255,255,.06);overflow:hidden}
+.rad .spor i{display:block;height:100%;width:0;border-radius:16px;background:linear-gradient(90deg,#15D8C4,#5B8BFF,#C21FBF);transition:width .9s cubic-bezier(.2,.8,.3,1)}
+.rad .verdi{font:800 38px/1 'JetBrains Mono',monospace;text-align:right;color:#FBE16B;opacity:0;transition:opacity .4s}
+.rad.vis .verdi{opacity:1}
+.fot1{margin-top:34px;font:700 32px/1.35 'Montserrat';color:#C9C6D6}
+/* scene 2: samme bevegelse */
+.flytt{margin-top:30px;font:800 64px/1 'JetBrains Mono',monospace;direction:ltr}
+.kort3{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.k{padding:24px 18px;border-radius:24px;background:rgba(255,255,255,.05);border:2px solid rgba(255,255,255,.1);text-align:center;transition:background .3s,border-color .3s}
+.k small{display:block;font:700 28px/1.2 'Montserrat';color:#A9A6B8}
+.k strong{display:block;margin-top:12px;font:800 56px/1 'JetBrains Mono',monospace;color:#3DDC97}
+.tap .k{border-color:rgba(255,107,110,.6);background:rgba(255,77,109,.10)}.tap .k strong{color:#FF8A8E}
+.fot2{margin-top:34px;font:800 36px/1.35 'Montserrat'}.tap .fot2{color:#FFB4B8}
+/* scene 3: først risiko */
+.trinn{margin-top:26px;display:grid;gap:14px}
+.t{display:flex;align-items:center;gap:20px;padding:18px 24px;border-radius:24px;background:rgba(255,255,255,.05);border:2px solid rgba(255,255,255,.1);opacity:0;transform:translateX(-24px);transition:opacity .45s,transform .45s}
+.t.vis{opacity:1;transform:none}
+.t b{flex:0 0 58px;height:58px;border-radius:50%;display:grid;place-items:center;font:800 28px/1 'Montserrat';color:#070912;background:linear-gradient(135deg,#15D8C4,#5B8BFF)}
+.t span{font:700 34px/1.25 'Montserrat'}
+.notat.vis{opacity:1}
+.t.svar{border-color:rgba(94,230,214,.6);background:rgba(21,216,196,.10)}.t.svar span{font-family:'JetBrains Mono',monospace;font-weight:800}
+.notat{margin-top:22px;opacity:0;transition:opacity .4s;font:700 36px/1.35 'Montserrat';color:#C9C6D6}
+/* slutt */
+.slutt{position:absolute;left:72px;right:72px;top:320px;opacity:0;transition:opacity .6s}.slutt.vis{opacity:1}
+.boks{padding:40px 36px;border-radius:30px;background:linear-gradient(110deg,rgba(21,216,196,.16),rgba(194,31,191,.14));border:2px solid rgba(94,230,214,.4)}
+.boks b{display:block;font:900 72px/1.05 'Archivo',sans-serif;font-stretch:76%}
+.boks p{margin-top:22px;font:700 36px/1.35 'Montserrat'}
+.boks em{display:block;margin-top:18px;font:600 36px/1.35 'Montserrat';font-style:normal;color:#C9C6D6}
+.fot{position:absolute;left:72px;right:72px;bottom:54px;font:600 34px/1.35 'Montserrat';color:#8E8B9E}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style></head><body><div class="glod"></div>
+<div class="inn"><div class="topp"><img src="../ap-gradient-96.png" alt=""><div class="merke">AIM<span>PIRE</span></div></div><h1>Lot kya hai?</h1></div>
+
+<section class="scene" id="s1">
+ <div class="etikett">Lot = trade ka size</div>
+ <div class="under">EUR/USD pe har pip ki value:</div>
+ <div class="soyler">
+  <div class="rad" id="r1"><span class="lot">0.01</span><span class="spor"><i></i></span><span class="verdi">$0.10</span></div>
+  <div class="rad" id="r2"><span class="lot">0.10</span><span class="spor"><i></i></span><span class="verdi">$1</span></div>
+  <div class="rad" id="r3"><span class="lot">1.00</span><span class="spor"><i></i></span><span class="verdi">$10</span></div>
+ </div>
+ <div class="fot1">Lot 10 guna bara = har pip ki value bhi 10 guna.</div>
+</section>
+
+<section class="scene" id="s2">
+ <div class="etikett">Same move: 10 pips</div>
+ <div class="flytt">1.0850 → <span id="s2p">1.0860</span></div>
+ <div class="kort3">
+  <div class="k"><small>0.01 lot</small><strong id="k1">$0</strong></div>
+  <div class="k"><small>0.10 lot</small><strong id="k2">$0</strong></div>
+  <div class="k"><small>1.00 lot</small><strong id="k3">$0</strong></div>
+ </div>
+ <div class="fot2" id="s2t">Lot bara – profit bhi bara…</div>
+</section>
+
+<section class="scene" id="s3">
+ <div class="etikett">Pehle risk, phir lot</div>
+ <div class="trinn">
+  <div class="t" id="t1"><b>1</b><span>Maan lo: $100 account, 2% risk = $2</span></div>
+  <div class="t" id="t2"><b>2</b><span>Stop loss: 20 pips door</span></div>
+  <div class="t" id="t3"><b>3</b><span>1.00 lot pe 20 pips = 20 × $10 = $200</span></div>
+  <div class="t svar" id="t4"><b>=</b><span>$2 ÷ $200 = 0.01 lot</span></div>
+ </div>
+ <div class="notat" id="notat">Yeh misaal hai, mashwara nahi. Hamesha round down karein (kam wali taraf).</div>
+</section>
+
+<section class="slutt" id="slutt"><div class="boks"><b>Lot himmat se nahi, hisaab se.</b>
+ <p>Account aur stop loss dekh kar lot chunein.</p><em>Aapke broker pe 1 lot kitna hai? MT5: symbol → Specification.</em></div></section>
+
+<div class="fot">Hum mil kar seekhte hain – yeh maali mashwara nahi hai.</div>
+<script src="takt.js"></script>
+<script src="sprak.js"></script>
+<script>
+const $ = id => document.getElementById(id), vent = ms => new Promise(r => setTimeout(r, ms));
+const BREDDE = { r1: "6%", r2: "30%", r3: "100%" };
+function teller(el, til, ms, prefiks){ return new Promise(r => { const t0 = performance.now();
+  (function steg(t){ const f = Math.min(1, (t - t0) / ms); const v = til * f;
+    el.textContent = (v < 0 ? "−$" : prefiks || "+$") + Math.abs(v).toFixed(Math.abs(til) < 10 ? 2 : 0); f < 1 ? requestAnimationFrame(steg) : r(); })(t0); }); }
+window.sceneNaa = -1;
+/* Scener: 0 pip-verdi per lot · 1 ti pips opp · 2 ti pips ned · 3 pehle risk, phir lot · 4 slutt. Uten cues: reservetider. */
+window.spill = async function(cues){
+  Takt.sett(cues, /opptak/.test(location.search));
+  await document.fonts.ready;
+  await Takt.scene(0, 500); window.sceneNaa = 0;
+  $("s1").classList.add("vis"); const d0 = Takt.varighet(0, 5350); await vent(Math.min(700, d0 * 0.12));
+  const steg0 = Math.max(600, (d0 * 0.65) / 3);
+  for (const id of ["r1", "r2", "r3"]){ $(id).querySelector("i").style.width = BREDDE[id]; await vent(Math.min(500, steg0 * 0.5)); $(id).classList.add("vis"); await vent(Math.max(100, steg0 * 0.5)); }
+  await Takt.scene(1, 1800); window.sceneNaa = 1;
+  $("s1").classList.remove("vis"); await vent(500);
+  $("s2").classList.add("vis"); const d1 = Takt.varighet(1, 3700); await vent(Math.min(800, d1 * 0.2));
+  const t1 = Math.max(900, d1 * 0.5);
+  await Promise.all([teller($("k1"), 1, t1), teller($("k2"), 10, t1), teller($("k3"), 100, t1)]);
+  $("s2t").textContent = "Lot bara – profit bhi bara…";
+  await Takt.scene(2, 1500); window.sceneNaa = 2;
+  $("s2").classList.add("tap"); $("s2p").textContent = "1.0840"; $("s2t").textContent = "…aur loss bhi utna hi bara. $100 account pe 1.00 lot? 10 pips = poora account.";
+  const d2 = Takt.varighet(2, 2900); const t2 = Math.max(900, d2 * 0.4);
+  await Promise.all([teller($("k1"), -1, t2), teller($("k2"), -10, t2), teller($("k3"), -100, t2)]);
+  await Takt.scene(3, 2000); window.sceneNaa = 3;
+  $("s2").classList.remove("vis"); await vent(500);
+  $("s3").classList.add("vis"); const d3 = Takt.varighet(3, 8900); await vent(Math.min(600, d3 * 0.07));
+  const steg3 = Math.max(900, (d3 * 0.7) / 4);
+  for (const id of ["t1", "t2", "t3", "t4"]){ $(id).classList.add("vis"); await vent(steg3); }
+  $("notat").classList.add("vis");
+  await Takt.scene(4, 3200); window.sceneNaa = 4;
+  $("s3").classList.remove("vis"); await vent(500);
+  $("slutt").classList.add("vis");
+  await Takt.slutt(3600);
+  window.ferdig = true;
+};
+if (!/opptak|[?&]app=/.test(location.search)) spill();
+</script></body></html>

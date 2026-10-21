@@ -1,0 +1,120 @@
+<!doctype html><html lang="ur-Latn"><head><meta charset="utf-8">
+<title>Journal kyun – animasjon</title>
+<!-- «Journal kyun?» på Roman Urdu (uke 2, leksjon 5). Fasit: UTTREKK §4 – under 20 trades = bare tendens; skriv før (hvorfor, stop, lot)
+     og etter (resultat, følelse). Fire scener i takt med stemmen (felles/takt.js): før traden · etter traden · les hver uke (mønster) ·
+     skriv første linje i dag. 1080×1350. Ingen råd, ingen løfter (B-030). Tallene er en misaal (−$2 = stop på 0,01 lot, 20 pips). -->
+<style>
+/* SKRIFT-START (tools/lag_skrift.py – ikke rediger for hånd) */
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(../skrift/montserrat-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(../skrift/montserrat-latin-ext.woff2) format('woff2');unicode-range:U+0100-017F,U+02BF,U+1E24-1E25,U+1E6C-1E6D,U+2190-2199,U+21BB,U+2212,U+221E,U+2248,U+2260,U+22EE-22EF}
+@font-face{font-family:'Noto Nastaliq Urdu';font-style:normal;font-weight:400 700;font-display:swap;src:url(../skrift/noto-nastaliq-urdu-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200F,U+2010-2011,U+204F,U+25CC}
+@font-face{font-family:'Noto Sans Devanagari';font-style:normal;font-weight:400 800;font-display:swap;src:url(../skrift/noto-sans-devanagari-devanagari.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF}
+@font-face{font-family:'Noto Naskh Arabic';font-style:normal;font-weight:400 700;font-display:swap;src:url(../skrift/noto-naskh-arabic-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200F,U+2010-2011,U+204F,U+25CC}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:800 900;font-stretch:72% 80%;font-display:swap;src:url(../skrift/archivo-smal-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:700 800;font-display:swap;src:url(../skrift/jetbrains-mono-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* SKRIFT-SLUTT */
+</style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;background:#070912;overflow:hidden;font-family:'Montserrat',sans-serif;color:#F4F2F8}
+.glod{position:absolute;inset:0;background:radial-gradient(700px 500px at 85% 0%,rgba(194,31,191,.26),transparent 62%),radial-gradient(800px 600px at 0% 100%,rgba(27,79,216,.28),transparent 60%),linear-gradient(180deg,#0A0D1C,#070912)}
+.inn{position:absolute;inset:0;padding:60px 72px}
+.topp{display:flex;align-items:center;gap:14px}.topp img{width:50px;height:50px}.merke{font:800 25px/1 'Montserrat';letter-spacing:.16em}.merke span{font-weight:600;opacity:.7}
+h1{margin-top:26px;font:900 104px/.95 'Archivo',sans-serif;font-stretch:72%}
+.scene{position:absolute;left:72px;right:72px;top:320px;opacity:0;transform:translateY(30px);transition:opacity .5s,transform .5s}
+.scene.vis{opacity:1;transform:none}
+.etikett{font:800 36px/1.2 'Montserrat';color:#5EE6D6}
+.under{margin-top:10px;font:700 32px/1.3 'Montserrat';color:#C9C6D6}
+/* journal-kort */
+.jn{margin-top:30px;padding:30px 34px;border-radius:26px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.08)}
+.jn .hode{display:flex;justify-content:space-between;font:800 28px/1 'JetBrains Mono',monospace;color:#A9A6B8;direction:ltr}
+.jn .linje{margin-top:18px;padding:16px 20px;border-radius:18px;background:rgba(255,255,255,.05);border:2px solid rgba(255,255,255,.1);font:700 34px/1.3 'Montserrat';opacity:0;transform:translateX(-20px);transition:opacity .4s,transform .4s;min-height:72px}
+.jn .linje.vis{opacity:1;transform:none}
+.jn .linje.foel{border-color:rgba(251,225,107,.7);background:rgba(251,225,107,.10)}
+.jn .linje.tap{color:#FFB4B8}
+.notat{margin-top:22px;opacity:0;transition:opacity .4s;font:700 36px/1.35 'Montserrat';color:#C9C6D6}.notat.vis{opacity:1}
+/* uke */
+.uke{margin-top:26px;display:grid;gap:10px}
+.r{display:grid;grid-template-columns:110px 150px 1fr;align-items:center;gap:16px;padding:14px 22px;border-radius:18px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.08);font:700 30px/1.2 'Montserrat';opacity:0;transition:opacity .35s,background .35s,border-color .35s}
+.r.vis{opacity:1}
+.r b{font:800 32px/1 'JetBrains Mono',monospace;direction:ltr}
+.r .p{color:#3DDC97}.r .n{color:#FF8A8E}
+.r .f{color:#C9C6D6}
+.r.merk{border-color:rgba(255,138,142,.7);background:rgba(255,77,109,.12)}
+.r.merk .f{color:#FF8A8E;font-weight:800}
+.slutt{position:absolute;left:72px;right:72px;top:320px;opacity:0;transition:opacity .6s}.slutt.vis{opacity:1}
+.boks{padding:40px 36px;border-radius:30px;background:linear-gradient(110deg,rgba(21,216,196,.16),rgba(194,31,191,.14));border:2px solid rgba(94,230,214,.4)}
+.boks b{display:block;font:900 72px/1.05 'Archivo',sans-serif;font-stretch:76%}
+.boks p{margin-top:22px;font:700 36px/1.35 'Montserrat'}
+.boks em{display:block;margin-top:18px;font:600 32px/1.35 'Montserrat';font-style:normal;color:#C9C6D6}
+.fot{position:absolute;left:72px;right:72px;bottom:54px;font:600 34px/1.35 'Montserrat';color:#8E8B9E}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style></head><body><div class="glod"></div>
+<div class="inn"><div class="topp"><img src="../ap-gradient-96.png" alt=""><div class="merke">AIM<span>PIRE</span></div></div><h1>Journal kyun?</h1></div>
+
+<section class="scene" id="s1">
+ <div class="etikett" id="s1e">Trade se PEHLE: 3 lines</div>
+ <div class="under" id="s1u">Likhne se faisla saaf</div>
+ <div class="jn">
+  <div class="hode"><span>EUR/USD · Buy</span><span id="jtid">Tue 09:12</span></div>
+  <div class="linje" id="l1">Kyun? Usool ke mutabiq breakout</div>
+  <div class="linje" id="l2">Stop kahan? 1.0830 (20 pips)</div>
+  <div class="linje" id="l3">Lot kitna? 0.01</div>
+  <div class="linje tap" id="l4">Result: −$2 (stop laga)</div>
+  <div class="linje foel" id="l5">Mehsoos: jaldi thi, FOMO</div>
+ </div>
+ <div class="notat" id="n1">Yeh line sabse qeemti hai</div>
+</section>
+
+<section class="scene" id="s3">
+ <div class="etikett">Har hafte parhein</div>
+ <div class="under">Pattern khud nazar aate hain</div>
+ <div class="uke">
+  <div class="r" id="u1"><span>Mon</span><b class="p">+$3</b><span class="f">shaant</span></div>
+  <div class="r" id="u2"><span>Tue</span><b class="n">−$2</b><span class="f">gussa</span></div>
+  <div class="r" id="u3"><span>Wed</span><b class="p">+$2</b><span class="f">shaant</span></div>
+  <div class="r" id="u4"><span>Thu</span><b class="n">−$2</b><span class="f">gussa</span></div>
+  <div class="r" id="u5"><span>Fri</span><b class="n">−$2</b><span class="f">gussa</span></div>
+ </div>
+ <div class="notat" id="n3">Wahi galti teesri baar = aadat, hadsa nahi</div>
+ <div class="notat" id="n4">20 se kam = sirf rujhan, saboot nahi</div>
+</section>
+
+<section class="slutt" id="slutt"><div class="boks"><b>Aaj pehli line likhein.</b>
+ <p>Journal app mein hai – 2 minute.</p><em>Aadat badli ja sakti hai.</em></div></section>
+
+<div class="fot">Hum mil kar seekhte hain – yeh maali mashwara nahi hai.</div>
+<script src="takt.js"></script>
+<script src="sprak.js"></script>
+<script>
+const $ = id => document.getElementById(id), vent = ms => new Promise(r => setTimeout(r, ms));
+window.sceneNaa = -1;
+/* Scener: 0 før traden (3 linjer) · 1 etter traden (2 linjer) · 2 les hver uke · 3 skriv i dag. Bevegelsen strekkes over scenens varighet. */
+window.spill = async function(cues){
+  Takt.sett(cues, /opptak/.test(location.search));
+  await document.fonts.ready;
+  await Takt.scene(0, 500); window.sceneNaa = 0;
+  $("s1").classList.add("vis"); const d0 = Takt.varighet(0, 7000); await vent(Math.min(1800, d0 * 0.2));
+  const steg0 = Math.max(700, (d0 * 0.5) / 3);
+  for (const id of ["l1", "l2", "l3"]){ $(id).classList.add("vis"); await vent(steg0); }
+  await Takt.scene(1, 3000); window.sceneNaa = 1;
+  $("s1e").textContent = "Trade ke BAAD: 2 lines"; $("s1u").textContent = "Result aur mehsoos";
+  const d1 = Takt.varighet(1, 6500); await vent(Math.min(1200, d1 * 0.12));
+  $("l4").classList.add("vis"); await vent(Math.max(900, d1 * 0.25)); $("l5").classList.add("vis"); await vent(Math.max(900, d1 * 0.25));
+  $("n1").classList.add("vis");
+  await Takt.scene(2, 3500); window.sceneNaa = 2;
+  $("s1").classList.remove("vis"); await vent(500);
+  $("s3").classList.add("vis"); const d2 = Takt.varighet(2, 12000); await vent(Math.min(1200, d2 * 0.08));
+  const steg2 = Math.max(500, (d2 * 0.35) / 5);
+  for (const id of ["u1", "u2", "u3", "u4", "u5"]){ $(id).classList.add("vis"); await vent(steg2); }
+  await vent(Math.min(800, d2 * 0.05));
+  for (const id of ["u2", "u4", "u5"]){ $(id).classList.add("merk"); await vent(Math.max(350, d2 * 0.05)); }
+  $("n3").classList.add("vis"); await vent(Math.max(1500, d2 * 0.2)); $("n4").classList.add("vis");
+  await Takt.scene(3, 4000); window.sceneNaa = 3;
+  $("s3").classList.remove("vis"); await vent(500);
+  $("slutt").classList.add("vis");
+  await Takt.slutt(3500);
+  window.ferdig = true;
+};
+if (!/opptak|[?&]app=/.test(location.search)) spill();
+</script></body></html>

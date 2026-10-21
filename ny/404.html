@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aimpire</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#070B14;color:#F2F4F8;font:600 1rem/1.5 Montserrat,system-ui,sans-serif;text-align:center;padding:24px;box-sizing:border-box}
+  .w{max-width:360px}
+  b.m{display:block;font-size:1.5rem;letter-spacing:.02em;margin-bottom:12px;background:linear-gradient(90deg,#15D8C4,#1B4FD8 55%,#C21FBF);-webkit-background-clip:text;background-clip:text;color:transparent}
+  p{margin:0 0 16px;color:rgba(242,244,248,.8)}
+</style>
+</head>
+<body>
+<div class="w">
+  <b class="m">Aimpire</b>
+  <p id="t">…</p>
+</div>
+<script>
+/* Nesté navnelenke-adapter (B-038-port). Når nesté eier site-roten (cutover), GitHub Pages
+   viser denne for ukjente stier. Vi sender videre til index med ?n=slug – app.js slår opp
+   slug→kode (Sheets + navnelenker-reserve.csv). Under preview /neste/ny/ brukes ikke denne
+   fila (Pages-404 er i repo-roten); der er durable lenke ?n= / #slug (se app.js). */
+(function(){
+  var raa = String(location.pathname.replace(/^\/+/, "").split("/")[0] || "");
+  try { raa = decodeURIComponent(raa); } catch (e) {}
+  try { raa = raa.normalize("NFKC"); } catch (e) {}
+  var s = raa.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 30);
+  var q = new URLSearchParams(location.search);
+  q.delete("n"); q.delete("s");
+  var rest = q.toString();
+  document.getElementById("t").textContent = "…";
+  if(!/^[a-z0-9]{1,30}$/.test(s) || s === "neste" || s === "ny"){
+    location.replace("./" + (rest ? "?" + rest : "") + location.hash);
+    return;
+  }
+  location.replace("./?n=" + encodeURIComponent(s) + (rest ? "&" + rest : "") + location.hash);
+})();
+</script>
+</body>
+</html>

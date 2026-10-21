@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="ur-Latn" dir="ltr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070B14">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png" type="image/png">
+<title>Aimpire</title>
+<!-- Delingskort. Etter cutover er dette rot-adressen alle deler i Element og WhatsApp; uten disse taggene
+     ble lenka et bart kort uten bilde (huben på rot har hatt kort hele tiden). Samme merkevarekort som guiden.
+     «noindex» står bevisst: å gjøre appen søkbar er et founder-valg (offentlig landingsside, compliance-porten). -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aimpire">
+<meta property="og:description" content="Twenty short lessons on how trading actually works — watch and listen, in Urdu, English or Norwegian. We learn together; this is not financial advice.">
+<meta property="og:url" content="https://aimpire.github.io/">
+<meta property="og:image" content="https://aimpire.github.io/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+/* Etter cutover ligger skallet på rot og huben (Guide) under /guide/. Gamle adresser i meldinger og bokmerker
+   (aimpire.github.io/#faq, #calc, #steg-3 …) sendes dit med samme søk og hash; #learn er Academy og blir her.
+   Én gang per hash per fane: kommer vi tilbake hit med samme hash innen 5 sekunder, tok /guide/ ikke imot oss
+   (målt 21.10: huben leste sin egen mappe som navnelenke og sendte oss rundt i ring, 14 hopp på 0,4 s). Da blir vi
+   her og dropper hashen i stedet for å løkke – appen er det trygge stedet å havne. Et ekte nytt trykk på samme
+   gamle lenke senere i økta videresendes som normalt. */
+(function(){ try{
+  var p = location.pathname; if(p !== "/" && p !== "/index.html") return;
+  var h = location.hash.replace(/^#/, "");
+  if(h === "learn"){ history.replaceState(null, "", p + location.search); return; }
+  if(!/^(start|tools|earn|faq|ib|menu|calc|chat|hours|guide|steg-[0-9]+)$/.test(h)) return;
+  var n = "neste.vsend:" + h, na = Date.now(), forrige = 0;
+  try{ forrige = +(sessionStorage.getItem(n) || 0) || 0; }catch(e){}
+  if(na - forrige > 5000){
+    try{ sessionStorage.setItem(n, String(na)); }catch(e){}
+    location.replace("/guide/" + location.search + location.hash);
+    return;
+  }
+  history.replaceState(null, "", p + location.search);
+}catch(e){} })();
+</script>
+<!--
+  Aimpire neste (B-048). Designplan:
+  Subjekt: trading-læring for nybegynnere i Pakistan på 360 px Android, ofte om natta (callen er 22:00), ofte delt telefon,
+  dårlig nett, lav leseferdighet, Roman Urdu. Jobben: én ting om gangen, tillit før handling, lær med øyne og ører.
+  Arkitektur: UKA er strukturen («Ukeløkka»): callen onsdag er ankeret, 5 korte Academy-leksjoner, prøv selv, ett spørsmål,
+  repetisjon 1/7/30 dager. Ingen daglig streak. Appen samler feilsvar til spørsmål for callen.
+  Visuelt språk (B-052, 21.10): marine grunn med tone (ingen glass, ingen vasker), radius 12/8, skillelinjer i lister,
+  gradient bare som semantikk (én primærknapp per skjerm, fremdrift), gull bare når noe er oppnådd, ikoner i tekstfarge.
+  Forsida starter øverst: leder · tillit · én overskrift · én handling · callen som rad. Marked bak disclosure.
+  Same-origin WOFF2. Urdu Nastaliq. Målestokk: Duolingo (løype), Revolut (tall), WhatsApp (lister).
+-->
+<style>
+/* SKRIFT-START (tools/lag_skrift.py – ikke rediger for hånd) */
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(skrift/montserrat-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(skrift/montserrat-latin-ext.woff2) format('woff2');unicode-range:U+0100-017F,U+02BF,U+1E24-1E25,U+1E6C-1E6D,U+2190-2199,U+21BB,U+2212,U+221E,U+2248,U+2260,U+22EE-22EF}
+@font-face{font-family:'Noto Nastaliq Urdu';font-style:normal;font-weight:400 700;font-display:swap;src:url(skrift/noto-nastaliq-urdu-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200F,U+2010-2011,U+204F,U+25CC}
+@font-face{font-family:'Noto Sans Devanagari';font-style:normal;font-weight:400 800;font-display:swap;src:url(skrift/noto-sans-devanagari-devanagari.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF}
+@font-face{font-family:'Noto Naskh Arabic';font-style:normal;font-weight:400 700;font-display:swap;src:url(skrift/noto-naskh-arabic-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200F,U+2010-2011,U+204F,U+25CC}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:800;font-stretch:80%;font-display:swap;src:url(skrift/archivo-80-800-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:700;font-display:swap;src:url(skrift/jetbrains-mono-700-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* SKRIFT-SLUTT */
+:root{
+  --blekk:#070B14; --flate:#0E1526; --flate2:#131C30; --linje:rgba(255,255,255,.08); --linje2:rgba(255,255,255,.16);
+  --tekst:#F2F4F8; --dempet:#9AA3B5; --svak:#6B7386;
+  --aksent:#5EE6D6; --aksent-ink:#070B14; --gull:#FBE16B; --gevinst:#3DDC97; --tap:#FF8A8E; --varsel:#F5A524;
+  --grad:linear-gradient(110deg,#15D8C4 0%,#5B8BFF 50%,#C21FBF 100%);
+  --grad-tekst:var(--grad);
+  --vis:'Archivo','Arial Narrow',system-ui,sans-serif; --kropp:'Montserrat',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --r:12px; --r2:8px; --gutter:max(20px,env(safe-area-inset-left,0px)); --maks:480px;
+  --t1:clamp(1.95rem,7.6vw,2.25rem); --t2:1.625rem; --t3:1.2rem; --t4:1rem; --t5:.84375rem;
+  --mast:var(--t1);
+  color-scheme:dark;
+}
+/* Lys: kjølig hvit (ikke cream, ikke violet-tint). Speiler mørk hierarki (#333 / B-052). */
+:root[data-theme="light"]{
+  --blekk:#F3F5F9; --flate:#FFFFFF; --flate2:#E6EAF2; --linje:rgba(11,26,46,.10); --linje2:rgba(11,26,46,.18); --tekst:#0B1A2E; --dempet:#4B5A6E; --svak:#6F7B8C;
+  --aksent:#0C7F78; --aksent-ink:#FFFFFF; --gull:#9A7400; --gevinst:#15804F; --tap:#C8373B; --varsel:#B26A00; color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;background:var(--blekk)}
+body{background:var(--blekk);color:var(--tekst);font:500 var(--t4)/1.5 var(--kropp);min-height:100%;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);position:relative;font-variant-numeric:tabular-nums}
+/* Tone, ikke vask: én stille vignett øverst (B-052). Ingen radiale flekker, ingen glass. */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#0B1221 0,var(--blekk) 280px)}
+:root[data-theme="light"] body::before{background:linear-gradient(180deg,#E8ECF4 0,var(--blekk) 220px)}
+/* Skrift per språk: latinske tegn (fagtermer, tall) i Montserrat/Archivo, egen skrift for urdu, hindi og arabisk.
+   Tokenene settes på <html>, så alle elementer som bruker var(--kropp)/var(--vis) får dem – ikke bare body. */
+html[lang="ur"]{--kropp:'Montserrat','Noto Nastaliq Urdu',system-ui,sans-serif;--vis:'Archivo','Noto Nastaliq Urdu',system-ui,sans-serif}
+html[lang="hi"]{--kropp:'Montserrat','Noto Sans Devanagari',system-ui,sans-serif;--vis:'Archivo','Noto Sans Devanagari',system-ui,sans-serif}
+html[lang="ar"]{--kropp:'Montserrat','Noto Naskh Arabic',system-ui,sans-serif;--vis:'Archivo','Noto Naskh Arabic',system-ui,sans-serif}
+html[lang="ur"] body{line-height:1.95}
+html[lang="ur"] :is(h1,h2,h3,b,.leks b,.call h2,.call .tid,.lek .hode b,.linjer p,.valg button,.knapp,.pille,.rad-lenke,.jnr b,.by b,.foyer h1,.call-chip){line-height:1.75}
+html[lang="ur"] :is(.uke h2,.sek h2,.risk h2,.mer h2){font-size:22px}
+html[lang="ur"] .call h2{font-size:20px}
+html[lang="ur"] .call .om{font-size:24px;line-height:1.7}   /* Nastaliq kolliderte på 32px/1.02 (målt 20.10, skjermbilde) */
+html[lang="ur"] .linjer p{font-size:17px;line-height:1.9}
+.ltr{direction:ltr;unicode-bidi:isolate}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--aksent);outline-offset:3px;border-radius:var(--r2)}
+.skjul{display:none !important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+svg.ik{width:22px;height:22px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.glass{background:var(--flate);border:0;border-radius:var(--r)}
+/* Én kolonne på brede skjermer (iPad/PC): appen står midt på, ikke strukket */
+main{max-width:var(--maks);margin-inline:auto}
+/* Leksjon og verktøy: én kolonne på brede skjermer, men aldri mindre enn margen på mobil. «margin-inline:auto» med id-presedens
+   overstyrte margene (.linjer, .vt, .prov …) og la teksten helt ut i kanten på 360 px (sett 21.10). Animasjonen sentrerer seg selv. */
+#lek > *:not(.hode):not(.anim){margin-inline:max(var(--gutter), calc((100% - var(--maks)) / 2 + var(--gutter)))}
+/* Bevegelse bare som svar på trykk */
+@media (prefers-reduced-motion:no-preference){
+  .knapp:active,.leks:active,.valg button:active,.lydk:active,.rad-lenke:active,.call-chip:active{transform:scale(.985)}
+  .knapp,.leks,.valg button,.lydk,.rad-lenke,.call-chip{transition:transform .12s ease,background-color .15s ease}
+}
+
+/* Topp – nytte, lite. Merket bor her (B-052: ingen mast med tom luft over). */
+.topp{display:flex;align-items:center;gap:10px;height:56px;padding:0 max(16px,env(safe-area-inset-right,0px)) 0 var(--gutter);max-width:var(--maks);margin-inline:auto}
+.merke{display:flex;align-items:center;gap:8px;text-decoration:none;direction:ltr;unicode-bidi:isolate}
+.merke img{width:28px;height:28px}
+.merke b{font:800 14px/1 var(--kropp);letter-spacing:.14em}
+.merke b span{font-weight:600;color:var(--dempet)}
+.topp .hoyre{margin-inline-start:auto;display:flex;gap:4px}
+.pille{min-height:40px;padding:0 12px;border:1px solid var(--linje2);border-radius:var(--r2);font:700 14px/1 var(--kropp);display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--tekst)}
+.topp .pille{border:0;min-width:40px;padding:0 10px;color:var(--dempet)}
+.topp .pille.on{color:var(--tekst);background:var(--flate)}
+.pille.on{border-color:var(--aksent);color:var(--aksent)}
+
+/* Språkport */
+.port{position:fixed;inset:0;z-index:40;background:var(--blekk);display:flex;flex-direction:column;justify-content:safe center;gap:14px;padding:40px var(--gutter);overflow-y:auto;overscroll-behavior:contain}
+.port > *{max-width:var(--maks);width:100%;margin-inline:auto}
+.portmerke{display:flex;align-items:center;gap:12px;direction:ltr;unicode-bidi:isolate}
+.portmerke img{width:44px;height:44px}
+.portmerke b{font:800 20px/1 var(--vis);font-stretch:80%;letter-spacing:.14em}
+.portmerke b span{font-weight:600;color:var(--dempet);letter-spacing:.12em}
+.portlinje{margin:-2px 0 10px;color:var(--dempet);font:600 14px/1.4 var(--kropp)}
+.port h1{font:800 var(--t1)/1.08 var(--vis);font-stretch:80%;letter-spacing:-.02em;max-width:14ch}
+.port button{display:flex;justify-content:space-between;align-items:center;min-height:56px;padding:0 18px;background:var(--flate);border:0;border-radius:var(--r);font:700 17px/1 var(--kropp);text-align:start}
+.port button b{font:700 13px/1 var(--kropp);color:var(--dempet)}
+.port-pk{display:grid;gap:10px}
+.port-etikett{font:700 13.5px/1.3 var(--kropp);color:var(--dempet)}
+.port button.port-anbefalt{box-shadow:inset 0 0 0 1.5px rgba(94,230,214,.5)}
+/* Ikke display:grid på <details> selv – det viser lukket innhold i Chromium (#266-port). */
+.port-andre{margin-top:6px;border:0;background:transparent}
+.port-andre summary{list-style:none;cursor:pointer;min-height:44px;display:flex;align-items:center;font:700 14px/1.3 var(--kropp);color:var(--dempet);padding:4px 2px}
+.port-andre summary::-webkit-details-marker{display:none}
+.port-andre[open]{display:grid;gap:10px}
+.port-andre[open] summary{margin-bottom:0;color:var(--tekst)}
+
+/* Forside: innholdet starter øverst med fast rytme – leder · tillit · én overskrift · én handling (B-052) */
+.foyer{padding:4px var(--gutter) 24px;position:relative}
+.foyer-merke{display:none}
+.foyer .leder{padding:0;margin:14px 0 0}
+.foyer .leder .avi{width:40px;height:40px;font-size:16px;box-shadow:none}
+.foyer .leder b{font-size:16px}
+.foyer .leder small{font-size:13px}
+.foyer .trygg{padding:0;margin:10px 0 0;font-size:13.5px;gap:8px;color:var(--dempet)}
+.foyer .trygg .ik{width:18px;height:18px}
+.foyer h1{margin-top:24px;font:800 var(--t1)/1.08 var(--vis);font-stretch:80%;letter-spacing:-.02em;max-width:15ch;text-wrap:balance}
+html[lang="ur"] .foyer h1,html[lang="ar"] .foyer h1,html[lang="hi"] .foyer h1{letter-spacing:0;max-width:17ch;line-height:1.35}
+html[lang="ur"] .foyer .lede{line-height:1.9}   /* Nastaliq klippes på 1.5 (sett 20.10) */
+.foyer .lede{margin-top:12px;color:var(--dempet);font:600 16px/1.5 var(--kropp);max-width:32ch}
+.foyer .cta{margin-top:22px;display:flex;flex-direction:column;align-items:stretch;gap:0}
+.foyer .cta .knapp{justify-content:space-between;text-align:start;min-height:54px}
+.foyer .cta .knapp .ik{width:20px;height:20px;stroke-width:2.2}
+html[dir="rtl"] .foyer .cta .knapp .ik{transform:scaleX(-1)}
+.foyer-cta-hint{margin-top:10px;color:var(--svak);font:600 13.5px/1.4 var(--kropp)}
+/* Cutover: den som sto midt i guiden da appen kom på rot, får vite hvor den ble av. Vises bare med hub-fremdrift, og bare til de åpner den. */
+.foyer-guide-tilbake{margin-top:10px;color:var(--aksent);font:700 13.5px/1.4 var(--kropp)}
+.foyer-guide-tilbake[hidden]{display:none}
+/* B-030: én stille risikolinje ved CTA — ikke kort, ikke modal, ikke jussvegg */
+.foyer-risk{margin:14px 0 0;padding:0;border:0;color:var(--dempet);font:600 13.5px/1.5 var(--kropp);max-width:36ch;text-wrap:pretty}
+.foyer-risk b{font-weight:800;color:var(--tekst)}
+html[lang="ur"] .foyer-risk,html[lang="ar"] .foyer-risk{max-width:42ch;line-height:1.7}
+/* Sekundære handlinger som tekstlenker – aldri to primære på samme skjerm */
+.foyer .cta .knapp.sekund{margin-top:8px;min-height:44px;padding:0;background:transparent;color:var(--aksent);border:0;justify-content:flex-start;font:700 15px/1.3 var(--kropp)}
+.foyer .cta .knapp.sekund.laast{color:var(--dempet);cursor:not-allowed}
+.foyer .cta .tekst-lenke{min-height:44px;padding:0;font:700 15px/1.3 var(--kropp);color:var(--aksent);text-align:start;text-decoration:none;background:none;border:0}
+/* Callen på forsida: en flat rad, som medlemmene kjenner fra WhatsApp */
+.call-chip{display:grid;grid-template-columns:40px 1fr 18px;grid-template-rows:auto auto;column-gap:14px;align-items:center;min-height:64px;margin-top:16px;padding:12px 0;border-top:1px solid var(--linje);border-bottom:1px solid var(--linje);text-decoration:none;color:var(--tekst)}
+.call-chip .ikon{grid-row:1/3;width:40px;height:40px;border-radius:10px;background:var(--flate);display:grid;place-items:center;color:var(--tekst)}
+.call-chip > span{grid-column:2;font:700 16px/1.3 var(--kropp)}
+.call-chip strong{grid-column:2;font:600 13.5px/1.35 var(--kropp);color:var(--dempet)}
+.call-chip .chev{grid-row:1/3;grid-column:3;color:var(--svak);width:18px;height:18px}
+html[dir="rtl"] .call-chip .chev{transform:scaleX(-1)}
+.dag2-rad{margin-top:16px}
+.dag2-rad .call-chip{margin-top:0}
+.kal-wapis{margin-top:12px;color:var(--dempet);font:600 14px/1.5 var(--kropp)}
+body.onboarding #foyer-del{display:none !important}   /* B-053: kontolenken (#foyer-reg) er synlig også ved første besøk når leder finnes */
+/* Første besøk: forsida viser uke 1 (0 / 5) under handlingen, men ikke call/konto/marked før første leksjon er åpnet. */
+body.onboarding #call,body.onboarding #sawal,body.onboarding .uke:not(#uke1),body.onboarding #dohr,body.onboarding .sek,body.onboarding .risk,body.onboarding .handling,body.onboarding .reg-gate,body.onboarding .mk-box,body.onboarding .mer,body.onboarding .bunn{display:none !important}
+body.onboarding .foyer .call-chip{display:none}
+/* Lær-først register-gate (gap #1): synlig handling + risiko, soft-lås — ingen innskuddsguide. Flat seksjon med skillelinje. */
+.reg-gate{margin:28px var(--gutter) 0;padding:18px 0 0;border-top:1px solid var(--linje)}
+.reg-gate h2{font:800 18px/1.3 var(--kropp)}
+.reg-gate .gate-risk{margin-top:8px;color:var(--dempet);font:600 13.5px/1.5 var(--kropp);max-width:38ch}
+.reg-gate .gate-risk b{font-weight:800;color:var(--tekst)}
+.reg-gate .knapp{margin-top:14px;width:100%;background:var(--flate2);color:var(--aksent)}
+.reg-gate .knapp.laast{color:var(--dempet);cursor:not-allowed}
+/* B-053: etter 3 riktige er kontoknappen hovedhandlingen – med 100-figur-rekka og kilden rett over */
+.reg-gate .knapp.hoved{background:var(--grad);color:#070B14}
+.reg-gate .figurer,.reg-gate .kilde{display:none}
+.reg-gate.aapen .figurer{display:grid;margin-top:14px;max-width:360px}
+.reg-gate.aapen .kilde{display:block;margin-top:6px;color:var(--svak);font:600 12.5px/1.3 var(--kropp)}
+.reg-gate .guide{display:block;margin-top:12px;font:700 15px/1.3 var(--kropp);color:var(--aksent);text-decoration:none}
+.reg-gate .guide[hidden]{display:none}
+.reg-gate small{display:block;margin-top:10px;color:var(--dempet);font:600 13px/1.4 var(--kropp)}
+
+/* Lederstripe (også utenfor forsida) */
+.leder{display:flex;align-items:center;gap:12px;padding:14px var(--gutter)}
+.leder .avi{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:800 16px/1 var(--kropp);color:#070B14;background:var(--grad);flex:0 0 auto}
+.leder .avi.tom{background:var(--flate2);color:var(--dempet);border:1.5px dashed var(--linje2)}
+.leder .txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.leder small{font:600 13px/1.3 var(--kropp);color:var(--dempet)}
+.leder b{font:700 16px/1.3 var(--kropp);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}   /* «ingen leder ennå»-setningen må få bryte – nowrap klippet den (sett 21.10) */
+.leder .ok{color:var(--aksent);margin-inline-start:6px}
+.leder .konflikt-valg{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.leder .konflikt b{white-space:normal}
+.trygg{display:flex;align-items:center;gap:8px;padding:4px var(--gutter) 10px;font:600 13.5px/1.4 var(--kropp);color:var(--dempet)}
+
+/* Dine spørsmål til callen */
+.sawal{margin:24px var(--gutter) 0;padding:18px 18px 16px;border-radius:var(--r);background:var(--flate)}
+.sawal h2{font:800 18px/1.3 var(--kropp)}
+.sawal .under{margin-top:4px;color:var(--dempet);font:600 14px/1.45 var(--kropp)}
+.sawal ol{margin:12px 0 0;padding-inline-start:22px;display:grid;gap:8px;font:600 15.5px/1.4 var(--kropp)}
+.sawal ol li::marker{color:var(--dempet);font-weight:700}
+.sawal .pille{margin-top:12px}
+
+/* Callen – ett rolig kort med tone; nedtelling som vanlig tekst med tabulære sifre */
+.call{margin:24px var(--gutter) 0;padding:18px 18px 16px;border-radius:var(--r);background:var(--flate);position:relative}
+.call .live{display:none;align-items:center;gap:8px;font:700 12.5px/1 var(--kropp);padding:6px 10px;border-radius:var(--r2);background:rgba(255,77,109,.14);color:var(--tekst)}
+.call .live i{width:8px;height:8px;border-radius:50%;background:#FF4D6D;animation:live-pulse 1.6s ease-in-out infinite}
+@keyframes live-pulse{50%{box-shadow:0 0 0 6px rgba(255,77,109,.14)}}
+@media (prefers-reduced-motion:reduce){.call .live i{animation:none}}
+.call.naa .live{display:inline-flex;margin-bottom:10px}
+.call h2{font:800 18px/1.25 var(--kropp)}
+.call .tid{margin-top:4px;font:600 14px/1.4 var(--kropp);color:var(--dempet)}
+.call .om{margin-top:12px;font:800 26px/1.15 var(--vis);font-stretch:80%;letter-spacing:-.02em;color:var(--tekst);max-width:18ch;text-wrap:balance}
+.call .lenke{margin-top:10px;font:600 13.5px/1.45 var(--kropp);color:var(--dempet)}
+.call .browser{margin-top:6px;font:600 13px/1.45 var(--kropp);color:var(--dempet)}
+.call .soft{margin-top:10px;padding:10px 12px;border-radius:var(--r2);background:rgba(255,77,109,.10);font:600 13px/1.45 var(--kropp);color:var(--tekst)}
+.call .lenker{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+.call .lenker a{display:inline-flex;align-items:center;min-height:40px;font:700 14px/1.2 var(--kropp);text-decoration:none;color:var(--aksent)}
+.call .lenker a#call-join{grid-column:1/-1;justify-content:center;min-height:50px;margin-bottom:6px;padding:0 16px;border-radius:var(--r);background:var(--flate2);color:var(--tekst)}
+.call.naa .lenker a#call-join{background:var(--grad);color:#070B14}
+/* Forrige call på 5 minutter (#337): lyd + kort tekst under callen – retur-mekanikken, nordstjernen §2 */
+.call .oppsum{margin-top:16px;padding-top:14px;border-top:1px solid var(--linje)}
+.call .oppsum[hidden]{display:none}
+.call .oppsum h3{font:800 16px/1.3 var(--kropp)}
+.call .oppsum .under{margin-top:2px;color:var(--dempet);font:600 13.5px/1.4 var(--kropp)}
+.call .oppsum .oppsum-t{margin-top:8px;font:600 14.5px/1.5 var(--kropp)}
+.call .oppsum .lyd{margin:12px 0 0}
+
+/* Ukesløype: flat liste med skillelinjer; ett tydelig «neste», resten stille (B-052) */
+.uke{padding:30px var(--gutter) 0}
+.uke h2{font:800 var(--t2)/1.1 var(--vis);font-stretch:80%;letter-spacing:-.02em}
+.uke .under{margin-top:6px;color:var(--dempet);font:600 14.5px/1.45 var(--kropp)}
+.uke.laast h2{color:var(--dempet)}
+.frem{display:flex;align-items:center;gap:12px;margin-top:14px;color:var(--dempet);font:600 13.5px/1 var(--kropp)}
+.frem[hidden]{display:none}
+.frem .bar{flex:1;height:6px;border-radius:3px;background:var(--flate);overflow:hidden}
+.frem .bar i{display:block;height:100%;width:0;background:var(--grad);border-radius:3px;transition:width .4s ease}
+.frem .tall{direction:ltr;unicode-bidi:isolate}   /* «0 / 5» speilet til «5 / 0» i urdu (sett 21.10) */
+.skinne{list-style:none;margin-top:10px;padding:0}
+.node{position:relative;padding:0}
+.node + .node{border-top:1px solid var(--linje)}
+.node:last-child{border-bottom:1px solid var(--linje)}
+.leks{display:flex;align-items:center;gap:14px;width:calc(100% + 16px);margin:0 -8px;min-height:68px;padding:12px 8px;border:0;border-radius:var(--r);background:transparent;text-align:start}
+.leks .nr{width:32px;height:32px;min-width:0;border-radius:50%;border:2px solid var(--linje2);display:grid;place-items:center;font:800 14px/1 var(--kropp);color:var(--svak);flex:0 0 auto}
+.leks .tx{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.leks b{font:700 16.5px/1.3 var(--kropp)}
+.leks small{color:var(--dempet);font:600 13.5px/1.3 var(--kropp);display:flex;gap:10px;flex-wrap:wrap}
+.leks .ik{color:var(--svak)}
+.node.sett .leks .nr{color:var(--dempet)}
+.node.naa .leks{background:var(--flate)}
+.node.naa .leks .nr{background:var(--grad);border-color:transparent;color:#070B14}
+.node.naa .leks .ik{color:var(--aksent)}
+.node.riktig .leks .nr{border-color:var(--gull);color:var(--gull)}
+.node.riktig .leks .ik{color:var(--gull)}
+.uke.laast .leks b,.uke.laast .leks small{color:var(--svak)}
+.ferdig{margin:10px 0 0;padding:14px 16px;border-radius:var(--r);background:rgba(251,225,107,.10);color:var(--tekst);font:700 14.5px/1.45 var(--kropp)}
+:root[data-theme="light"] .ferdig{background:rgba(154,116,0,.10)}
+.node.riktig:has(.ferdig){border:0}
+
+/* Seksjoner */
+.sek{padding:30px var(--gutter) 0}
+.sek h2{font:800 var(--t2)/1.1 var(--vis);font-stretch:80%;letter-spacing:-.02em}
+.sek .under{margin-top:6px;color:var(--dempet);font:600 14.5px/1.45 var(--kropp)}
+.tom{margin-top:12px;color:var(--svak);font:600 14.5px/1.45 var(--kropp)}
+
+/* Markedet – bak disclosure (ikke første viewport) */
+.mk-box{margin:24px var(--gutter) 0;padding:0;border-radius:var(--r);background:var(--flate);overflow:hidden}
+.mk-box > summary{list-style:none;cursor:pointer;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;font:700 16px/1.3 var(--kropp);min-height:52px}
+.mk-box > summary::-webkit-details-marker{display:none}
+.mk-box > summary::after{content:"";width:8px;height:8px;border-inline-end:2px solid var(--svak);border-bottom:2px solid var(--svak);transform:rotate(45deg);transition:transform .2s;flex:0 0 auto;margin-top:-4px}
+.mk-box[open] > summary::after{transform:rotate(225deg);margin-top:4px}
+.mk-box .mk-body{padding:0 16px 16px}
+.mk-box .under{margin:0 0 10px;color:var(--dempet);font:600 13.5px/1.45 var(--kropp)}
+.byer{margin-top:4px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.by{padding:11px 4px 10px;border-radius:var(--r2);background:var(--flate2);text-align:center}
+.by b{display:block;font:700 12px/1.2 var(--kropp);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.by small{display:block;margin-top:4px;font:600 12px/1 var(--kropp);color:var(--dempet)}
+.by i{display:block;width:7px;height:7px;border-radius:50%;margin:7px auto 0;background:var(--linje2)}
+.by .st{display:block;margin-top:5px;font:700 11px/1 var(--kropp);color:var(--svak)}
+.by.open{background:rgba(61,220,151,.10)} .by.open i{background:var(--gevinst)} .by.open .st{color:var(--gevinst)}
+.mknote{margin-top:10px;font:600 13px/1.45 var(--kropp);color:var(--dempet)}
+
+/* Fremdrift */
+.kart{margin-top:14px;display:grid;gap:0}
+.kart .rad{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--linje)}
+.kart .rad b{font:700 15px/1.3 var(--kropp)}
+.kart .niv{display:flex;gap:5px}
+.kart .niv i{width:22px;height:6px;border-radius:3px;background:var(--flate2)}
+.kart .niv i.on{background:var(--grad)}
+.kart .forkl{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font:600 12.5px/1.3 var(--kropp);color:var(--dempet)}
+.kart .forkl span{display:inline-flex;align-items:center;gap:6px}
+.kart .forkl i{width:14px;height:6px;border-radius:3px;background:var(--grad)}
+
+/* Risiko + handling */
+.risk{padding:30px var(--gutter) 0}
+.risk h2{font:800 var(--t2)/1.1 var(--vis);font-stretch:80%;letter-spacing:-.02em}
+.figurer{margin-top:14px;display:grid;grid-template-columns:repeat(20,1fr);gap:3px;max-width:400px}
+.figurer i{aspect-ratio:1/2;border-radius:3px 3px 1px 1px;background:var(--flate2)}
+.figurer i.tap{background:var(--tap)}
+.risk p{margin-top:12px;font:600 15px/1.5 var(--kropp)}
+.risk p b{color:var(--tap)}
+.risk small{display:block;margin-top:4px;color:var(--svak);font:600 12.5px/1.3 var(--kropp)}
+.handling{margin:16px var(--gutter) 0;display:flex;flex-direction:column;gap:8px}
+/* Knapper: primær = gradient, 54 px, radius 12, ingen glød. Aldri to primære på samme skjerm. */
+.knapp{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 20px;border-radius:var(--r);background:var(--grad);color:#070B14;font:800 16.5px/1.2 var(--kropp);text-decoration:none;text-align:center}
+.knapp[aria-disabled="true"]{background:var(--flate2);color:var(--dempet)}
+.handling small{color:var(--dempet);font:600 13.5px/1.4 var(--kropp)}
+
+/* Mer + bunn – tekstliste med skillelinjer */
+.mer{padding:30px var(--gutter) 0;display:grid;gap:0}
+.mer h2{font:800 var(--t2)/1.1 var(--vis);font-stretch:80%;letter-spacing:-.02em;margin-bottom:8px}
+.rad-lenke{display:flex;align-items:center;gap:14px;width:100%;min-height:56px;padding:0;background:transparent;border:0;border-bottom:1px solid var(--linje);border-radius:0;text-decoration:none;font:700 16px/1.3 var(--kropp);text-align:start}
+.rad-lenke .ik{color:var(--tekst)}
+.rad-lenke .ik:last-child{color:var(--svak);width:18px;height:18px}
+html[dir="rtl"] .rad-lenke .ik:last-child{transform:scaleX(-1)}
+.rad-lenke span{flex:1}
+.bunn{padding:24px var(--gutter) 32px;color:var(--svak);font:600 13px/1.5 var(--kropp);display:grid;gap:10px}
+/* B-055: fire steder (Ghar · Academy · Paisa · Mazeed) i fast bunnmeny. Tone, ikke glass; ikoner i tekstfarge; aksent bare
+   på det aktive stedet (B-052). Ligger under leksjonsrammen (.lek z30) og språkporten (.port z40), så den dekkes når de er åpne. */
+.side[hidden]{display:none !important}
+.call-chip[hidden]{display:none !important}   /* #339: raden bare i live-vinduet; klassen setter display:flex, så hidden må vinne */
+body{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(4,1fr);background:var(--flate);border-top:1px solid var(--linje);padding-bottom:env(safe-area-inset-bottom,0px)}
+.bar button{appearance:none;background:none;border:0;margin:0;color:var(--dempet);font:700 11px/1.2 var(--kropp);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:9px 4px 7px;min-height:58px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.bar button .ik{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bar button span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar button[aria-current="page"]{color:var(--aksent)}
+.bar button[aria-current="page"] .ik{stroke-width:2.2}
+body.onboarding .bar{display:none}
+body.onboarding{padding-bottom:env(safe-area-inset-bottom,0px)}
+#paisa-inn:empty{display:none}
+/* Verve-inngangen: samme rolige foyer, men handlingen er kontoen. Sannhetene som en kort liste med hake, ikke kort. */
+body.verve #intro-t,body.verve #intro-u,body.verve .foyer .cta{display:none !important}
+.verve h1{margin:18px 0 10px}
+.verve .lede{margin:0 0 14px;color:var(--dempet);font:500 16px/1.5 var(--kropp)}
+.verve .sannheter{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:10px}
+.verve .sannheter li{position:relative;padding-inline-start:28px;font:600 15px/1.45 var(--kropp)}
+.verve .sannheter li::before{content:"";position:absolute;inset-inline-start:2px;top:.3em;width:14px;height:8px;border-inline-start:2.5px solid var(--aksent);border-bottom:2.5px solid var(--aksent);transform:rotate(-45deg)}
+.verve .sannheter li:last-child::before{border-color:var(--tap)}
+.verve .knapp{width:100%}
+.verve .tekst-lenke{display:block;margin:12px auto 4px;background:none;border:0;color:var(--aksent);font:700 15px/1.3 var(--kropp);cursor:pointer;min-height:44px}
+.verve details.dhoka{margin-top:14px;border-top:1px solid var(--linje)}
+.verve details.dhoka summary{list-style:none;cursor:pointer;padding:14px 0;font:700 15px/1.35 var(--kropp);display:flex;justify-content:space-between;gap:10px}
+.verve details.dhoka summary::-webkit-details-marker{display:none}
+.verve details.dhoka summary::after{content:"+";color:var(--dempet);font:700 18px/1 var(--vis)}
+.verve details.dhoka[open] summary::after{content:"–"}
+.verve details.dhoka p{margin:0 0 14px;white-space:pre-line;font:500 14.5px/1.55 var(--kropp);color:var(--dempet)}
+/* Lederens to lenker: et rolig valg over lenka, ikke to like store knapper */
+.ldvalg{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:10px 0 6px;border:1px solid var(--linje2);border-radius:var(--r2);overflow:hidden}
+.ldvalg button{appearance:none;border:0;background:transparent;color:var(--dempet);font:700 13.5px/1.2 var(--kropp);padding:10px 8px;min-height:44px;cursor:pointer}
+.ldvalg button[aria-pressed="true"]{background:var(--flate2);color:var(--tekst)}
+.ldvalg-u{margin:0 0 10px;font:500 12.5px/1.4 var(--kropp);color:var(--dempet)}
+/* Hjelp inne i stegene (P2P, appene, Sonic-innstillinger): sammenleggbar, så steget selv står øverst */
+.vt details.hjelp{margin:14px 0;border:1px solid var(--linje);border-radius:var(--r2);padding:0 14px;background:var(--flate)}
+.vt details.hjelp > summary{font:800 14.5px/1.35 var(--kropp);color:var(--aksent)}
+.hjelp-inn{padding-bottom:12px}
+.hjelp-inn p{margin:0 0 8px;font:500 14.5px/1.5 var(--kropp)}
+.hjelp-steg{margin:8px 0;padding-inline-start:20px;display:grid;gap:10px}
+.hjelp-steg b{display:block;font:700 14.5px/1.4 var(--kropp);margin-bottom:2px}
+.hjelp-steg p{margin:0;color:var(--dempet);font:500 13.5px/1.5 var(--kropp)}
+.app-rad{padding:10px 0;border-bottom:1px solid var(--linje)}
+.tabell-rull{overflow-x:auto;margin:12px 0}
+.tabell-rull table.sammen{border-collapse:collapse;width:100%;font:600 13px/1.35 var(--kropp)}
+.tabell-rull th,.tabell-rull td{padding:8px 6px;border-bottom:1px solid var(--linje);text-align:start;vertical-align:top}
+.tabell-rull td{direction:ltr;unicode-bidi:isolate}
+.verdier{display:grid;gap:10px;margin-top:16px}
+.verdi{display:grid;grid-template-columns:34px 1fr;column-gap:10px;align-items:baseline}
+.verdi b{font:800 22px/1 var(--vis);color:var(--aksent);grid-row:span 2}
+.verdi span{font:800 15px/1.3 var(--kropp)}
+.verdi p{margin:0;font:500 13.5px/1.45 var(--kropp);color:var(--dempet)}
+.bunn .tekst-lenke{background:none;border:0;padding:0;color:var(--dempet);text-decoration:underline;font:600 13px/1.5 var(--kropp);text-align:start;cursor:pointer}
+/* Sekundærknapp overalt i detaljene: gradient er forbeholdt den ÉNE hovedhandlingen per skjerm (B-052) */
+.vt .knapp.sekund{background:transparent;color:var(--tekst);box-shadow:inset 0 0 0 1.5px var(--linje2)}
+.mer h3.mgruppe{margin:20px 0 2px;font:700 12.5px/1.3 var(--kropp);color:var(--dempet)}
+/* Regneverktøy: felt med etikett over, svar som tall-rad */
+.vfelt{display:grid;gap:5px;margin:10px 0;font:600 13px/1.3 var(--kropp);color:var(--dempet)}
+.vfelt input{appearance:none;width:100%;min-height:46px;padding:10px 12px;border-radius:var(--r2);border:1px solid var(--linje2);background:var(--flate);color:var(--tekst);font:700 17px/1.2 var(--kropp);direction:ltr;unicode-bidi:isolate}
+.vt-del{margin-top:26px;padding-top:18px;border-top:1px solid var(--linje)}
+.vt-del > small{display:block;margin:12px 0 6px;font:600 13px/1.3 var(--kropp);color:var(--dempet)}
+.fibliste{display:grid;margin:12px 0}
+.fibrad{display:flex;justify-content:space-between;padding:10px 2px;border-bottom:1px solid var(--linje);font:600 15px/1.3 var(--kropp);direction:ltr}
+.fibrad b{color:var(--dempet);font-weight:700}
+.fibrad.on{color:var(--aksent)} .fibrad.on b{color:var(--aksent)}
+.kurver{margin:12px 0;border-radius:var(--r2);background:var(--flate);padding:8px}
+.kurver svg{width:100%;height:auto;display:block}
+.kurver .kurve{fill:none;stroke:var(--dempet);stroke-width:.8;opacity:.45}
+.kurver .median{fill:none;stroke:var(--tekst);stroke-width:2.4}
+.kurver .ref{stroke:var(--linje2);stroke-width:1;stroke-dasharray:4 4}
+.kurver .ref.tap{stroke:var(--tap);opacity:.7}
+/* Stegtekst som delsteg: tall i egen sirkel, luft mellom, linjelengde holdt kort */
+.vt ol.delsteg{list-style:none;counter-reset:d;margin:6px 0 14px;padding:0;display:grid;gap:12px}
+.vt ol.delsteg li{counter-increment:d;position:relative;padding-inline-start:36px;font:500 15.5px/1.5 var(--kropp)}
+.vt ol.delsteg li::before{content:counter(d);position:absolute;inset-inline-start:0;top:1px;width:24px;height:24px;border-radius:50%;background:var(--flate2);color:var(--aksent);display:grid;place-items:center;font:800 12.5px/1 var(--vis)}
+.vt details.tafseel > summary{color:var(--dempet);font:700 14px/1.35 var(--kropp)}
+/* Paisa-oversikten: fem rader, ett sant svar hver. Samme rad-idiom som Mazeed, pluss en linje under navnet. */
+#paisa-inn{padding:8px var(--gutter) 0}
+#paisa-inn h2{margin:14px 0 6px}
+.paisa-rad{align-items:center}
+.paisa-rad .p-t{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0;text-align:start}
+.paisa-rad .p-t b{font:800 15.5px/1.25 var(--kropp);color:var(--tekst)}
+.paisa-rad .p-t small{font:600 12.5px/1.35 var(--kropp);color:var(--dempet);white-space:normal}
+/* Detaljene (i leksjonsrammen): tall-rad, søyler, steg-liste, FAQ */
+.vt .fakta{margin:12px 0;padding:0 0 0 18px;display:grid;gap:8px;font:600 14.5px/1.45 var(--kropp)}
+.vt .risiko{margin:14px 0;padding:12px 14px;border-radius:var(--r2);background:var(--flate2);border-inline-start:3px solid var(--tap);font:700 14px/1.45 var(--kropp);color:var(--tekst)}
+.vt .note{font:500 13.5px/1.5 var(--kropp);color:var(--dempet);margin:10px 0}
+.vt .kilde{display:inline-block;margin-top:10px;font:700 13px/1.3 var(--kropp);color:var(--aksent);text-decoration:underline}
+.tall5{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:10px;margin:14px 0}
+.tall5 .tall{background:var(--flate);border:1px solid var(--linje);border-radius:var(--r2);padding:10px 12px;display:grid;gap:3px}
+.tall5 .tall b{font:800 19px/1.1 var(--vis);letter-spacing:.01em;direction:ltr;unicode-bidi:isolate}
+.tall5 .tall small{font:600 11.5px/1.3 var(--kropp);color:var(--dempet)}
+.soyler{display:flex;align-items:flex-end;gap:3px;height:96px;margin:8px 0 4px;padding:0 2px;border-bottom:1px solid var(--linje2);direction:ltr}
+.soyler i{flex:1;min-width:0;background:var(--gevinst);border-radius:3px 3px 0 0;opacity:.85}
+.soyler i.tap{background:var(--tap)}
+.steg{list-style:none;margin:12px 0;padding:0;display:grid;gap:0}
+.steg li button{appearance:none;width:100%;background:none;border:0;border-bottom:1px solid var(--linje);color:var(--tekst);display:flex;align-items:center;gap:12px;padding:13px 0;font:600 15px/1.35 var(--kropp);text-align:start;cursor:pointer}
+.steg .nr{flex:0 0 30px;height:30px;border-radius:50%;border:1.5px solid var(--linje2);display:grid;place-items:center;font:800 13px/1 var(--vis);color:var(--dempet)}
+.steg li.ok .nr{background:var(--aksent);border-color:var(--aksent);color:var(--aksent-ink)}
+.steg li.ok button{color:var(--dempet);text-decoration:line-through;text-decoration-color:var(--linje2)}
+.vt details.faq{border-bottom:1px solid var(--linje);padding:4px 0}
+.vt details.faq summary{list-style:none;cursor:pointer;padding:12px 0;font:700 15px/1.35 var(--kropp);display:flex;justify-content:space-between;gap:10px}
+.vt details.faq summary::-webkit-details-marker{display:none}
+.vt details.faq summary::after{content:"+";color:var(--dempet);font:700 18px/1 var(--vis)}
+.vt details.faq[open] summary::after{content:"–"}
+.vt details.faq p{margin:0 0 14px;white-space:pre-line;font:500 14.5px/1.55 var(--kropp);color:var(--dempet)}
+/* Konto-stegene: faser som overskrift, steg som rader som åpner; i steget: sjekk deg selv, quiz, «Yeh ho gaya» */
+.vt h3.fase{margin:18px 0 4px;font:800 13px/1.3 var(--kropp);color:var(--dempet)}
+.steg li button .ik{margin-inline-start:auto;flex:0 0 20px;color:var(--svak)}
+.vt .sjekk{margin:14px 0;padding:12px 14px;border-radius:var(--r2);background:var(--flate);border:1px solid var(--linje);display:grid;gap:4px}
+.vt .sjekk b{font:800 13px/1.3 var(--kropp);color:var(--aksent)}
+.vt .sjekk p{margin:0;font:500 14.5px/1.5 var(--kropp)}
+.vt .quiz{margin:16px 0;display:grid;gap:8px}
+.vt .quiz > b{font:800 13px/1.3 var(--kropp);color:var(--dempet)}
+.vt .quiz .valg{display:grid;gap:8px}
+.vt .quiz .valg button{appearance:none;text-align:start;background:var(--flate);border:1px solid var(--linje2);border-radius:var(--r2);color:var(--tekst);padding:11px 14px;font:600 14.5px/1.4 var(--kropp);cursor:pointer}
+.vt .quiz .valg button.riktig{border-color:var(--gevinst);background:color-mix(in srgb,var(--gevinst) 14%,var(--flate))}
+.vt .quiz .valg button.feil{border-color:var(--tap)}
+.vt .flyt{list-style:none;margin:12px 0;padding:0;display:grid;gap:10px}
+.vt .flyt li{display:grid;grid-template-columns:88px 1fr;gap:10px;align-items:baseline;font:500 14.5px/1.45 var(--kropp)}
+.vt .flyt li b{font:800 13.5px/1.3 var(--kropp);color:var(--aksent)}
+.bunn button{text-align:start;color:var(--dempet);font:600 13.5px/1.4 var(--kropp);padding:8px 0;text-decoration:underline;text-underline-offset:3px}
+
+/* Leksjonsvisning (fullskjerm): tekst som tekst, én avspillerkontroll, valg med én form */
+.lek{position:fixed;inset:0;z-index:30;background:var(--blekk);overflow-y:auto;overscroll-behavior:contain;padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+.lek .hode{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top,0px)) var(--gutter) 10px;background:var(--blekk);border-bottom:1px solid var(--linje)}
+.lek .hode button{min-height:40px;display:inline-flex;align-items:center;gap:6px;padding:0 10px 0 4px;font:700 15px/1 var(--kropp);color:var(--aksent)}
+html[dir="rtl"] .lek .hode button .ik{transform:scaleX(-1)}
+.lek .hode b{font:800 16px/1.2 var(--kropp);flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.lek .hode small{color:var(--dempet);font:600 13px/1 var(--kropp)}
+.anim{position:relative;margin:14px auto 0;border-radius:var(--r);overflow:hidden;background:#070912;aspect-ratio:1080/1350;width:max(220px,min(calc(100% - 2 * var(--gutter)),calc((100vh - 150px) * .8)));width:max(220px,min(calc(100% - 2 * var(--gutter)),calc((100svh - 150px) * .8)))}   /* hele animasjonen innenfor skjermhøyden: iPad liggende og PC fikk den høyere enn skjermen (målt 20.10) */
+.anim iframe{position:absolute;top:0;left:0;width:1080px;height:1350px;border:0;transform-origin:0 0;pointer-events:none}
+.anim .start{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(7,11,20,.55);color:#fff;font:800 17px/1.2 var(--kropp)}
+.anim .start .ring{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#070912}
+.anim .start .ring .ik{width:32px;height:32px;stroke-width:2.2}
+.anim .igjen{position:absolute;inset-inline-end:10px;top:10px;min-height:40px;padding:0 12px;border-radius:var(--r2);background:rgba(7,11,20,.8);color:#fff;font:700 13.5px/1 var(--kropp);display:inline-flex;align-items:center;gap:6px}
+.fig{margin:14px var(--gutter) 0;padding:16px;border-radius:var(--r);background:var(--flate)}
+.fig svg{width:100%;height:auto;display:block;direction:ltr}
+.linjer{margin:20px var(--gutter) 0;display:grid;gap:14px}
+.linjer p{font:600 17px/1.55 var(--kropp);max-width:60ch}
+.lydnote{margin:12px var(--gutter) 0;color:var(--svak);font:600 13px/1.4 var(--kropp)}
+.lydfeil{margin-top:8px;color:var(--varsel);font:700 13.5px/1.4 var(--kropp)}
+.lyd{margin:16px var(--gutter) 0}
+.lydk{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;padding:8px 14px 8px 8px;background:var(--flate);border:0;border-radius:var(--r);font:700 15.5px/1.2 var(--kropp);text-align:start}
+.lydk .ik{width:40px;height:40px;padding:9px;border-radius:50%;background:var(--grad);color:#070B14;stroke-width:2.2}
+.lydk.on{color:var(--aksent)}
+.lydk.on .ik{background:var(--flate2);color:var(--aksent)}
+.prov{margin:26px var(--gutter) 0}
+.prov h3,.sporsmal h3{font:800 22px/1.1 var(--vis);font-stretch:80%;letter-spacing:-.02em;margin-bottom:12px}
+.pipr{display:grid;gap:12px;padding:16px;border-radius:var(--r);background:var(--flate)}
+.pipr .prad{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;padding:4px;border-radius:var(--r2);background:var(--flate2)}
+.pipr .prad button{min-height:40px;border-radius:6px;border:0;font:700 14px/1 var(--kropp);color:var(--dempet)}
+.pipr .prad button.on{background:var(--linje2);color:var(--tekst)}
+.pipr .ppris{font:700 1.5rem/1.3 var(--mono);text-align:center;white-space:nowrap;direction:ltr}
+.pipr .ppris b{padding:0 4px;border-radius:6px;background:var(--grad);color:#070912}
+.pipr input[type=range]{width:100%;min-height:36px;accent-color:var(--aksent)}
+.pipr .pres{font:700 1.2rem/1.3 var(--mono);text-align:center;direction:ltr}
+.pipr .pres.pos{color:var(--gevinst)} .pipr .pres.neg{color:var(--tap)}
+.pipr .pnote{font:600 13px/1.4 var(--kropp);color:var(--dempet);text-align:center}
+.pipr .pnote:empty{display:none}
+/* Kalkulator (#333): tool-sharp — tone, r 12/8, mono tall, ingen glass/gradient-stripe */
+.kalk{display:grid;gap:14px;padding:16px;border-radius:var(--r);background:var(--flate)}
+.kalk .kfelt{display:grid;gap:6px}
+.kalk .kfelt-t{font:600 13.5px/1.3 var(--kropp);color:var(--dempet)}
+.kalk label.kfelt{display:grid;gap:6px;font:600 13.5px/1.3 var(--kropp);color:var(--dempet)}
+.kalk input[type=number]{min-height:48px;padding:0 14px;border:1px solid var(--linje2);border-radius:var(--r2);background:var(--blekk);color:var(--tekst);font:700 18px/1 var(--mono);font-variant-numeric:tabular-nums;width:100%;direction:ltr}
+:root[data-theme="light"] .kalk input[type=number],:root[data-theme="light"] .jnf input,:root[data-theme="light"] .ldkode input,:root[data-theme="light"] .ldlink code,:root[data-theme="light"] .jn-res{background:var(--flate2)}
+.kalk .kinst,.kalk .krisk{display:flex;flex-wrap:wrap;gap:6px}
+.kalk .kinst button,.kalk .krisk button{min-height:40px;padding:0 12px;border-radius:var(--r2);border:1px solid var(--linje2);background:transparent;color:var(--tekst);font:700 13px/1 var(--mono);font-variant-numeric:tabular-nums;direction:ltr}
+.kalk .kinst button.on,.kalk .krisk button.on{border-color:var(--aksent);color:var(--aksent-ink);background:var(--aksent)}
+.kalk .ut{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kalk .ut .lotv{grid-column:1 / -1}
+.kalk .ut > div{padding:12px;border-radius:var(--r2);border:1px solid var(--linje);background:transparent}
+.kalk .ut .lotv{border-color:var(--linje2);background:var(--flate2)}
+.kalk .ut small{display:block;font:600 12px/1.3 var(--kropp);color:var(--dempet)}
+.kalk .ut b.tall,.kalk .ut b{display:block;margin-top:6px;font:700 20px/1.15 var(--mono);font-variant-numeric:tabular-nums;direction:ltr;letter-spacing:-.01em}
+.kalk .ut .lotv b{font-size:24px;color:var(--tekst)}
+.kalk .ut .tapv b{color:var(--tap)}
+.kalk .ut .riskv b{color:var(--aksent)}
+.kalk .kfloor{margin:0;font:600 13px/1.4 var(--kropp);color:var(--varsel)}
+.kalk .kfloor[hidden]{display:none}
+.kalk .kformel{margin:0;font:600 12.5px/1.45 var(--mono);color:var(--svak);direction:ltr}
+.kalk .knote{margin:0;font:600 13px/1.45 var(--kropp);color:var(--dempet)}
+/* Verktøy */
+.vt{margin:14px var(--gutter) 0}
+.vt .under{color:var(--dempet);font:600 14px/1.45 var(--kropp);margin-bottom:12px}
+.vt h3{font:800 22px/1.1 var(--vis);font-stretch:80%;letter-spacing:-.02em;margin:24px 0 10px}
+/* Journal: form = tool-flate; lukkede rader = liste med skillelinjer (ikke like kort) */
+.jnf{display:grid;gap:10px;padding:16px;border-radius:var(--r);background:var(--flate)}
+.jnf label{display:grid;gap:6px;font:600 13.5px/1.3 var(--kropp);color:var(--dempet)}
+.jnf input[type=text],.jnf input[type=number]{min-height:48px;padding:0 14px;border:1px solid var(--linje2);border-radius:var(--r2);background:var(--blekk);color:var(--tekst);font:700 16px/1 var(--kropp);width:100%}
+.jnf input[type=number]{font-family:var(--mono);font-variant-numeric:tabular-nums;direction:ltr}
+.jnf .to{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.jnf .prad{display:flex;gap:6px;flex-wrap:wrap}
+.jnf .prad button{flex:1;min-height:44px;border-radius:var(--r2);border:1px solid var(--linje2);font:700 14px/1 var(--kropp)}
+.jnf .prad button.on{background:var(--linje2);border-color:transparent;color:var(--tekst)}
+.jnf .knapp{min-height:52px}
+.jnstat{margin-top:14px;display:grid;gap:4px;font:600 14px/1.5 var(--kropp);color:var(--dempet)}
+.jnstat b{font:700 22px/1.2 var(--mono);color:var(--tekst);font-variant-numeric:tabular-nums}
+.jnstat b.pos{color:var(--gevinst)} .jnstat b.neg{color:var(--tap)}
+.jnl{display:grid;gap:0;margin-top:4px}
+.jnr{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:14px 0;border-bottom:1px solid var(--linje);background:transparent;border-radius:0}
+.jnr:last-child{border-bottom:0}
+.jnr b{font:700 15px/1.3 var(--kropp)}
+.jnr .r{font:700 16px/1.3 var(--mono);text-align:end;direction:ltr;font-variant-numeric:tabular-nums}
+.jnr .r.pos{color:var(--gevinst)} .jnr .r.neg{color:var(--tap)}
+.jnr small{grid-column:1/-1;color:var(--dempet);font:600 13px/1.4 var(--kropp)}
+.jnr .hv{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.jnr .hv button{min-height:40px;padding:0 14px;border:1px solid var(--linje2);border-radius:var(--r2);font:700 13.5px/1 var(--kropp)}
+.jnr .hv button.hoved{background:var(--grad);color:#070912;border-color:transparent}
+.jnr .hv button.farlig{color:var(--tap);border-color:transparent;background:transparent}
+.jn-res{flex:1 1 140px;min-height:40px;padding:0 10px;border:1px solid var(--linje2);border-radius:var(--r2);background:var(--blekk);color:var(--tekst);font:600 14px/1 var(--mono);font-variant-numeric:tabular-nums;direction:ltr}
+.jn-feels button.hoved{background:var(--aksent);color:var(--aksent-ink);border-color:transparent}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;padding:12px 18px;border-radius:var(--r);background:var(--tekst);color:var(--blekk);font:700 14px/1 var(--kropp);opacity:0;transition:opacity .2s;pointer-events:none;max-width:min(92vw,420px);white-space:normal;text-align:center}
+.toast.vis{opacity:1}
+/* #334: Ny person-bekreftelse + gjenoppretting + iOS Home Screen (v2 tokens, ingen glass/pill/glow) */
+.bekref{position:fixed;inset:0;z-index:55;background:rgba(7,11,20,.72);display:flex;align-items:flex-end;justify-content:center;padding:0}
+.bekref[hidden]{display:none !important}
+.bekref .ark{width:100%;max-width:var(--maks);background:var(--flate);border-radius:var(--r) var(--r) 0 0;padding:22px var(--gutter) calc(22px + env(safe-area-inset-bottom,0px));display:grid;gap:14px}
+.bekref .ark p{margin:0;font:600 15px/1.45 var(--kropp);color:var(--dempet)}
+.bekref .ark .rad{display:flex;gap:10px;flex-wrap:wrap}
+.bekref .ark .rad .knapp{flex:1 1 40%;min-height:52px}
+.bekref .ark .rad .sekund{background:transparent;color:var(--tekst);box-shadow:inset 0 0 0 1.5px var(--linje2)}
+.gjen-box{display:grid;gap:12px;padding:16px;border-radius:var(--r);background:var(--flate)}
+.gjen-kode{display:block;padding:14px;border-radius:var(--r2);background:var(--blekk);font:700 15px/1.45 var(--mono);letter-spacing:.04em;direction:ltr;text-align:left;word-break:break-all;color:var(--tekst);user-select:all;-webkit-user-select:all}
+.gjen-box code.gjen-lenke{display:block;padding:12px 14px;border-radius:var(--r2);background:var(--blekk);font:600 12.5px/1.4 var(--mono);direction:ltr;text-align:left;word-break:break-all;color:var(--dempet)}
+.gjen-box .rad{display:flex;gap:8px;flex-wrap:wrap}
+.gjen-box .rad button{flex:1 1 40%;min-height:48px;border-radius:var(--r2);border:0;font:700 14.5px/1 var(--kropp);background:var(--flate2);color:var(--tekst)}
+.gjen-box .rad button.hoved{background:var(--grad);color:#070912}
+.gjen-paste{display:grid;gap:8px;margin-top:4px}
+.gjen-paste textarea{min-height:88px;padding:12px 14px;border:1px solid var(--linje2);border-radius:var(--r2);background:var(--blekk);color:var(--tekst);font:600 14px/1.4 var(--mono);direction:ltr;resize:vertical;width:100%}
+.gjen-paste .knapp{min-height:52px}
+.gjen-qr{margin-top:4px;padding:14px;border-radius:var(--r2);background:#fff;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:8px}
+.gjen-qr p{margin:0;color:#0B1630;font:700 12.5px/1.35 var(--kropp);text-align:center;max-width:22ch}
+.ios-guide{display:grid;gap:14px;margin-top:4px}
+.ios-steg{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--linje)}
+.ios-steg:last-of-type{border-bottom:0}
+.ios-fig{width:56px;height:56px;border-radius:var(--r2);background:var(--flate);display:flex;align-items:center;justify-content:center;color:var(--aksent)}
+.ios-fig svg{width:32px;height:32px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ios-steg b{display:block;font:800 15px/1.3 var(--kropp);margin-bottom:4px}
+.ios-steg span{display:block;font:600 13.5px/1.4 var(--kropp);color:var(--dempet)}
+.ios-note{margin:8px 0 0;font:600 13px/1.45 var(--kropp);color:var(--svak)}
+/* Lederverktøy (#333): toolbox-first, tone, r 12/8, én gradient-CTA (copy) */
+.ldkit h3{margin:4px 0 10px;font:800 16px/1.3 var(--kropp)}
+.ldkit .ldkit-hode h3{margin-top:0;font:800 var(--t3)/1.2 var(--vis);font-stretch:80%;letter-spacing:-.02em}
+.ldkit .tom{color:var(--dempet);font:600 15px/1.45 var(--kropp);padding:8px 0 4px}
+.ldlink{display:grid;gap:10px;padding:16px;border-radius:var(--r);background:var(--flate)}
+.ldlink .navn{display:flex;align-items:center;gap:10px;font:800 17px/1.2 var(--kropp)}
+.ldlink .navn .ok{color:var(--aksent);font:700 14px/1 var(--kropp)}
+.ldlink > small{font:600 13px/1.3 var(--kropp);color:var(--dempet)}
+.ldlink code{display:block;padding:12px 14px;border-radius:var(--r2);background:var(--blekk);font:600 13.5px/1.4 var(--mono);direction:ltr;text-align:left;word-break:break-all;color:var(--dempet)}
+.ldlink .rad{display:flex;gap:8px;flex-wrap:wrap}
+.ldlink .rad button{flex:1 1 30%;min-height:46px;border-radius:var(--r2);border:0;font:700 14.5px/1 var(--kropp);background:var(--flate2);color:var(--tekst)}
+.ldlink .rad button.hoved{background:var(--grad);color:#070912}
+.ldaksjoner-sek button{background:transparent;border:1px solid var(--linje2) !important;color:var(--tekst)}
+.ldqr{margin-top:4px;padding:14px;border-radius:var(--r2);background:#fff;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:8px}
+.ldqr.skjul,.ldprev.skjul{display:none}
+.ldqr-scan{margin:0;color:#0B1630;font:700 12.5px/1.35 var(--kropp);text-align:center;max-width:22ch}
+.ldnote{margin:4px 0 0;color:var(--svak);font:600 12.5px/1.4 var(--kropp)}
+.ldmin{margin-top:18px;border-radius:var(--r);padding:4px 14px 12px;background:var(--flate)}
+.ldmin summary{cursor:pointer;list-style:none;font:800 15px/1.3 var(--kropp);padding:12px 0;color:var(--tekst)}
+.ldmin summary::-webkit-details-marker{display:none}
+.ldmin[open] summary{border-bottom:1px solid var(--linje);margin-bottom:10px}
+.ldmin .under{margin:0 0 10px;font:600 13.5px/1.45 var(--kropp);color:var(--dempet)}
+.ldkode{display:flex;gap:8px;margin-top:4px}
+.ldkode input{flex:1;min-width:0;min-height:48px;padding:0 14px;border:1px solid var(--linje2);border-radius:var(--r2);background:var(--blekk);color:var(--tekst);font:700 18px/1 var(--mono);letter-spacing:.12em;text-transform:lowercase;direction:ltr}
+.ldkode button{flex:0 0 auto;min-height:48px;padding:0 18px;border-radius:var(--r2);background:var(--grad);color:#070912;font:800 15px/1 var(--kropp)}
+.ldfeil{margin-top:8px;color:var(--tap);font:600 14px/1.4 var(--kropp);min-height:1.4em}
+.ldaapne{margin:0;color:var(--dempet);font:700 13px/1.4 var(--kropp)}
+.ldbio{margin-top:8px;padding:14px 0 0;border-top:1px solid var(--linje);display:grid;gap:8px;background:transparent;border-radius:0}
+.ldbio b{font:800 15px/1.3 var(--kropp)}
+.ldbio p{margin:0;color:var(--dempet);font:600 13.5px/1.45 var(--kropp)}
+.ldbio button{min-height:44px;border-radius:var(--r2);border:1px solid var(--linje2);font:700 14.5px/1 var(--kropp);background:transparent;color:var(--tekst)}
+#inapp-bar{position:sticky;top:0;z-index:70;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0B2341;color:#F4F7FB;font:600 13.5px/1.35 var(--kropp);border-bottom:1px solid rgba(94,230,214,.25)}
+#inapp-bar[hidden]{display:none !important}
+#inapp-bar #inapp-t{flex:1 1 160px;margin:0}
+#inapp-bar a,#inapp-bar button{appearance:none;min-height:40px;padding:0 14px;border-radius:var(--r2);border:0;font:800 13.5px/1 var(--kropp);text-decoration:none;display:inline-flex;align-items:center}
+#inapp-bar #inapp-go{background:var(--grad);color:#070912}
+#inapp-bar #inapp-ios{background:transparent;color:#5EE6D6;border:1px solid rgba(94,230,214,.4);padding:8px 0;min-height:0;font-weight:700}
+#inapp-bar #inapp-x{background:transparent;color:rgba(244,247,251,.7);padding:0 8px;min-height:36px}
+/* #266-port: mens språkporten er åpen i IAB, banner over porten (z 130) og port skyves/rulles så alle valg nås */
+html.portaapen #inapp-bar:not([hidden]){position:fixed;left:0;right:0;top:0;z-index:130;margin:0;padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+html.portaapen #inapp-bar:not([hidden]) #inapp-t{font-size:13px;line-height:1.35}
+html.portaapen.iabvis #port{padding-top:calc(var(--iabh, 0px) + 12px);overflow-y:auto;overscroll-behavior:contain;justify-content:flex-start}
+html.portaapen.iabvis #port .portmerke{margin-top:8px}
+/* Banneret er sticky øverst (z 70): leksjonshodet og lederforhåndsvisningen er også sticky top:0 og lå BAK det –
+   tilbake-knappen var dekket av bannerteksten på 360 px (målt 21.10). De må begynne under banneret. */
+html.iabvis .lek .hode,html.iabvis .ldprev-chrome{top:var(--iabh,0px)}
+.ldaksjoner{flex-wrap:wrap}
+.lddekhe{margin-top:0;min-height:46px;flex:1 1 45%;border-radius:var(--r2);font:700 15px/1 var(--kropp);background:var(--flate2);color:var(--tekst);border:0}
+/* Preview open = one composition; invite chrome hidden until soft exit (#325 on v2) */
+.ldprev-wrap{margin-top:10px}
+.ldprev-wrap.skjul{display:none}
+.ldkit.ldprev-aapen .ldlink{border:0;padding:0;background:transparent;border-radius:0;gap:0}
+.ldkit.ldprev-aapen .ldlink > :not(.ldprev-wrap):not(.ldqr){display:none !important}
+.ldkit.ldprev-aapen .ldprev-wrap{display:block;margin:0}
+.ldkit.ldprev-aapen .ldmin,.ldkit.ldprev-aapen .ldhub,
+.ldkit.ldprev-aapen .ldkit-hode,.ldkit.ldprev-aapen > .under{display:none !important}
+.ldprev{display:grid;gap:0;padding:0;border:0;background:transparent;border-radius:0}
+.ldprev-chrome{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:8px 2px 12px;border-bottom:1px solid var(--linje);position:sticky;top:0;z-index:3;background:var(--blekk)}
+.ldprev-eyebrow{margin:0;font:700 13.5px/1.3 var(--kropp);color:var(--svak);flex:1;min-width:0;letter-spacing:0;text-transform:none}
+.ldprev-tilbake{appearance:none;flex:0 0 auto;min-height:36px;padding:0;border:0;border-radius:0;background:transparent;color:var(--aksent);font:700 13.5px/1.2 var(--kropp);display:inline-flex;align-items:center;gap:4px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.ldprev-tilbake .ik{width:15px;height:15px;flex:0 0 auto}
+html[dir="rtl"] .ldprev-tilbake .ik{transform:scaleX(-1)}
+.ldprev-hint{margin:8px 0 0;color:var(--svak);font:600 12.5px/1.4 var(--kropp);max-width:36ch}
+.ldprev-foyer{display:flex;flex-direction:column;gap:0;margin-top:12px;padding:18px 2px 8px;border:0;border-radius:0;background:transparent}
+.ldprev-merke{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ldprev-merke img{width:36px;height:36px}
+.ldprev-merke b{font:800 14px/1 var(--kropp);letter-spacing:.14em}
+.ldprev-merke b span{font-weight:600;color:var(--dempet)}
+.ldprev-strip{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.ldprev-strip .avi{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:800 14px/1 var(--kropp);color:#070B14;background:var(--grad);flex:0 0 auto}
+.ldprev-strip .txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.ldprev-strip small{font:600 12px/1.3 var(--kropp);color:var(--dempet)}
+.ldprev-strip b{font:700 15px/1.2 var(--kropp);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ldprev-trygg{margin:0 0 14px;font:600 13px/1.4 var(--kropp);color:var(--dempet)}
+.ldprev-lede{margin:0;font:800 var(--t1)/1.08 var(--vis);font-stretch:80%;letter-spacing:-.02em;max-width:15ch}
+html[lang="ur"] .ldprev-lede,html[lang="ar"] .ldprev-lede,html[lang="hi"] .ldprev-lede{letter-spacing:0;max-width:17ch;line-height:1.35}
+.ldprev-lede-u{margin:10px 0 0;color:var(--dempet);font:600 15px/1.45 var(--kropp);max-width:32ch}
+.ldprev-cta{display:inline-flex;align-items:center;margin-top:18px;min-height:48px;padding:0 18px;border-radius:var(--r);background:var(--grad);color:#070B14;font:800 15px/1 var(--kropp);width:fit-content;max-width:100%}
+.ldprev-aksjoner{margin-top:16px;padding-top:12px;border-top:1px solid var(--linje)}
+.ldprev-open{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0;border:0;border-radius:0;font:700 14.5px/1.3 var(--kropp);text-decoration:underline;text-underline-offset:3px;color:var(--aksent);background:transparent}
+.ldhub{margin-top:22px;padding-top:8px;border-top:1px solid var(--linje)}
+.ldhub .under{margin-bottom:10px}
+.ldhub-link{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 16px;margin-top:0;border-radius:var(--r);background:var(--flate);color:var(--aksent);font:700 15px/1.3 var(--kropp);text-decoration:none}
+.ldkit-extra:empty{display:none}
+.sporsmal{margin:26px var(--gutter) 0}
+.sporsmal p.q{font:600 18px/1.45 var(--kropp)}
+.valg{margin-top:12px;display:grid;gap:8px}
+.valg button{min-height:54px;padding:0 16px;border:0;border-radius:var(--r);text-align:start;font:700 16px/1.3 var(--kropp);background:var(--flate)}
+.valg button.riktig{background:rgba(251,225,107,.12);color:var(--gull);box-shadow:inset 0 0 0 1.5px rgba(251,225,107,.55)}
+.valg button.feil{background:rgba(255,77,109,.10);color:var(--tap);box-shadow:inset 0 0 0 1.5px rgba(255,138,142,.45)}
+:root[data-theme="light"] .valg button.riktig{background:rgba(154,116,0,.10)}
+.svar{margin-top:12px;font:600 15px/1.5 var(--kropp);min-height:1.5em}
+.svar b{font-weight:800}
+.nesteknapp{margin:22px var(--gutter) 0}
+/* «Jeg står fast» → WhatsApp / Element (soft-fail) */
+.stuck{margin:26px var(--gutter) 28px;padding-top:18px;border-top:1px solid var(--linje)}
+.stuckb{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:48px;padding:0 18px;border-radius:var(--r);border:0;background:var(--flate);font:700 15.5px/1.2 var(--kropp);color:var(--tekst)}
+.stuckhint{margin-top:10px;font:600 12.5px/1.45 var(--kropp);color:var(--svak)}
+.stucksoft{margin-top:10px;padding:10px 12px;border-radius:var(--r2);background:rgba(255,77,109,.10);font:600 13px/1.45 var(--kropp);color:var(--tekst)}
+.stuckmeny{margin-top:12px;display:grid;gap:8px}
+.stuckmeny a,.stuckmeny button{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 16px;border-radius:var(--r2);border:0;background:var(--flate2);font:700 15px/1.2 var(--kropp);text-decoration:none;color:var(--tekst);cursor:pointer}
+.stuckmeny a.wa{color:#25D366}
+.stuckmeny a.el{color:var(--aksent)}
+</style>
+</head>
+<body>
+<div id="inapp-bar" hidden role="status">
+  <p id="inapp-t"></p>
+  <a id="inapp-go" hidden rel="noopener"></a>
+  <span id="inapp-ios" hidden></span>
+  <button type="button" id="inapp-x" aria-label="Close">×</button>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M14.5 6L8.5 12l6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M4 20l6-6M14 4l6 6-4 4-6-6z"/><path d="M4 20l2 0 0-2"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5c3 0 6 2 6 5.5"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L13 19V5L7.5 9.5z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4z"/><path d="M20 5.5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V4"/><path d="M8.5 7.5L12 4l3.5 3.5"/><path d="M5 12v7a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19v-7"/></symbol>
+  <symbol id="i-replay" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.5-5.8"/><path d="M4 4v5h5"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="M9.5 6l6 6-6 6"/></symbol>
+  <symbol id="i-kart" viewBox="0 0 24 24"><path d="M9 4L3 6.5V20l6-2.5 6 2.5 6-2.5V4l-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path d="M6 4h10l4 4v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20V5.5A1.5 1.5 0 0 1 5.5 4z"/><path d="M8 4v5h8V4"/><path d="M8 18h8"/></symbol>
+  <symbol id="i-paisa" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="2.5"/><path d="M3 11h18"/><circle cx="16.5" cy="15" r="1.3"/></symbol>
+  <symbol id="i-mazeed" viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11.5L12 4l8 7.5"/><path d="M7 10.5V20h10v-9.5"/></symbol>
+</svg>
+
+<section class="port skjul" id="port" aria-labelledby="port-t">
+  <div class="portmerke"><img src="ap-gradient-96.png" alt="" width="36" height="36"><b>AIM<span>PIRE</span></b></div>
+  <p class="portlinje">Hum mil kar trading seekhte hain · We learn trading together</p>
+  <h1 id="port-t"></h1>
+  <div id="port-valg" style="display:grid;gap:10px"></div>
+</section>
+
+<header class="topp">
+  <a class="merke" href="./" aria-label="Aimpire"><img src="ap-gradient-96.png" alt="" width="30" height="30"><b>AIM<span>PIRE</span></b></a>
+  <div class="hoyre">
+    <button class="pille" id="sprak" type="button"></button>
+    <button class="pille" id="tema" type="button" aria-label="Light / dark">◐</button>
+  </div>
+</header>
+
+<main id="hjem">
+  <!-- B-055: fire steder rundt medlemmets spørsmål. Ghar: hvem sendte meg, hva er dette, hva nå. -->
+  <div class="side" id="side-ghar">
+  <section class="foyer" id="intro" aria-labelledby="intro-t">
+    <section class="leder" id="leder"></section>
+    <div class="trygg"><svg class="ik"><use href="#i-shield"/></svg><span id="trygg"></span></div>
+    <!-- B-055 verve-inngang (?v=1): hvem inviterte deg · hva det er · tre sannheter · én knapp · «er dette svindel?» -->
+    <div class="verve" id="verve" hidden></div>
+    <h1 id="intro-t"></h1>
+    <p class="lede" id="intro-u"></p>
+    <div class="cta">
+      <button type="button" class="knapp" id="foyer-cta"></button>
+      <p class="foyer-cta-hint" id="foyer-cta-hint"></p>
+      <p class="foyer-guide-tilbake" id="foyer-guide-tilbake" hidden></p>
+      <!-- B-030: ærlig % nær primær CTA (synlig også i onboarding; .risk/.reg-gate er skjult da) -->
+      <p class="foyer-risk" id="foyer-risk" role="note"></p>
+      <!-- #288/#285: lær-først — soft-låst til 3 leksjoner / uke 1; kun validRef-URL -->
+      <a class="knapp sekund" id="foyer-reg" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
+      <button type="button" class="tekst-lenke" id="foyer-del" hidden></button>
+      <a class="call-chip" id="foyer-call" href="#call"><span class="ikon"><svg class="ik"><use href="#i-cal"/></svg></span><span id="foyer-call-l"></span><strong id="foyer-call-om"></strong><svg class="ik chev"><use href="#i-next"/></svg></a>
+    </div>
+  </section>
+
+  <section class="call" id="call" aria-live="polite">
+    <span class="live"><i></i>LIVE</span>
+    <h2 id="call-t"></h2>
+    <div class="tid" id="call-tid"></div>
+    <div class="om" id="call-om"></div>
+    <div class="lenke" id="call-lenke"></div>
+    <p class="browser" id="call-browser"></p>
+    <p class="soft skjul" id="call-soft" hidden></p>
+    <div class="lenker"><a id="call-join" href="#" target="_blank" rel="noopener noreferrer"></a><a id="call-grp" href="#" target="_blank" rel="noopener noreferrer"></a><a id="call-ics" href="call.ics" download="aimpire-call.ics"></a></div>
+    <div class="oppsum" id="call-oppsum" hidden></div>
+  </section>
+  <section class="sawal skjul" id="sawal">
+    <h2 id="sawal-t"></h2>
+    <p class="under" id="sawal-u"></p>
+    <ol id="sawal-liste"></ol>
+    <button type="button" class="pille" id="sawal-kopi"></button>
+  </section>
+
+  </div>
+  <!-- Academy: de 20 leksjonene, urørt -->
+  <div class="side" id="side-academy" hidden>
+  <section class="uke" id="uke1">
+    <h2 id="uke-t"></h2>
+    <p class="under" id="uke-u"></p>
+    <div class="frem" id="frem1" hidden><div class="bar"><i></i></div><span class="tall"></span></div>
+    <ol class="skinne" id="skinne"></ol>
+  </section>
+  <section class="uke" id="uke2">
+    <h2 id="uke2-t"></h2>
+    <p class="under" id="uke2-u"></p>
+    <div class="frem" id="frem2" hidden><div class="bar"><i></i></div><span class="tall"></span></div>
+    <ol class="skinne" id="skinne2"></ol>
+  </section>
+  <section class="uke" id="uke3">
+    <h2 id="uke3-t"></h2>
+    <p class="under" id="uke3-u"></p>
+    <div class="frem" id="frem3" hidden><div class="bar"><i></i></div><span class="tall"></span></div>
+    <ol class="skinne" id="skinne3"></ol>
+  </section>
+  <section class="uke" id="uke4">
+    <h2 id="uke4-t"></h2>
+    <p class="under" id="uke4-u"></p>
+    <div class="frem" id="frem4" hidden><div class="bar"><i></i></div><span class="tall"></span></div>
+    <ol class="skinne" id="skinne4"></ol>
+  </section>
+
+  <section class="sek" id="dohr">
+    <h2 id="dohr-t"></h2>
+    <p class="under" id="dohr-u"></p>
+    <div id="dohr-liste"></div>
+  </section>
+
+  <section class="sek">
+    <h2 id="frem-t"></h2>
+    <div class="kart" id="kart"></div>
+  </section>
+
+  </div>
+  <!-- Paisa: forstå → sjekke → regne → gjøre → få ut. Risikoen ligger her, der beslutningen tas. -->
+  <div class="side" id="side-paisa" hidden>
+    <div id="paisa-inn"></div>
+  <section class="risk">
+    <h2 id="risk-t"></h2>
+    <div class="figurer" id="figurer" aria-hidden="true"></div>
+    <p id="risk-b"></p>
+    <small id="risk-k"></small>
+  </section>
+  <!-- Academy-først gate: konto-CTA soft-låst til 3 Academy-leksjoner / uke 1. Ingen innskuddssteg. -->
+  <section class="reg-gate" id="reg-gate" aria-labelledby="reg-gate-t">
+    <h2 id="reg-gate-t"></h2>
+    <p class="gate-risk" id="reg-gate-risk"></p>
+    <div class="figurer" id="reg-figurer" aria-hidden="true"></div>
+    <small class="kilde" id="reg-kilde"></small>
+    <a class="knapp" id="reg" href="#" target="_blank" rel="noopener noreferrer"></a>
+    <small id="reg-u"></small>
+    <a class="guide" id="reg-guide" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
+  </section>
+
+  </div>
+  <!-- Mazeed: resten – når medlemmet leter -->
+  <div class="side" id="side-mazeed" hidden>
+  <details class="mk-box" id="mk">
+    <summary id="mk-t"></summary>
+    <div class="mk-body">
+      <p class="under" id="mk-u"></p>
+      <div class="byer" id="byer"></div>
+      <p class="mknote" id="mk-n"></p>
+    </div>
+  </details>
+
+  <section class="mer">
+    <h2 id="mer-t"></h2>
+    <!-- B-055: Mazeed i fire grupper – medlemmet leter etter «noe å lære med», «hjelp», «mitt», «venner» – ikke elleve rader på rad -->
+    <h3 class="mgruppe" id="mg-laer"></h3>
+    <button class="rad-lenke" id="l-journal" type="button"><svg class="ik"><use href="#i-book"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <button class="rad-lenke" id="l-tapsrekke" type="button"><svg class="ik"><use href="#i-replay"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <button class="rad-lenke" id="l-fib" type="button"><svg class="ik"><use href="#i-tools"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <h3 class="mgruppe" id="mg-madad"></h3>
+    <button class="rad-lenke" id="l-faq" type="button"><svg class="ik"><use href="#i-kart"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <button class="rad-lenke" id="l-halal" type="button"><svg class="ik"><use href="#i-book"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <button class="rad-lenke" id="l-madad" type="button"><svg class="ik"><use href="#i-people"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <h3 class="mgruppe" id="mg-apna"></h3>
+    <button class="rad-lenke" id="l-gjen" type="button"><svg class="ik"><use href="#i-save"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <button class="rad-lenke" id="l-ios" type="button"><svg class="ik"><use href="#i-home"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <h3 class="mgruppe" id="mg-dost"></h3>
+    <button class="rad-lenke" id="l-del" type="button"><svg class="ik"><use href="#i-share"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <button class="rad-lenke" id="l-ledere" type="button"><svg class="ik"><use href="#i-people"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+    <!-- Verving: valgfritt og sist (B-013) – aldri i samme løp som det et nytt medlem må forstå -->
+    <button class="rad-lenke" id="l-verve" type="button"><svg class="ik"><use href="#i-share"/></svg><span></span><svg class="ik"><use href="#i-next"/></svg></button>
+  </section>
+
+  <footer class="bunn">
+    <span id="fot"></span>
+    <button type="button" class="tekst-lenke" id="l-juridisk"></button>
+    <button type="button" id="bytt"></button>
+  </footer>
+  </div>
+</main>
+<!-- B-055: fast bunnmeny – fire steder, fire korte ord som får plass på 320 px i alle seks språk. Ikke sju faner (#240). -->
+<nav class="bar" id="bar" aria-label="Aimpire">
+  <button type="button" data-side="ghar" aria-current="page"><svg class="ik"><use href="#i-home"/></svg><span></span></button>
+  <button type="button" data-side="academy"><svg class="ik"><use href="#i-book"/></svg><span></span></button>
+  <button type="button" data-side="paisa"><svg class="ik"><use href="#i-paisa"/></svg><span></span></button>
+  <button type="button" data-side="mazeed"><svg class="ik"><use href="#i-mazeed"/></svg><span></span></button>
+</nav>
+
+<div class="bekref" id="bekref" hidden role="dialog" aria-modal="true" aria-labelledby="bekref-t">
+  <div class="ark">
+    <p id="bekref-t"></p>
+    <div class="rad">
+      <button type="button" class="knapp" id="bekref-ja"></button>
+      <button type="button" class="knapp sekund" id="bekref-nei"></button>
+    </div>
+  </div>
+</div>
+
+<section class="lek skjul" id="lek" role="dialog" aria-modal="true"></section>
+
+<script src="app.js" defer></script>
+<!-- #291: SW bare for denne mappa (scope ./). Kapper aldri hub `/` — se sw.js + #258. -->
+<script>
+if("serviceWorker" in navigator){
+  window.addEventListener("load", function(){
+    navigator.serviceWorker.register("sw.js", { scope: "./" }).catch(function(){});
+  });
+}
+</script>
+</body>
+</html>

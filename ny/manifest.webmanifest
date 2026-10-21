@@ -1,0 +1,19 @@
+{
+  "name": "Aimpire Academy",
+  "short_name": "Aimpire",
+  "description": "Hum mil kar seekhte hain – har hafte ek call, chhote sabaq, apni journal.",
+  "id": "./",
+  "start_url": "./?src=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A0C14",
+  "theme_color": "#070B14",
+  "lang": "ur",
+  "dir": "auto",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

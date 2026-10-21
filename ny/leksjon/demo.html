@@ -1,0 +1,130 @@
+<!doctype html><html lang="ur-Latn"><head><meta charset="utf-8">
+<title>Demo account kyun – animasjon</title>
+<!-- «Demo account kyun?» på Roman Urdu (uke 2, leksjon 4). Fasit: UTTREKK §4 – under 20 trades = bare tendens; demo = ekte priser,
+     lekepenger, gratis på MT5; forskjellen er frykt. Fire scener i takt med stemmen (felles/takt.js): den tomme plassen · en test,
+     ikke underholdning (20 trades inn i journalen) · én forskjell: frykt · ekte starter med bitte liten lot. 1080×1350. Ingen råd (B-030). -->
+<style>
+/* SKRIFT-START (tools/lag_skrift.py – ikke rediger for hånd) */
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(../skrift/montserrat-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(../skrift/montserrat-latin-ext.woff2) format('woff2');unicode-range:U+0100-017F,U+02BF,U+1E24-1E25,U+1E6C-1E6D,U+2190-2199,U+21BB,U+2212,U+221E,U+2248,U+2260,U+22EE-22EF}
+@font-face{font-family:'Noto Nastaliq Urdu';font-style:normal;font-weight:400 700;font-display:swap;src:url(../skrift/noto-nastaliq-urdu-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200F,U+2010-2011,U+204F,U+25CC}
+@font-face{font-family:'Noto Sans Devanagari';font-style:normal;font-weight:400 800;font-display:swap;src:url(../skrift/noto-sans-devanagari-devanagari.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF}
+@font-face{font-family:'Noto Naskh Arabic';font-style:normal;font-weight:400 700;font-display:swap;src:url(../skrift/noto-naskh-arabic-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200F,U+2010-2011,U+204F,U+25CC}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:800 900;font-stretch:72% 80%;font-display:swap;src:url(../skrift/archivo-smal-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:700 800;font-display:swap;src:url(../skrift/jetbrains-mono-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* SKRIFT-SLUTT */
+</style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;background:#070912;overflow:hidden;font-family:'Montserrat',sans-serif;color:#F4F2F8}
+.glod{position:absolute;inset:0;background:radial-gradient(700px 500px at 85% 0%,rgba(194,31,191,.26),transparent 62%),radial-gradient(800px 600px at 0% 100%,rgba(27,79,216,.28),transparent 60%),linear-gradient(180deg,#0A0D1C,#070912)}
+.inn{position:absolute;inset:0;padding:60px 72px}
+.topp{display:flex;align-items:center;gap:14px}.topp img{width:50px;height:50px}.merke{font:800 25px/1 'Montserrat';letter-spacing:.16em}.merke span{font-weight:600;opacity:.7}
+h1{margin-top:26px;font:900 104px/.95 'Archivo',sans-serif;font-stretch:72%}
+.scene{position:absolute;left:72px;right:72px;top:320px;opacity:0;transform:translateY(30px);transition:opacity .5s,transform .5s}
+.scene.vis{opacity:1;transform:none}
+.etikett{font:800 36px/1.2 'Montserrat';color:#5EE6D6}
+.under{margin-top:10px;font:700 32px/1.3 'Montserrat';color:#C9C6D6}
+/* demo-kort */
+.kort{margin-top:30px;padding:34px 36px;border-radius:26px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.08)}
+.kort .hode{display:flex;align-items:center;justify-content:space-between}
+.kort .hode b{font:800 40px/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:#5EE6D6}
+.kort .hode span{font:700 28px/1 'Montserrat';color:#A9A6B8}
+.sjekk{margin-top:26px;display:grid;gap:14px}
+.sjekk .r{display:flex;align-items:center;gap:18px;font:700 36px/1.2 'Montserrat';opacity:0;transform:translateX(-20px);transition:opacity .4s,transform .4s}
+.sjekk .r.vis{opacity:1;transform:none}
+.sjekk .r i{flex:0 0 52px;height:52px;border-radius:50%;display:grid;place-items:center;font:800 30px/1 'Montserrat';color:#070912;background:#5EE6D6;font-style:normal}
+/* 20 trades */
+.rute{margin-top:26px;display:grid;grid-template-columns:repeat(10,1fr);gap:10px}
+.rute i{display:block;aspect-ratio:1;border-radius:12px;background:rgba(255,255,255,.08);transition:background .25s}
+.rute i.p{background:#3DDC97}.rute i.n{background:#FF8A8E}
+.tall{margin-top:22px;display:flex;justify-content:space-between;align-items:center;font:800 40px/1 'JetBrains Mono',monospace;direction:ltr}
+.tall .p{color:#3DDC97}.tall .n{color:#FF8A8E}
+.notat{margin-top:22px;opacity:0;transition:opacity .4s;font:700 36px/1.35 'Montserrat';color:#C9C6D6}.notat.vis{opacity:1}
+/* frykt */
+.to{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.kol{padding:24px;border-radius:26px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.08);opacity:0;transform:translateY(16px);transition:opacity .45s,transform .45s}
+.kol.vis{opacity:1;transform:none}
+.kol h3{font:800 32px/1.2 'Montserrat';color:#5EE6D6}.kol.real h3{color:#FF8A8E}
+.kol svg{margin-top:16px;width:100%;height:180px}
+.kol p{margin-top:14px;font:700 30px/1.3 'Montserrat';color:#C9C6D6}
+.slutt{position:absolute;left:72px;right:72px;top:320px;opacity:0;transition:opacity .6s}.slutt.vis{opacity:1}
+.boks{padding:40px 36px;border-radius:30px;background:linear-gradient(110deg,rgba(21,216,196,.16),rgba(194,31,191,.14));border:2px solid rgba(94,230,214,.4)}
+.boks b{display:block;font:900 68px/1.05 'Archivo',sans-serif;font-stretch:76%}
+.boks p{margin-top:22px;font:700 36px/1.35 'Montserrat'}
+.boks em{display:block;margin-top:18px;font:600 32px/1.35 'Montserrat';font-style:normal;color:#C9C6D6}
+.fot{position:absolute;left:72px;right:72px;bottom:54px;font:600 34px/1.35 'Montserrat';color:#8E8B9E}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style></head><body><div class="glod"></div>
+<div class="inn"><div class="topp"><img src="../ap-gradient-96.png" alt=""><div class="merke">AIM<span>PIRE</span></div></div><h1>Demo account kyun?</h1></div>
+
+<section class="scene" id="s1">
+ <div class="etikett">Khaali maidan</div>
+ <div class="under">Pehle practice, phir main road</div>
+ <div class="kort">
+  <div class="hode"><b>DEMO</b><span>MT5</span></div>
+  <div class="sjekk">
+   <div class="r" id="r1"><i>✓</i><span>Price asli</span></div>
+   <div class="r" id="r2"><i>✓</i><span>Paisa nakli</span></div>
+   <div class="r" id="r3"><i>✓</i><span>MT5 pe free</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="scene" id="s2">
+ <div class="etikett">Test, tafreeh nahi</div>
+ <div class="under">Apna usool likhein → 20 trades → journal</div>
+ <div class="rute" id="rute"></div>
+ <div class="tall"><span class="p" id="tp">0 ✓</span><span id="tt">0 / 20</span><span class="n" id="tn">0 ✗</span></div>
+ <div class="notat" id="n2">Usool chalta hai ya sirf achha lagta hai?</div>
+</section>
+
+<section class="scene" id="s3">
+ <div class="etikett">Ek farq: dar</div>
+ <div class="under">Wahi chart – alag ehsaas</div>
+ <div class="to">
+  <div class="kol" id="k1"><h3>Demo: dar nahi</h3><svg viewBox="0 0 400 180" preserveAspectRatio="none"><polyline fill="none" stroke="#F4F2F8" stroke-width="6" stroke-linejoin="round" points="0,120 60,100 120,110 180,70 240,80 300,50 360,60 400,40"/></svg><p>Haath sthir</p></div>
+  <div class="kol real" id="k2"><h3>Real: haath kaanpta hai</h3><svg viewBox="0 0 400 180" preserveAspectRatio="none"><polyline id="skjelv" fill="none" stroke="#F4F2F8" stroke-width="6" stroke-linejoin="round" points="0,120 60,100 120,110 180,70 240,80 300,50 360,60 400,40"/></svg><p>Wahi chart, wahi price</p></div>
+ </div>
+</section>
+
+<section class="slutt" id="slutt"><div class="boks"><b>Real pe chhote lot se shuru.</b>
+ <p>Wahan sabaq skill nahi, dar ko sambhalna hai.</p><em>Jaldi koi nahi – maidan khula hai.</em></div></section>
+
+<div class="fot">Hum mil kar seekhte hain – yeh maali mashwara nahi hai.</div>
+<script src="takt.js"></script>
+<script src="sprak.js"></script>
+<script>
+const $ = id => document.getElementById(id), vent = ms => new Promise(r => setTimeout(r, ms));
+for (let i = 0; i < 20; i++) $("rute").append(document.createElement("i"));
+const UTFALL = [1,0,1,1,0,1,0,1,1,0,1,1,0,1,0,1,1,0,1,1];   /* 13 ✓ / 7 ✗ – en tendens, ikke et bevis */
+let skjelvId = null;
+function skjelv(){ const el = $("skjelv"), base = [[0,120],[60,100],[120,110],[180,70],[240,80],[300,50],[360,60],[400,40]]; skjelvId = setInterval(() => { el.setAttribute("points", base.map(([x, y]) => x + "," + (y + (Math.random() - .5) * 10).toFixed(1)).join(" ")); }, 90); }
+window.sceneNaa = -1;
+/* Scener: 0 den tomme plassen · 1 20 trades · 2 frykt · 3 ekte med bitte liten lot. Bevegelsen strekkes over scenens varighet. */
+window.spill = async function(cues){
+  Takt.sett(cues, /opptak/.test(location.search));
+  await document.fonts.ready;
+  await Takt.scene(0, 500); window.sceneNaa = 0;
+  $("s1").classList.add("vis"); const d0 = Takt.varighet(0, 7000); await vent(Math.min(2500, d0 * 0.45));
+  const steg0 = Math.max(500, (d0 * 0.4) / 3);
+  for (const id of ["r1", "r2", "r3"]){ $(id).classList.add("vis"); await vent(steg0); }
+  await Takt.scene(1, 3000); window.sceneNaa = 1;
+  $("s1").classList.remove("vis"); await vent(500);
+  $("s2").classList.add("vis"); const d1 = Takt.varighet(1, 8000); await vent(Math.min(1500, d1 * 0.15));
+  const steg1 = Math.max(120, (d1 * 0.55) / 20); let p = 0, n = 0; const r = $("rute").children;
+  for (let i = 0; i < 20; i++){ r[i].classList.add(UTFALL[i] ? "p" : "n"); if (UTFALL[i]) p++; else n++; $("tp").textContent = p + " ✓"; $("tn").textContent = n + " ✗"; $("tt").textContent = (i + 1) + " / 20"; await vent(steg1); }
+  $("n2").classList.add("vis");
+  await Takt.scene(2, 3500); window.sceneNaa = 2;
+  $("s2").classList.remove("vis"); await vent(500);
+  $("s3").classList.add("vis"); const d2 = Takt.varighet(2, 7000); await vent(Math.min(800, d2 * 0.1));
+  $("k1").classList.add("vis"); await vent(Math.max(1200, d2 * 0.35)); $("k2").classList.add("vis"); skjelv();
+  await Takt.scene(3, 4500); window.sceneNaa = 3;
+  if (skjelvId) clearInterval(skjelvId);
+  $("s3").classList.remove("vis"); await vent(500);
+  $("slutt").classList.add("vis");
+  await Takt.slutt(4000);
+  window.ferdig = true;
+};
+if (!/opptak|[?&]app=/.test(location.search)) spill();
+</script></body></html>

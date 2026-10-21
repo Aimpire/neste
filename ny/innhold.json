@@ -1,0 +1,4246 @@
+{
+  "_om": "Innhold for det nye skallet (B-048). Språk: ur_rm (hoved), ur, en, no, hi, ar – aldri hindi i stedet for urdu. Ingen råd, ingen løfter (B-030). Produktspråk: seksjonen heter Academy (ikke «Lær»); ingen saksnummer i medlems-UI.",
+  "sprak": {
+    "ur_rm": "Roman Urdu",
+    "ur": "اردو",
+    "en": "English",
+    "no": "Norsk",
+    "hi": "हिन्दी",
+    "ar": "العربية"
+  },
+  "rtl": [
+    "ur",
+    "ar"
+  ],
+  "call": {
+    "ukedag": 3,
+    "utc_time": 17,
+    "merk": "Hver onsdag 22:00 Asia/Karachi = 17:00 UTC (Pakistan har ikke sommertid, PTA).",
+    "gruppe": "https://matrix.to/#/%23aimpire:matrix.org",
+    "ics": "call.ics",
+    "jitsi_vert": "meet.jit.si",
+    "jitsi_rom": "AimpireCall-4bh36r",
+    "jitsi_skjema": "Fast rom med tilfeldig hale så ingen utenforstående gjetter seg inn: AimpireCall-4bh36r (gitt founder 20.10). Bokstaver, tall og bindestrek. Founder oppretter rommet første gang (konto kreves, K-170), deltakere uten konto.",
+    "jitsi_probe_ms": 4000,
+    "jitsi_video_av": true,
+    "oppsummering_om": "etter hver onsdagscall legges et 5-minutters lydsammendrag her, nyeste først: {dato: YYYY-MM-DD, min: 5, spor: [ur, no, en], tekst: {ur_rm, ur, en, no, hi, ar}}. Lydfil: lyd/call-<dato>-<sp>.mp3 (lag med tools/lag_lyd.py call-<dato> --uten-innhold, manus i lydmanus.json). Tom liste = blokken vises ikke.",
+    "oppsummering": []
+  },
+  "ui": {
+    "ur_rm": {
+      "velg_sprak": "Aap kis zaban mein parhna chahte hain?",
+      "hafta": "Pehla hafta",
+      "hafta_under": "Buniyadi baatein – 5 chhote sabaq, har ek 1–2 minute.",
+      "call": "Budh ki Live Call",
+      "call_tid": "Raat 10 baje, Pakistan time",
+      "call_link": "Video band rakhein, sirf awaaz – net pe halka rehta hai.",
+      "call_om": "{d} din {h} ghante baaki",
+      "call_om_t": "{h} ghante {m} minute baaki",
+      "call_naa": "Abhi live hai",
+      "leder": "Aap ko invite kiya hai:",
+      "leder_ingen": "Abhi tak kisi leader ka link nahi. Apne leader se link lein.",
+      "leder_venter": "Link mil gaya — naam list online hone pe dikhega.",
+      "navnelenke_venter": "Yeh link abhi activate ho raha hai. Chand minute baad dobara koshish karein.",
+      "reg_u_venter": "Jab leader ka naam dikhe, tab account link khulega.",
+      "trygg": "Hum kabhi password ya paise nahi maangte.",
+      "sabaq": "Sabaq",
+      "min": "min",
+      "dekh": "Dekhein",
+      "dobara": "Dobara",
+      "prov": "Khud try karein",
+      "sawal": "1 sawal",
+      "sahi": "Sahi!",
+      "galat": "Nahi –",
+      "neste": "Agla sabaq",
+      "ferdig_u": "Hafta mukammal. Budh ko call mein milte hain.",
+      "kal_wapis": "Kal: 1 sawal + takreeban 1 minute audio. Koi jaldi nahi – jab ready hon, wapas aayein.",
+      "kal_wapis_call": "Call ka waqt",
+      "dohrana": "Dohrai",
+      "dohrana_under": "Jo seekha, usko yaad karein – yaad rakhne ka sabse acha tareeqa.",
+      "dohrana_tom": "Aaj dohrane ko kuch nahi. Kal phir dekhein.",
+      "frem": "Aap kahan hain",
+      "nivaa": [
+        "Dekha",
+        "Try kiya",
+        "Sahi jawab"
+      ],
+      "risk_t": "Pehle sach, phir account",
+      "risk_b": "Har 100 mein se taqreeban {n} log CFD trading mein paise kho dete hain.",
+      "risk_k": "Broker ka apna data.",
+      "reg": "Leader ke link se account banayein",
+      "reg_u": "Sirf tab jab aap sabaq samajh chuke hon.",
+      "mer": "Mazeed",
+      "verktoy": "Calculator, journal",
+      "ledere": "Leaders ke liye",
+      "bytt": "Koi aur shakhs? Yahan se naya shuru karein.",
+      "bytt_bekreft": "Naya shakhs? Language, leader aur progress sab clear ho jayega. Journal bhi. Pehle photo lein recovery code ki.",
+      "bytt_ja": "Haan, naya shuru",
+      "bytt_nei": "Wapas",
+      "gjen": "Progress save / restore",
+      "gjen_u": "Phone change ya Safari wipe? Code ya link ka photo lein. Naye phone pe paste — server nahi, sirf aap ke paas.",
+      "gjen_foto": "Is code ka photo lein",
+      "gjen_kode": "Recovery code",
+      "gjen_lenke": "Ya yeh link",
+      "gjen_kopi": "Code copy",
+      "gjen_kopi_lenke": "Link copy",
+      "gjen_lim": "Code ya link yahan paste",
+      "gjen_bruk": "Restore karein",
+      "gjen_ok": "Progress wapas aa gaya ✓",
+      "gjen_feil": "Code samajh nahi aaya — photo check karein.",
+      "gjen_tom": "Abhi save karne ko kuch nahi — pehle ek sabaq try karein.",
+      "gjen_qr": "QR bhi photo le sakte hain",
+      "ios_hjem": "Home Screen pe add",
+      "ios_u": "iPhone: Safari 7 din baad data mita sakta hai. Home Screen pe app rakhein — progress zyada safe.",
+      "ios_s1": "Safari mein Share dabayein (box + arrow)",
+      "ios_s2": "Neeche scroll: Add to Home Screen",
+      "ios_s3": "Add — Aimpire icon Home pe",
+      "ios_note": "Sirf Safari. Chrome iPhone pe yeh option nahi deta.",
+      "fot": "Hum mil kar seekhte hain – yeh financial advice nahi hai.",
+      "lyd_kommer": "Audio jald aa raha hai.",
+      "anim_kommer": "Animation jald aa rahi hai – abhi neeche parhein.",
+      "lyd": "Sunein",
+      "lyd_stopp": "Rokein",
+      "hafta2": "Doosra hafta",
+      "hafta2_under": "Candlestick, leverage, news, demo aur journal – 5 chhote sabaq.",
+      "laast": "Pehla hafta mukammal karne ke baad khulega.",
+      "mk": "Market abhi",
+      "mk_u": "Aap ke phone ke time mein.",
+      "open": "Khula",
+      "closed": "Band",
+      "overlap": "London aur New York ek saath: {A}–{B} – aam taur pe sabse zyada move hoti hai.",
+      "weekend": "Weekend – market band. Khulti hai: {T}.",
+      "byer": {
+        "Sydney": "Sydney",
+        "Tokyo": "Tokyo",
+        "London": "London",
+        "New York": "New York"
+      },
+      "kalk": "Calculator",
+      "kalk_u": "Jab aap pehle se tay kar lein keh kitna khone ko tayyar hain, to yeh batata hai keh trade kitni bari hogi. Yeh hisaab hai, mashwara nahi.",
+      "journal": "Journal",
+      "journal_u": "Sirf is phone pe. Password ya account number kabhi na likhein.",
+      "jn": {
+        "pehle": "Pehle – trade kholne se pehle",
+        "baad": "Baad",
+        "inst": "Pair",
+        "dir": "Buy / Sell",
+        "buy": "Buy",
+        "sell": "Sell",
+        "lot": "Lot",
+        "stop": "Stop (pips)",
+        "why": "Kyun? (ek line)",
+        "res": "Result $ (loss = minus)",
+        "feel": "Kaisa laga?",
+        "feels": [
+          "Sukoon",
+          "Dar",
+          "Lalach",
+          "Ghussa"
+        ],
+        "lagre": "Likh lein",
+        "band": "Band karein",
+        "slett": "Hata dein",
+        "tom": "Abhi koi trade nahi. Pehli trade se PEHLE likhein.",
+        "open_t": "Khuli trades",
+        "closed_t": "Band trades",
+        "stat": "{N} trades · {W} jeet · {L} haar",
+        "total": "Total",
+        "prosess": "Stop pehle likha: {P} %",
+        "importert": "{N} trades purani app se aa gayi hain.",
+        "tendens": "20 se kam = sirf rujhan."
+      },
+      "grp": "Aimpire group (backup)",
+      "ics": "Calendar mein lagayein",
+      "del": "Dost ko bhejein",
+      "del_tekst": "Aimpire Academy mein mere saath seekhein – free sabaq, har Budh live call. {url}",
+      "kopiert": "Link copy ho gaya.",
+      "ld": {
+        "t": "Leaders ke liye",
+        "kit": "Apna link bhejein",
+        "u": "Pehle invite: copy, WhatsApp, share, QR. Profile baad mein.",
+        "invite": "Invite karein",
+        "meri": "Aap ka invite link",
+        "kode": "Apna 6-letter code",
+        "sjekk": "Unlock",
+        "sjekker": "Check ho raha…",
+        "feil": "Yeh code list mein nahi — email wali code dobara likhein.",
+        "ok": "Verified",
+        "kopi": "Copy link",
+        "wa": "WhatsApp",
+        "bhej": "Share",
+        "qr": "QR dikhayein",
+        "qr_feil": "QR abhi load nahi hua – copy use karein.",
+        "dekhe": "Invitee kya dekhega",
+        "dekhe_t": "Naya member yeh dekhega",
+        "dekhe_u": "{N} ka naam, Academy ka pehla sabaq, Budh call. Markets pehle nahi.",
+        "khud": "Apni link se khud account mat banayein – phir IB galat sponsor dikhata hai.",
+        "min": "Min side · code unlock",
+        "min_u": "Email wali 6-letter code yahan likhein. Ek dafa unlock, phir toolbox yahin rehti hai.",
+        "offline": "List abhi nahi khuli (net/Sheets). Baad mein try karein – saved link pehle se yahan hai to woh chalega.",
+        "offline_ok": "Sheets band hai, lekin aap ka saved link chal raha hai.",
+        "full": "Leader page (apply, approval, email)",
+        "ingen": "Pehle apna code unlock karein (email mein) – phir yahan se invite bhejein.",
+        "qr_scan": "Camera se scan karein – Chrome ya Safari mein kholein.",
+        "bio_title": "Bio mein lagayein",
+        "bio_body": "Instagram / TikTok bio mein sirf yeh link. Jo dabaye, aap ka naam dekhega aur aap sponsor. Bio seedhi: kamaai ka wada nahi.",
+        "bio_copy": "Bio ke liye link copy",
+        "bio_done": "Copy ho gaya ✓",
+        "aapne": "Chrome ya Safari mein kholein – app ke andar nahi.",
+        "dekhe_open": "Poora page kholein (jaise member dekhega)",
+        "full_u": "Apply, approval aur email ke liye leader page kholein.",
+        "dekhe_tilbake": "Wapas invite pe"
+      },
+      "intro_t": "Hum mil kar trading seekhte hain.",
+      "intro_u": "Har hafte: ek live call, 5 chhote sabaq, apni journal. Pehle samajh, phir account.",
+      "call_aaj": "Aaj raat 10 baje, {h} ghante {m} minute baaki",
+      "call_kal": "Kal raat 10 baje, {h} ghante baaki",
+      "call_dager": "{d} din baaki, Budh raat 10 baje",
+      "sawal_t": "Call ke liye aap ke sawal",
+      "sawal_u": "App ne jama kiye – jo samajh nahi aaya, woh call mein poochein.",
+      "sawal_feil": "{t} – dobara samjhein",
+      "sawal_jn": "Journal: {n} trade mein {f} – is pe baat karein",
+      "sawal_kopi": "Copy karein",
+      "sawal_tom": "",
+      "se_hor": "Dekhein aur sunein",
+      "hafta3": "Teesra hafta",
+      "hafta3_under": "Sessions, trend, support/resistance, risk:reward aur swap – 5 chhote sabaq.",
+      "laast3": "Doosra hafta mukammal karne ke baad khulega.",
+      "hafta4": "Chautha hafta",
+      "hafta4_under": "Dimagh aur trading: FOMO, revenge trade, overtrading, trading plan aur kab trade na karein – 5 chhote sabaq.",
+      "laast4": "Teesra hafta mukammal karne ke baad khulega.",
+      "lyd_feil": "Awaaz shuru nahi hui – volume check karein aur dobara tap karein.",
+      "call_join": "Call mein shamil hon",
+      "call_browser": "Link browser mein kholein – Chrome ya Safari. WhatsApp/Element ke andar mat kholein.",
+      "call_blokk": "Jitsi abhi nahi khul raha (net/firewall). Group link se try karein, ya thodi der baad browser mein dobara.",
+      "stuck_btn": "Mujhe madad chahiye",
+      "stuck_btn_n": "{N} se madad mangain",
+      "stuck_msg": "Salam {N}, mujhe Aimpire ke sabaq «{t}» mein madad chahiye. Kya aap help kar sakte hain?",
+      "stuck_element": "Aimpire group (Questions) kholein",
+      "stuck_soft": "WhatsApp nahi khula – group se poochein, ya message copy karein.",
+      "stuck_hint": "Kabhi password ya login ka screenshot na bhejein.",
+      "stuck_kopi": "Message copy karein",
+      "stuck_wa": "WhatsApp",
+      "cta_foyer": "Academy shuru: {t}",
+      "cta_foyer_min": "{m} min",
+      "cta_foyer_done": "Agla Academy sabaq: {t}",
+      "port_pk": "Pakistan",
+      "port_andre": "Aur zubanein",
+      "intro_u_ny": "Pehle ek chhota Academy sabaq — 1 minute. Account baad mein.",
+      "steg_sabaq": "Pehla Academy sabaq abhi",
+      "reg_gate_t": "Account baad mein",
+      "reg_laast": "Pehle {n} Academy sabaq ({a}/{n}) — phir leader ka account link.",
+      "reg_klar": "Academy OK — account leader ke link se.",
+      "reg_gate_risk": "Lagbhag {n}/100 CFD traders paise kho dete hain. Hum kabhi password ya paise nahi maangte.",
+      "reg_laast_cta": "Academy pehle",
+      "foyer_risk": "CFD trading: lagbhag {n}/100 paise kho dete hain. Hum seekhte hain — income ka wada nahi.",
+      "leder_hvem": "Aap ko kis ne invite kiya? Ek chunein – yahi aap ka leader rahega.",
+      "flyer_krok": "Poora hafta, ek call mein.",
+      "flyer_tid": "Raat 10 baje, Pakistan time",
+      "flyer_ærlig": "Har Budh 22:00 Asia/Karachi (PKT, UTC+5). Pakistan mein daylight saving nahi.",
+      "flyer_join": "Call mein shamil hon",
+      "flyer_blokk": "Jitsi abhi nahi khul raha (net/firewall). Group link se try karein.",
+      "flyer_fot": "Hum mil kar seekhte hain – yeh maali mashwara nahi hai.",
+      "aapne": "Chrome ya Safari mein kholein – app ke andar nahi.",
+      "inapp_bar": "{APP} ke andar khula hai – sponsor link yahan toot sakti hai.",
+      "inapp_any": "App",
+      "inapp_ios": "⋮ → Open in Safari / Chrome",
+      "open_chrome": "Chrome mein kholein",
+      "call_oppsum": "Pichli call ka khulasa",
+      "call_oppsum_u": "{d}, {m} minute",
+      "reg_forst": "Academy pehle ({a}/{n}) – link yahan hai, jab aap tayyar hon.",
+      "reg_guide": "Guide: KYC, deposit aur apps – qadam ba qadam",
+      "reg_gate_t_klar": "Account kholna – jab aap tayyar hon",
+      "mer_guide": "Guide: account, KYC, deposit aur apps",
+      "guide_tilbake": "Guide wahin hai jahan aap ruke the – Mazeed mein «Guide».",
+      "nav": {
+        "ghar": "Ghar",
+        "academy": "Academy",
+        "paisa": "Paisa",
+        "mazeed": "Mazeed"
+      },
+      "paisa_t": "Paisa",
+      "p_sonic_linje": "Copy-trading jo aap ke apne account mein trade karta hai",
+      "p_historikk": "Historikk",
+      "p_hist_linje": "{m} mahine · {total} total · sab se bari dip {dip}",
+      "p_konto": "Account",
+      "p_konto_u": "Dus steps. Har ek pe tap karein jab ho jaye – app yaad rakhti hai.",
+      "p_konto_linje": "{n}/{N} steps",
+      "p_uttak": "Withdraw",
+      "p_faq": "Sawal-jawab",
+      "p_risiko": "Yaad rakhein: aap sab kuch kho sakte hain. Pichhla record aage ka wada nahi.",
+      "p_se_historikk": "Historikk dekhein",
+      "p_kilde": "Kilde",
+      "p_sjekk": "Khud check karein",
+      "p_ferdig": "Yeh ho gaya",
+      "p_ferdig_angre": "Abhi nahi hua",
+      "p_verve": "Dost ko invite karna",
+      "p_verve_linje": "Link share karein – optional, pehle samajh",
+      "p_ib": "IB aur bonus",
+      "p_ib_mer": "IB aur bonus ke baare mein",
+      "p_bonuser": "Bonus",
+      "p_uverifisert": "Yeh numbers broker ki presentation se hain, Aimpire ne verify nahi kiye. Apne asli numbers sirf IB Portal mein dekhein.",
+      "p_uttak_linje": "Profit kabhi bhi; deposit pehli trade ke 30 din baad",
+      "henter": "Thodi der… la raha hai",
+      "nett_feil": "Net nahi mila. Thodi der baad dobara.",
+      "v_h1": "{N} ne aap ko Aimpire mein bulaya hai",
+      "v_lede": "Hum mil kar trading seekhte hain. Aur Sonic – ek copy-trading strategy jo aap ke apne account mein chalti hai.",
+      "v_sann1": "Aap ka paisa broker ke paas rehta hai – kabhi Aimpire ya {N} ke paas nahi.",
+      "v_sann3": "Lagbhag {p}/100 log CFD trading mein paise kho dete hain. Sirf utna daalein jitna poora kho sakein.",
+      "v_cta": "Account banayein – {N} ke link se, step by step",
+      "v_laer": "Pehle 1 minute ka sabaq",
+      "v_dhoka_t": "Kya yeh dhoka hai?",
+      "cta_dohr": "Dohrana: {t}",
+      "cta_dohr_hint": "Aaj {n} sabaq dohrane hain – 1 minute har ek",
+      "ld_lenke_laer": "Seekhne ka link",
+      "ld_lenke_konto": "Account ka link",
+      "ld_lenke_u": "Dost ne pehle se suna hai? Account ka link. Naya aur curious? Seekhne ka link.",
+      "v_sann2": "Profit kabhi bhi nikal sakte hain – pehle thora nikal kar khud dekhein.",
+      "p_halal": "Kya yeh halal hai?",
+      "p_madad": "Jab aap atak jayein",
+      "p_juridisk": "Aimpire aur aap ki zimmedari",
+      "p_apper": "Dono apps",
+      "p_amplify": "Sonic kaise set karein",
+      "p_spor_sponsor": "Assalam o alaikum, mujhe Aimpire mein madad chahiye:",
+      "p_tafseel": "Tafseel",
+      "mg_laer": "Seekhne ke tools",
+      "mg_madad": "Madad",
+      "mg_apna": "Aap ka",
+      "mg_dost": "Doston ke liye",
+      "p_tapsrekke": "Lagataar nuqsan – khud aazmaayein",
+      "p_gull_pris": "Sone ki qeemat – apni app mein dekh kar likhein"
+    },
+    "ur": {
+      "velg_sprak": "آپ کس زبان میں پڑھنا چاہتے ہیں؟",
+      "hafta": "پہلا ہفتہ",
+      "hafta_under": "بنیادی باتیں – 5 چھوٹے سبق، ہر ایک 1–2 منٹ۔",
+      "call": "بدھ کی لائیو کال",
+      "call_tid": "رات 10 بجے، پاکستان ٹائم",
+      "call_link": "ویڈیو بند رکھیں، صرف آواز – نیٹ پر ہلکا رہتا ہے۔",
+      "call_om": "{d} دن {h} گھنٹے باقی",
+      "call_om_t": "{h} گھنٹے {m} منٹ باقی",
+      "call_naa": "ابھی لائیو ہے",
+      "leder": "آپ کو انوائٹ کیا ہے:",
+      "leder_ingen": "ابھی تک کسی لیڈر کا لنک نہیں۔ اپنے لیڈر سے لنک لیں۔",
+      "leder_venter": "لنک مل گیا — نام فہرست آن لائن ہونے پر دکھے گا۔",
+      "navnelenke_venter": "یہ لنک ابھی فعال ہو رہا ہے۔ چند منٹ بعد دوبارہ کوشش کریں۔",
+      "reg_u_venter": "جب لیڈر کا نام دکھے، تب اکاؤنٹ لنک کھلے گا۔",
+      "trygg": "ہم کبھی پاس ورڈ یا پیسے نہیں مانگتے۔",
+      "sabaq": "سبق",
+      "min": "منٹ",
+      "dekh": "دیکھیں",
+      "dobara": "دوبارہ",
+      "prov": "خود آزمائیں",
+      "sawal": "1 سوال",
+      "sahi": "صحیح!",
+      "galat": "نہیں –",
+      "neste": "اگلا سبق",
+      "ferdig_u": "ہفتہ مکمل۔ بدھ کو کال میں ملتے ہیں۔",
+      "kal_wapis": "کل: 1 سوال + تقریباً 1 منٹ آڈیو۔ کوئی جلدی نہیں – جب تیار ہوں، واپس آئیں۔",
+      "kal_wapis_call": "کال کا وقت",
+      "dohrana": "دہرائی",
+      "dohrana_under": "جو سیکھا، اسے یاد کریں – یاد رکھنے کا سب سے اچھا طریقہ۔",
+      "dohrana_tom": "آج دہرانے کو کچھ نہیں۔ کل پھر دیکھیں۔",
+      "frem": "آپ کہاں ہیں",
+      "nivaa": [
+        "دیکھا",
+        "آزمایا",
+        "صحیح جواب"
+      ],
+      "risk_t": "پہلے سچ، پھر اکاؤنٹ",
+      "risk_b": "ہر 100 میں سے تقریباً {n} لوگ CFD ٹریڈنگ میں پیسے کھو دیتے ہیں۔",
+      "risk_k": "بروکر کا اپنا ڈیٹا۔",
+      "reg": "لیڈر کے لنک سے اکاؤنٹ بنائیں",
+      "reg_u": "صرف تب جب آپ سبق سمجھ چکے ہوں۔",
+      "mer": "مزید",
+      "verktoy": "کیلکولیٹر، جرنل",
+      "ledere": "لیڈرز کے لیے",
+      "bytt": "کوئی اور شخص؟ یہاں سے نیا شروع کریں۔",
+      "bytt_bekreft": "نیا شخص؟ زبان، لیڈر اور پیشرفت سب صاف ہو جائے گی۔ جرنل بھی۔ پہلے recovery code کی تصویر لیں۔",
+      "bytt_ja": "ہاں، نیا شروع",
+      "bytt_nei": "واپس",
+      "gjen": "Progress محفوظ / واپس",
+      "gjen_u": "فون بدلا یا Safari نے ڈیٹا مٹایا؟ کوڈ یا لنک کی تصویر لیں۔ نئے فون پر پیسٹ کریں — کوئی سرور نہیں، صرف آپ کے پاس۔",
+      "gjen_foto": "اس کوڈ کی تصویر لیں",
+      "gjen_kode": "Recovery code",
+      "gjen_lenke": "یا یہ لنک",
+      "gjen_kopi": "کوڈ کاپی",
+      "gjen_kopi_lenke": "لنک کاپی",
+      "gjen_lim": "کوڈ یا لنک یہاں پیسٹ",
+      "gjen_bruk": "واپس لائیں",
+      "gjen_ok": "پیشرفت واپس آ گئی ✓",
+      "gjen_feil": "کوڈ سمجھ نہیں آیا — تصویر چیک کریں۔",
+      "gjen_tom": "ابھی محفوظ کرنے کو کچھ نہیں — پہلے ایک سبق آزمائیں۔",
+      "gjen_qr": "QR کی بھی تصویر لے سکتے ہیں",
+      "ios_hjem": "Home Screen پر شامل کریں",
+      "ios_u": "iPhone: Safari سات دن بعد ڈیٹا مٹا سکتا ہے۔ Home Screen پر رکھیں — پیشرفت زیادہ محفوظ۔",
+      "ios_s1": "Safari میں Share دبائیں (باکس + تیر)",
+      "ios_s2": "نیچے سکرول: Add to Home Screen",
+      "ios_s3": "Add — Aimpire آئیکن Home پر",
+      "ios_note": "صرف Safari۔ Chrome iPhone پر یہ آپشن نہیں دیتا。",
+      "fot": "ہم مل کر سیکھتے ہیں – یہ مالی مشورہ نہیں ہے۔",
+      "lyd_kommer": "آڈیو جلد آ رہا ہے۔",
+      "anim_kommer": "اینیمیشن جلد آ رہی ہے – ابھی نیچے پڑھیں۔",
+      "lyd": "سنیں",
+      "lyd_stopp": "روکیں",
+      "hafta2": "دوسرا ہفتہ",
+      "hafta2_under": "Candlestick، leverage، خبریں، ڈیمو اور جرنل – 5 چھوٹے سبق۔",
+      "laast": "پہلا ہفتہ مکمل کرنے کے بعد کھلے گا۔",
+      "mk": "مارکیٹ ابھی",
+      "mk_u": "آپ کے فون کے ٹائم میں۔",
+      "open": "کھلا",
+      "closed": "بند",
+      "overlap": "لندن اور نیو یارک ساتھ: {A}–{B} – عام طور پر سب سے زیادہ حرکت۔",
+      "weekend": "ویک اینڈ – مارکیٹ بند۔ کھلتی ہے: {T}۔",
+      "byer": {
+        "Sydney": "سڈنی",
+        "Tokyo": "ٹوکیو",
+        "London": "لندن",
+        "New York": "نیو یارک"
+      },
+      "kalk": "کیلکولیٹر",
+      "kalk_u": "جب آپ پہلے سے طے کر لیں کہ کتنا کھونے کو تیار ہیں، تو یہ بتاتا ہے کہ trade کتنی بڑی ہوگی۔ یہ حساب ہے، مشورہ نہیں۔",
+      "journal": "جرنل",
+      "journal_u": "صرف اس فون پر۔ پاس ورڈ یا اکاؤنٹ نمبر کبھی نہ لکھیں۔",
+      "jn": {
+        "pehle": "پہلے – ٹریڈ کھولنے سے پہلے",
+        "baad": "بعد",
+        "inst": "پیئر",
+        "dir": "Buy / Sell",
+        "buy": "Buy",
+        "sell": "Sell",
+        "lot": "Lot",
+        "stop": "Stop (pips)",
+        "why": "کیوں؟ (ایک لائن)",
+        "res": "نتیجہ $ (نقصان = مائنس)",
+        "feel": "کیسا لگا؟",
+        "feels": [
+          "سکون",
+          "ڈر",
+          "لالچ",
+          "غصہ"
+        ],
+        "lagre": "لکھ لیں",
+        "band": "بند کریں",
+        "slett": "ہٹا دیں",
+        "tom": "ابھی کوئی ٹریڈ نہیں۔ پہلی ٹریڈ سے پہلے لکھیں۔",
+        "open_t": "کھلی ٹریڈز",
+        "closed_t": "بند ٹریڈز",
+        "stat": "{N} ٹریڈز · {W} جیت · {L} ہار",
+        "total": "کل",
+        "prosess": "Stop پہلے لکھا: {P} %",
+        "importert": "{N} ٹریڈز پرانی ایپ سے آ گئیں۔",
+        "tendens": "20 سے کم = صرف رجحان۔"
+      },
+      "grp": "Aimpire گروپ (بیک اپ)",
+      "ics": "کیلنڈر میں لگائیں",
+      "del": "دوست کو بھیجیں",
+      "del_tekst": "Aimpire Academy میں میرے ساتھ سیکھیں – مفت سبق، ہر بدھ لائیو کال۔ {url}",
+      "kopiert": "لنک کاپی ہو گیا۔",
+      "ld": {
+        "t": "لیڈرز کے لیے",
+        "kit": "اپنا لنک بھیجیں",
+        "u": "پہلے invite: کاپی، WhatsApp، share، QR۔ پروفائل بعد میں۔",
+        "invite": "Invite کریں",
+        "meri": "آپ کا invite link",
+        "kode": "اپنا 6 حرفی code",
+        "sjekk": "Unlock",
+        "sjekker": "چیک ہو رہا…",
+        "feil": "یہ code فہرست میں نہیں — ای میل والا code دوبارہ لکھیں۔",
+        "ok": "Verified",
+        "kopi": "Link کاپی",
+        "wa": "WhatsApp",
+        "bhej": "Share",
+        "qr": "QR دکھائیں",
+        "qr_feil": "QR ابھی لوڈ نہیں ہوا – کاپی استعمال کریں۔",
+        "dekhe": "Invitee کیا دیکھے گا",
+        "dekhe_t": "نیا ممبر یہ دیکھے گا",
+        "dekhe_u": "{N} کا نام، Academy کا پہلا سبق، بدھ کال۔ Markets پہلے نہیں۔",
+        "khud": "اپنی لنک سے خود account نہ بنائیں – پھر IB غلط sponsor دکھاتا ہے۔",
+        "min": "Min side · code unlock",
+        "min_u": "ای میل والی 6 حرفی کوڈ یہاں لکھیں۔ ایک بار unlock، پھر toolbox یہیں رہتی ہے۔",
+        "offline": "لسٹ ابھی نہیں کھلی (net/Sheets)۔ بعد میں try کریں – محفوظ لنک پہلے سے ہے تو وہ چلے گی۔",
+        "offline_ok": "Sheets بند ہے، لیکن آپ کا محفوظ لنک چل رہا ہے۔",
+        "full": "لیڈر صفحہ (apply، approval، email)",
+        "ingen": "پہلے اپنا کوڈ unlock کریں (ای میل میں) – پھر یہاں سے invite بھیجیں۔",
+        "qr_scan": "Camera سے scan کریں – Chrome یا Safari میں کھولیں۔",
+        "bio_title": "Bio میں لگائیں",
+        "bio_body": "Instagram / TikTok bio میں صرف یہ link۔ جو دبائے، آپ کا نام دیکھے گا اور آپ sponsor۔ Bio سیدھی: کمائی کا وعدہ نہیں۔",
+        "bio_copy": "Bio کے لیے link کاپی",
+        "bio_done": "کاپی ہو گیا ✓",
+        "aapne": "Chrome یا Safari میں کھولیں – app کے اندر نہیں۔",
+        "dekhe_open": "پورا صفحہ کھولیں (جیسے member دیکھے گا)",
+        "full_u": "Apply، approval اور email کے لیے leader page کھولیں۔",
+        "dekhe_tilbake": "واپس invite پر"
+      },
+      "intro_t": "ہم مل کر trading سیکھتے ہیں۔",
+      "intro_u": "ہر ہفتے: ایک لائیو کال، 5 چھوٹے سبق، اپنی جرنل۔ پہلے سمجھ، پھر اکاؤنٹ۔",
+      "call_aaj": "آج رات 10 بجے، {h} گھنٹے {m} منٹ باقی",
+      "call_kal": "کل رات 10 بجے، {h} گھنٹے باقی",
+      "call_dager": "{d} دن باقی، بدھ رات 10 بجے",
+      "sawal_t": "کال کے لیے آپ کے سوال",
+      "sawal_u": "ایپ نے جمع کیے – جو سمجھ نہیں آیا، وہ کال میں پوچھیں۔",
+      "sawal_feil": "{t} – دوبارہ سمجھیں",
+      "sawal_jn": "جرنل: {n} ٹریڈ میں {f} – اس پر بات کریں",
+      "sawal_kopi": "کاپی کریں",
+      "sawal_tom": "",
+      "se_hor": "دیکھیں اور سنیں",
+      "hafta3": "تیسرا ہفتہ",
+      "hafta3_under": "Sessions، trend، support/resistance، risk:reward اور swap – 5 چھوٹے سبق۔",
+      "laast3": "دوسرا ہفتہ مکمل کرنے کے بعد کھلے گا۔",
+      "hafta4": "چوتھا ہفتہ",
+      "hafta4_under": "دماغ اور ٹریڈنگ: FOMO، revenge trade، overtrading، trading plan اور کب ٹریڈ نہ کریں – 5 چھوٹے سبق۔",
+      "laast4": "تیسرا ہفتہ مکمل کرنے کے بعد کھلے گا۔",
+      "lyd_feil": "آواز شروع نہیں ہوئی – volume چیک کریں اور دوبارہ tap کریں۔",
+      "call_join": "کال میں شامل ہوں",
+      "call_browser": "لنک براؤزر میں کھولیں – Chrome یا Safari۔ WhatsApp/Element کے اندر نہ کھولیں۔",
+      "call_blokk": "Jitsi ابھی نہیں کھل رہا (نیٹ/فائر وال)۔ گروپ لنک سے کوشش کریں، یا تھوڑی دیر بعد براؤزر میں دوبارہ۔",
+      "stuck_btn": "مجھے مدد چاہیے",
+      "stuck_btn_n": "{N} سے مدد مانگیں",
+      "stuck_msg": "سلام {N}، مجھے Aimpire کے سبق «{t}» میں مدد چاہیے۔ کیا آپ help کر سکتے ہیں؟",
+      "stuck_element": "Aimpire group (Questions) کھولیں",
+      "stuck_soft": "WhatsApp نہیں کھلا – group سے پوچھیں، یا message کاپی کریں۔",
+      "stuck_hint": "کبھی password یا login کا screenshot نہ بھیجیں۔",
+      "stuck_kopi": "Message کاپی کریں",
+      "stuck_wa": "WhatsApp",
+      "cta_foyer": "Academy شروع: {t}",
+      "cta_foyer_min": "{m} منٹ",
+      "cta_foyer_done": "اگلا Academy سبق: {t}",
+      "port_pk": "پاکستان",
+      "port_andre": "اور زبانیں",
+      "intro_u_ny": "پہلے ایک چھوٹا Academy سبق — 1 منٹ۔ اکاؤنٹ بعد میں۔",
+      "steg_sabaq": "پہلا Academy سبق ابھی",
+      "reg_gate_t": "اکاؤنٹ بعد میں",
+      "reg_laast": "پہلے {n} Academy سبق ({a}/{n}) — پھر لیڈر کا account لنک۔",
+      "reg_klar": "Academy ٹھیک — account لیڈر کے لنک سے۔",
+      "reg_gate_risk": "تقریباً {n}/100 CFD traders پیسے کھو دیتے ہیں۔ ہم کبھی پاس ورڈ یا پیسے نہیں مانگتے۔",
+      "reg_laast_cta": "پہلے Academy",
+      "foyer_risk": "CFD trading: تقریباً {n}/100 پیسے کھو دیتے ہیں۔ ہم سیکھتے ہیں — income کا وعدہ نہیں۔",
+      "leder_hvem": "آپ کو کس نے invite کیا؟ ایک چنیں – یہی آپ کا leader رہے گا۔",
+      "flyer_krok": "پورا ہفتہ، ایک کال میں۔",
+      "flyer_tid": "رات 10 بجے، پاکستانی وقت",
+      "flyer_ærlig": "ہر بدھ 22:00 Asia/Karachi (PKT، UTC+5)۔ پاکستان میں daylight saving نہیں۔",
+      "flyer_join": "کال میں شامل ہوں",
+      "flyer_blokk": "Jitsi ابھی نہیں کھل رہا (نیٹ/فائر وال)۔ گروپ لنک سے کوشش کریں۔",
+      "flyer_fot": "ہم مل کر سیکھتے ہیں – یہ مالی مشورہ نہیں ہے۔",
+      "aapne": "Chrome یا Safari میں کھولیں – app کے اندر نہیں۔",
+      "inapp_bar": "{APP} کے اندر کھلا ہے – sponsor link یہاں ٹوٹ سکتی ہے۔",
+      "inapp_any": "App",
+      "inapp_ios": "⋮ → Open in Safari / Chrome",
+      "open_chrome": "Chrome میں کھولیں",
+      "call_oppsum": "پچھلی کال کا خلاصہ",
+      "call_oppsum_u": "{d}، {m} منٹ",
+      "reg_forst": "پہلے Academy ({a}/{n}) – لنک یہاں ہے، جب آپ تیار ہوں۔",
+      "reg_guide": "گائیڈ: KYC، deposit اور apps – قدم بہ قدم",
+      "reg_gate_t_klar": "اکاؤنٹ کھولنا – جب آپ تیار ہوں",
+      "mer_guide": "گائیڈ: account، KYC، deposit اور apps",
+      "guide_tilbake": "گائیڈ وہیں ہے جہاں آپ رُکے تھے – «مزید» میں «Guide»۔",
+      "nav": {
+        "ghar": "گھر",
+        "academy": "Academy",
+        "paisa": "پیسہ",
+        "mazeed": "مزید"
+      },
+      "paisa_t": "پیسہ",
+      "p_sonic_linje": "Copy-trading جو آپ کے اپنے account میں trade کرتا ہے",
+      "p_historikk": "ریکارڈ",
+      "p_hist_linje": "{m} مہینے · کل {total} · سب سے بڑی گراوٹ {dip}",
+      "p_konto": "Account",
+      "p_konto_u": "دس steps۔ جو ہو جائے اس پر tap کریں – app یاد رکھتی ہے۔",
+      "p_konto_linje": "{n}/{N} steps",
+      "p_uttak": "Withdraw",
+      "p_faq": "سوال جواب",
+      "p_risiko": "یاد رکھیں: آپ سب کچھ کھو سکتے ہیں۔ پچھلا ریکارڈ آگے کا وعدہ نہیں۔",
+      "p_se_historikk": "ریکارڈ دیکھیں",
+      "p_kilde": "ماخذ",
+      "p_sjekk": "خود چیک کریں",
+      "p_ferdig": "یہ ہو گیا",
+      "p_ferdig_angre": "ابھی نہیں ہوا",
+      "p_verve": "دوست کو invite کرنا",
+      "p_verve_linje": "Link share کریں – optional، پہلے سمجھ",
+      "p_ib": "IB اور bonus",
+      "p_ib_mer": "IB اور bonus کے بارے میں",
+      "p_bonuser": "Bonus",
+      "p_uverifisert": "یہ numbers broker کی presentation سے ہیں، Aimpire نے verify نہیں کیے۔ اپنے اصل numbers صرف IB Portal میں دیکھیں۔",
+      "p_uttak_linje": "Profit کبھی بھی؛ deposit پہلی trade کے 30 دن بعد",
+      "henter": "تھوڑی دیر… لا رہا ہے",
+      "nett_feil": "Net نہیں ملا۔ تھوڑی دیر بعد دوبارہ۔",
+      "v_h1": "{N} نے آپ کو Aimpire میں بلایا ہے",
+      "v_lede": "ہم مل کر trading سیکھتے ہیں۔ اور Sonic – ایک copy-trading strategy جو آپ کے اپنے account میں چلتی ہے۔",
+      "v_sann1": "آپ کا پیسہ broker کے پاس رہتا ہے – کبھی Aimpire یا {N} کے پاس نہیں۔",
+      "v_sann3": "تقریباً {p}/100 لوگ CFD trading میں پیسے کھو دیتے ہیں۔ صرف اتنا ڈالیں جتنا پورا کھو سکیں۔",
+      "v_cta": "Account بنائیں – {N} کے link سے، step by step",
+      "v_laer": "پہلے 1 منٹ کا سبق",
+      "v_dhoka_t": "کیا یہ دھوکا ہے؟",
+      "cta_dohr": "دہرائیں: {t}",
+      "cta_dohr_hint": "آج {n} سبق دہرانے ہیں – ہر ایک 1 منٹ",
+      "ld_lenke_laer": "سیکھنے کا link",
+      "ld_lenke_konto": "Account کا link",
+      "ld_lenke_u": "دوست نے پہلے سے سنا ہے؟ Account کا link۔ نیا اور curious؟ سیکھنے کا link۔",
+      "v_sann2": "Profit کبھی بھی نکال سکتے ہیں – پہلے تھوڑا نکال کر خود دیکھیں۔",
+      "p_halal": "کیا یہ حلال ہے؟",
+      "p_madad": "جب آپ اٹک جائیں",
+      "p_juridisk": "Aimpire اور آپ کی ذمہ داری",
+      "p_apper": "دونوں apps",
+      "p_amplify": "Sonic کیسے set کریں",
+      "p_spor_sponsor": "السلام علیکم، مجھے Aimpire میں مدد چاہیے:",
+      "p_tafseel": "تفصیل",
+      "mg_laer": "سیکھنے کے tools",
+      "mg_madad": "مدد",
+      "mg_apna": "آپ کا",
+      "mg_dost": "دوستوں کے لیے",
+      "p_tapsrekke": "لگاتار نقصان – خود آزمائیں",
+      "p_gull_pris": "سونے کی قیمت – اپنی app میں دیکھ کر لکھیں"
+    },
+    "en": {
+      "velg_sprak": "Which language do you want to read in?",
+      "hafta": "Week one",
+      "hafta_under": "The basics – 5 short lessons, 1–2 minutes each.",
+      "call": "Wednesday live call",
+      "call_tid": "10 PM, Pakistan time",
+      "call_link": "Keep video off, audio only – it's lighter on the network.",
+      "call_om": "{d} days {h} hours to go",
+      "call_om_t": "{h} h {m} min to go",
+      "call_naa": "Live now",
+      "leder": "You were invited by",
+      "leder_ingen": "No leader link yet. Ask your leader for the link.",
+      "leder_venter": "Link received — name when the list is online.",
+      "navnelenke_venter": "This link is being activated. Try again in a few minutes.",
+      "reg_u_venter": "The account link opens when your leader's name is shown.",
+      "trygg": "We never ask for passwords or money.",
+      "sabaq": "Lesson",
+      "min": "min",
+      "dekh": "Watch",
+      "dobara": "Replay",
+      "prov": "Try it yourself",
+      "sawal": "1 question",
+      "sahi": "Right!",
+      "galat": "Not quite –",
+      "neste": "Next lesson",
+      "ferdig_u": "Week done. See you on the call on Wednesday.",
+      "kal_wapis": "Tomorrow: 1 question + about 1 minute of audio. No rush – come back when you're ready.",
+      "kal_wapis_call": "Call time",
+      "dohrana": "Review",
+      "dohrana_under": "Recall what you learned – the best-proven way to remember.",
+      "dohrana_tom": "Nothing to review today. Check again tomorrow.",
+      "frem": "Where you are",
+      "nivaa": [
+        "Seen",
+        "Tried",
+        "Answered right"
+      ],
+      "risk_t": "The truth first, then the account",
+      "risk_b": "About {n} of every 100 people lose money trading CFDs.",
+      "risk_k": "The broker's own figure.",
+      "reg": "Open an account via your leader's link",
+      "reg_u": "Only when you've understood the lessons.",
+      "mer": "More",
+      "verktoy": "Calculator, journal",
+      "ledere": "For leaders",
+      "bytt": "Someone else? Start fresh here.",
+      "bytt_bekreft": "New person? Language, leader and progress will clear. Journal too. Photo your recovery code first.",
+      "bytt_ja": "Yes, start fresh",
+      "bytt_nei": "Back",
+      "gjen": "Save / restore progress",
+      "gjen_u": "New phone or Safari wiped data? Photo this code or link. Paste on the new phone — no server, only on your device.",
+      "gjen_foto": "Photo this code",
+      "gjen_kode": "Recovery code",
+      "gjen_lenke": "Or this link",
+      "gjen_kopi": "Copy code",
+      "gjen_kopi_lenke": "Copy link",
+      "gjen_lim": "Paste code or link here",
+      "gjen_bruk": "Restore",
+      "gjen_ok": "Progress restored ✓",
+      "gjen_feil": "Code not recognized — check the photo.",
+      "gjen_tom": "Nothing to save yet — try one Academy lesson first.",
+      "gjen_qr": "You can photo the QR too",
+      "ios_hjem": "Add to Home Screen",
+      "ios_u": "iPhone: Safari may erase data after 7 days. Add Aimpire to Home Screen — progress stays safer.",
+      "ios_s1": "In Safari, tap Share (square with arrow)",
+      "ios_s2": "Scroll down: Add to Home Screen",
+      "ios_s3": "Tap Add — Aimpire icon on Home",
+      "ios_note": "Safari only. Chrome on iPhone does not offer this.",
+      "fot": "Learning together – not financial advice.",
+      "lyd_kommer": "Audio in English is coming soon.",
+      "anim_kommer": "Animation coming soon – read below for now.",
+      "lyd": "Listen",
+      "lyd_stopp": "Pause",
+      "hafta2": "Week two",
+      "hafta2_under": "Candlesticks, leverage, news, demo and journal – 5 short lessons.",
+      "laast": "Opens when week one is done.",
+      "mk": "Markets now",
+      "mk_u": "In your phone's time.",
+      "open": "Open",
+      "closed": "Closed",
+      "overlap": "London and New York overlap {A}–{B} – usually the busiest hours.",
+      "weekend": "Weekend – the market is closed. Opens {T}.",
+      "byer": {
+        "Sydney": "Sydney",
+        "Tokyo": "Tokyo",
+        "London": "London",
+        "New York": "New York"
+      },
+      "kalk": "Calculator",
+      "kalk_u": "How big a trade is when you decide in advance how much you are willing to lose. Arithmetic, not advice.",
+      "journal": "Journal",
+      "journal_u": "Only on this phone. Never write passwords or account numbers here.",
+      "jn": {
+        "pehle": "Before – before you open the trade",
+        "baad": "After",
+        "inst": "Pair",
+        "dir": "Buy / Sell",
+        "buy": "Buy",
+        "sell": "Sell",
+        "lot": "Lot",
+        "stop": "Stop (pips)",
+        "why": "Why? (one line)",
+        "res": "Result $ (loss = minus)",
+        "feel": "How did it feel?",
+        "feels": [
+          "Calm",
+          "Fear",
+          "Greed",
+          "Anger"
+        ],
+        "lagre": "Save",
+        "band": "Close trade",
+        "slett": "Delete",
+        "tom": "No trades yet. Write BEFORE your first trade.",
+        "open_t": "Open trades",
+        "closed_t": "Closed trades",
+        "stat": "{N} trades · {W} won · {L} lost",
+        "total": "Total",
+        "prosess": "Stop written first: {P} %",
+        "importert": "{N} trades imported from the old app.",
+        "tendens": "Fewer than 20 = a tendency only."
+      },
+      "grp": "Aimpire group (backup)",
+      "ics": "Add to calendar",
+      "del": "Send to a friend",
+      "del_tekst": "Join me in Aimpire Academy – free lessons, live call every Wednesday. {url}",
+      "kopiert": "Link copied.",
+      "ld": {
+        "t": "For leaders",
+        "kit": "Share your link",
+        "u": "Invite first: copy, WhatsApp, share, QR. Profile later.",
+        "invite": "Invite",
+        "meri": "Your invite link",
+        "kode": "Your 6-letter code",
+        "sjekk": "Unlock",
+        "sjekker": "Checking…",
+        "feil": "That code is not on the list — re-enter the code from your email.",
+        "ok": "Verified",
+        "kopi": "Copy link",
+        "wa": "WhatsApp",
+        "bhej": "Share",
+        "qr": "Show QR",
+        "qr_feil": "QR didn't load – use Copy.",
+        "dekhe": "What invitees see",
+        "dekhe_t": "A new member sees this",
+        "dekhe_u": "{N}'s name, first Academy lesson, Wednesday call. Not markets first.",
+        "khud": "Don't open an account under your own link – IB will show the wrong sponsor.",
+        "min": "My page · unlock code",
+        "min_u": "Enter the 6-letter code from your email. Unlock once; the toolbox stays here.",
+        "offline": "List didn't open (net/Sheets). Try later – a saved link still works here.",
+        "offline_ok": "Sheets is down, but your saved link still works.",
+        "full": "Leader page (apply, approval, email)",
+        "ingen": "Unlock your code first (from email) – then invite from here.",
+        "qr_scan": "Scan with the camera – open in Chrome or Safari.",
+        "bio_title": "Put it in your bio",
+        "bio_body": "Put only this link in your Instagram or TikTok bio. Whoever taps sees your name and gets you as sponsor. Keep the bio honest: no income promises.",
+        "bio_copy": "Copy link for bio",
+        "bio_done": "Copied ✓",
+        "aapne": "Open in Chrome or Safari – not inside the app.",
+        "dekhe_open": "Open the full page (as a member sees it)",
+        "full_u": "For applying, approvals and email, open the leader page.",
+        "dekhe_tilbake": "Back to invite"
+      },
+      "intro_t": "We learn trading together.",
+      "intro_u": "Every week: one live call, 5 short lessons, your own journal. Understand first, then the account.",
+      "call_aaj": "Tonight 10 PM PKT, {h} h {m} min to go",
+      "call_kal": "Tomorrow 10 PM PKT, {h} h to go",
+      "call_dager": "{d} days to go, Wednesday 10 PM PKT",
+      "sawal_t": "Your questions for the call",
+      "sawal_u": "Collected by the app – what wasn't clear, ask it on the call.",
+      "sawal_feil": "{t} – go over it again",
+      "sawal_jn": "Journal: {f} in {n} trade(s) – talk about it",
+      "sawal_kopi": "Copy",
+      "sawal_tom": "",
+      "se_hor": "Watch and listen",
+      "hafta3": "Week three",
+      "hafta3_under": "Sessions, trend, support/resistance, risk:reward and swap – 5 short lessons.",
+      "laast3": "Opens when week two is done.",
+      "hafta4": "Week four",
+      "hafta4_under": "Mind and trading: FOMO, revenge trading, overtrading, a trading plan and when not to trade – 5 short lessons.",
+      "laast4": "Opens when week three is done.",
+      "lyd_feil": "The audio didn't start – check your volume and tap again.",
+      "call_join": "Join the call",
+      "call_browser": "Open the link in Chrome or Safari. Do not open it inside WhatsApp or Element.",
+      "call_blokk": "Jitsi is not reachable right now (network/firewall). Try the group link, or again in the browser in a moment.",
+      "stuck_btn": "I need help",
+      "stuck_btn_n": "Ask {N} for help",
+      "stuck_msg": "Hi {N}, I need help with the Aimpire lesson «{t}». Can you help?",
+      "stuck_element": "Open Aimpire group (Questions)",
+      "stuck_soft": "WhatsApp didn't open – ask in the group, or copy the message.",
+      "stuck_hint": "Never send a password or a login screenshot.",
+      "stuck_kopi": "Copy message",
+      "stuck_wa": "WhatsApp",
+      "cta_foyer": "Start Academy: {t}",
+      "cta_foyer_min": "{m} min",
+      "cta_foyer_done": "Next Academy lesson: {t}",
+      "port_pk": "Pakistan",
+      "port_andre": "More languages",
+      "intro_u_ny": "First: one short Academy lesson — about 1 minute. Account later.",
+      "steg_sabaq": "First Academy lesson now",
+      "reg_gate_t": "Account later",
+      "reg_laast": "First {n} Academy lessons ({a}/{n}) — then your leader’s account link.",
+      "reg_klar": "Academy done for now — open an account via your leader’s link.",
+      "reg_gate_risk": "About {n}/100 CFD traders lose money. We never ask for passwords or money.",
+      "reg_laast_cta": "Academy first",
+      "foyer_risk": "CFD trading: about {n}/100 lose money. We learn — no income promises.",
+      "leder_hvem": "Who invited you? Pick one – they stay your leader.",
+      "flyer_krok": "The whole week, in one call.",
+      "flyer_tid": "10 PM, Pakistan time",
+      "flyer_ærlig": "Every Wednesday 22:00 Asia/Karachi (PKT, UTC+5). Pakistan has no daylight saving.",
+      "flyer_join": "Join the call",
+      "flyer_blokk": "Jitsi is not reachable right now (network/firewall). Try the group link.",
+      "flyer_fot": "We learn together – this is not financial advice.",
+      "aapne": "Open in Chrome or Safari – not inside the app.",
+      "inapp_bar": "Opened inside {APP} – the sponsor link can break here.",
+      "inapp_any": "an app",
+      "inapp_ios": "⋮ → Open in Safari / Chrome",
+      "open_chrome": "Open in Chrome",
+      "call_oppsum": "Last call in 5 minutes",
+      "call_oppsum_u": "{d}, {m} min",
+      "reg_forst": "Academy first ({a}/{n}) – the link is here when you are ready.",
+      "reg_guide": "Guide: KYC, deposit and apps – step by step",
+      "reg_gate_t_klar": "Opening an account – when you are ready",
+      "mer_guide": "Guide: account, KYC, deposit and apps",
+      "guide_tilbake": "The Guide is right where you left it – under «More».",
+      "nav": {
+        "ghar": "Home",
+        "academy": "Academy",
+        "paisa": "Money",
+        "mazeed": "More"
+      },
+      "paisa_t": "Money",
+      "p_sonic_linje": "Copy trading that trades in your own account",
+      "p_historikk": "Track record",
+      "p_hist_linje": "{m} months · {total} total · largest dip {dip}",
+      "p_konto": "Account",
+      "p_konto_u": "Ten steps. Tap each one when it is done – the app remembers.",
+      "p_konto_linje": "{n}/{N} steps",
+      "p_uttak": "Withdraw",
+      "p_faq": "Questions",
+      "p_risiko": "Remember: you can lose it all. A past record is not a promise.",
+      "p_se_historikk": "See the track record",
+      "p_kilde": "Source",
+      "p_sjekk": "Check yourself",
+      "p_ferdig": "Done",
+      "p_ferdig_angre": "Not done yet",
+      "p_verve": "Inviting a friend",
+      "p_verve_linje": "Share your link – optional, understand first",
+      "p_ib": "IB and bonuses",
+      "p_ib_mer": "About IB and bonuses",
+      "p_bonuser": "Bonuses",
+      "p_uverifisert": "These numbers come from the broker's presentation; Aimpire has not verified them. Your real numbers live only in the IB Portal.",
+      "p_uttak_linje": "Profit any time; the deposit 30 days after your first trade",
+      "henter": "One moment…",
+      "nett_feil": "No connection. Try again in a moment.",
+      "v_h1": "{N} invited you to Aimpire",
+      "v_lede": "We learn trading together. And Sonic – a copy-trading strategy that runs in your own account.",
+      "v_sann1": "Your money stays with the broker – never with Aimpire or {N}.",
+      "v_sann3": "About {p} in 100 people lose money trading CFDs. Only put in what you could lose completely.",
+      "v_cta": "Open your account – with {N}'s link, step by step",
+      "v_laer": "First, a 1-minute lesson",
+      "v_dhoka_t": "Is this a scam?",
+      "cta_dohr": "Review: {t}",
+      "cta_dohr_hint": "{n} lessons to review today – 1 minute each",
+      "ld_lenke_laer": "Learning link",
+      "ld_lenke_konto": "Account link",
+      "ld_lenke_u": "Your friend has already heard about it? Account link. New and curious? Learning link.",
+      "v_sann2": "You can take profit out any time – take a little out first and see for yourself.",
+      "p_halal": "Is it halal?",
+      "p_madad": "When you get stuck",
+      "p_juridisk": "About Aimpire and your responsibility",
+      "p_apper": "The two apps",
+      "p_amplify": "How to set up Sonic",
+      "p_spor_sponsor": "Hi, I need help with Aimpire:",
+      "p_tafseel": "Details",
+      "mg_laer": "Tools to learn with",
+      "mg_madad": "Help",
+      "mg_apna": "Yours",
+      "mg_dost": "For friends",
+      "p_tapsrekke": "Losing streaks – try it yourself",
+      "p_gull_pris": "Gold price – check it in your app and type it in"
+    },
+    "no": {
+      "velg_sprak": "Hvilket språk vil du lese på?",
+      "hafta": "Uke én",
+      "hafta_under": "Grunnlaget – 5 korte leksjoner, 1–2 minutter hver.",
+      "call": "Onsdagscallen",
+      "call_tid": "22:00 pakistansk tid",
+      "call_link": "Ha video av, bare lyd – det er lettere for nettet.",
+      "call_om": "{d} dager {h} timer igjen",
+      "call_om_t": "{h} t {m} min igjen",
+      "call_naa": "Live nå",
+      "leder": "Du ble invitert av",
+      "leder_ingen": "Ingen lederlenke ennå. Spør lederen din om lenken.",
+      "trygg": "Vi ber aldri om passord eller penger.",
+      "sabaq": "Leksjon",
+      "min": "min",
+      "dekh": "Se",
+      "dobara": "Se igjen",
+      "prov": "Prøv selv",
+      "sawal": "1 spørsmål",
+      "sahi": "Riktig!",
+      "galat": "Ikke helt –",
+      "neste": "Neste leksjon",
+      "ferdig_u": "Uka er gjort. Vi ses på callen onsdag.",
+      "kal_wapis": "I morgen: 1 spørsmål + rundt 1 minutt lyd. Ingen stress – kom når du er klar.",
+      "kal_wapis_call": "Call-tid",
+      "dohrana": "Repetisjon",
+      "dohrana_under": "Hent fram det du lærte – den best dokumenterte måten å huske på.",
+      "dohrana_tom": "Ingenting å repetere i dag. Se igjen i morgen.",
+      "frem": "Hvor du er",
+      "nivaa": [
+        "Sett",
+        "Prøvd",
+        "Svart riktig"
+      ],
+      "risk_t": "Sannheten først, så kontoen",
+      "risk_b": "Omtrent {n} av 100 som handler CFD taper penger.",
+      "risk_k": "Meglerens eget tall.",
+      "reg": "Opprett konto via lederens lenke",
+      "reg_u": "Først når du har forstått leksjonene.",
+      "mer": "Mer",
+      "verktoy": "Kalkulator, journal",
+      "ledere": "For ledere",
+      "bytt": "En annen person? Start på nytt her.",
+      "bytt_bekreft": "Ny person? Språk, leder og fremdrift slettes. Journal også. Ta bilde av gjenopprettingskoden først.",
+      "bytt_ja": "Ja, start på nytt",
+      "bytt_nei": "Tilbake",
+      "gjen": "Lagre / hent fremdrift",
+      "gjen_u": "Ny telefon eller Safari slettet data? Ta bilde av koden eller lenken. Lim inn på den nye telefonen — ingen server, bare hos deg.",
+      "gjen_foto": "Ta bilde av denne koden",
+      "gjen_kode": "Gjenopprettingskode",
+      "gjen_lenke": "Eller denne lenken",
+      "gjen_kopi": "Kopier kode",
+      "gjen_kopi_lenke": "Kopier lenke",
+      "gjen_lim": "Lim inn kode eller lenke her",
+      "gjen_bruk": "Gjenopprett",
+      "gjen_ok": "Fremdriften er tilbake ✓",
+      "gjen_feil": "Koden ble ikke gjenkjent — sjekk bildet.",
+      "gjen_tom": "Ingenting å lagre ennå — prøv én Academy-leksjon først.",
+      "gjen_qr": "Du kan også ta bilde av QR-koden",
+      "ios_hjem": "Legg til på Hjem-skjerm",
+      "ios_u": "iPhone: Safari kan slette data etter 7 dager. Legg Aimpire på Hjem-skjermen — fremdriften er tryggere.",
+      "ios_s1": "I Safari: trykk Del (firkant med pil)",
+      "ios_s2": "Bla ned: Legg til på Hjem-skjerm",
+      "ios_s3": "Trykk Legg til — Aimpire-ikon på Hjem",
+      "ios_note": "Bare Safari. Chrome på iPhone har ikke dette.",
+      "fot": "Vi lærer sammen – ikke økonomisk rådgivning.",
+      "lyd_kommer": "Lyd på norsk kommer snart.",
+      "anim_kommer": "Animasjon kommer snart – les nedenfor så lenge.",
+      "lyd": "Hør forklaringen",
+      "lyd_stopp": "Pause",
+      "hafta2": "Uke to",
+      "hafta2_under": "Candlestick, leverage, nyheter, demo og journal – 5 korte leksjoner.",
+      "laast": "Åpner når uke én er gjort.",
+      "mk": "Markedet nå",
+      "mk_u": "I telefonens tid.",
+      "open": "Åpen",
+      "closed": "Stengt",
+      "overlap": "London og New York overlapper {A}–{B} – vanligvis de travleste timene.",
+      "weekend": "Helg – markedet er stengt. Åpner {T}.",
+      "byer": {
+        "Sydney": "Sydney",
+        "Tokyo": "Tokyo",
+        "London": "London",
+        "New York": "New York"
+      },
+      "kalk": "Kalkulator",
+      "kalk_u": "Hvor stor en handel blir når du bestemmer på forhånd hvor mye du er villig til å tape. Regnestykke, ikke råd.",
+      "journal": "Journal",
+      "journal_u": "Bare på denne telefonen. Skriv aldri passord eller kontonummer her.",
+      "jn": {
+        "pehle": "Før – før du åpner handelen",
+        "baad": "Etter",
+        "inst": "Par",
+        "dir": "Buy / Sell",
+        "buy": "Buy",
+        "sell": "Sell",
+        "lot": "Lot",
+        "stop": "Stop (pips)",
+        "why": "Hvorfor? (én linje)",
+        "res": "Resultat $ (tap = minus)",
+        "feel": "Hvordan føltes det?",
+        "feels": [
+          "Ro",
+          "Frykt",
+          "Grådighet",
+          "Sinne"
+        ],
+        "lagre": "Lagre",
+        "band": "Lukk handelen",
+        "slett": "Slett",
+        "tom": "Ingen handler ennå. Skriv FØR den første.",
+        "open_t": "Åpne handler",
+        "closed_t": "Lukkede handler",
+        "stat": "{N} handler · {W} vunnet · {L} tapt",
+        "total": "Totalt",
+        "prosess": "Stop skrevet først: {P} %",
+        "importert": "{N} handler hentet fra den gamle appen.",
+        "tendens": "Under 20 = bare en tendens."
+      },
+      "grp": "Aimpire-gruppa (reserve)",
+      "ics": "Legg i kalenderen",
+      "del": "Send til en venn",
+      "del_tekst": "Bli med i Aimpire Academy – gratis leksjoner, live-call hver onsdag. {url}",
+      "kopiert": "Lenken er kopiert.",
+      "ld": {
+        "t": "For ledere",
+        "kit": "Del lenken din",
+        "u": "Invitasjon først: kopier, WhatsApp, del, QR. Profil etterpå.",
+        "invite": "Invitasjonsverktøy",
+        "meri": "Invitasjonslenken din",
+        "kode": "Din 6-bokstavs kode",
+        "sjekk": "Lås opp",
+        "sjekker": "Sjekker…",
+        "feil": "Koden står ikke i lista — skriv inn koden fra e-posten på nytt.",
+        "ok": "Bekreftet",
+        "kopi": "Kopier lenke",
+        "wa": "WhatsApp",
+        "bhej": "Del",
+        "qr": "Vis QR",
+        "qr_feil": "QR lastet ikke – bruk Kopier.",
+        "dekhe": "Hva den inviterte ser",
+        "dekhe_t": "Et nytt medlem ser dette",
+        "dekhe_u": "{N} sitt navn, første Academy-leksjon, onsdagscall. Ikke markedet først.",
+        "khud": "Ikke opprett konto under egen lenke – IB viser feil sponsor.",
+        "min": "Min side · lås opp kode",
+        "min_u": "Skriv 6-bokstavskoden fra e-posten. Én gang; verktøykassen blir her.",
+        "offline": "Lista åpnet ikke (nett/Sheets). Prøv senere – lagret lenke virker fortsatt.",
+        "offline_ok": "Sheets er nede, men den lagrede lenken din virker.",
+        "full": "Lederside (søknad, godkjenning, e-post)",
+        "ingen": "Lås opp koden først (fra e-post) – så inviterer du herfra.",
+        "qr_scan": "Skann med kameraet – åpne i Chrome eller Safari.",
+        "bio_title": "Legg den i bioen",
+        "bio_body": "Legg bare denne lenken i bioen på Instagram eller TikTok. Den som trykker, ser navnet ditt og får deg som sponsor. Hold bioen ærlig: ingen inntektsløfter.",
+        "bio_copy": "Kopier lenke til bio",
+        "bio_done": "Kopiert ✓",
+        "aapne": "Åpne i Chrome eller Safari – ikke inne i appen.",
+        "dekhe_open": "Åpne hele siden (slik medlemmet ser den)",
+        "full_u": "For søknad, godkjenning og e-post: åpne ledersiden.",
+        "dekhe_tilbake": "Tilbake til invitasjon"
+      },
+      "intro_t": "Vi lærer trading sammen.",
+      "intro_u": "Hver uke: én live-call, 5 korte leksjoner, din egen journal. Forstå først, så kontoen.",
+      "call_aaj": "I kveld 22:00 PKT, {h} t {m} min igjen",
+      "call_kal": "I morgen 22:00 PKT, {h} t igjen",
+      "call_dager": "{d} dager igjen, onsdag 22:00 PKT",
+      "sawal_t": "Dine spørsmål til callen",
+      "sawal_u": "Samlet av appen – det som ikke satt, spør om det på callen.",
+      "sawal_feil": "{t} – ta den en gang til",
+      "sawal_jn": "Journal: {f} i {n} handler – ta det opp",
+      "sawal_kopi": "Kopier",
+      "sawal_tom": "",
+      "se_hor": "Se og hør",
+      "hafta3": "Uke tre",
+      "hafta3_under": "Sessions, trend, support/resistance, risk:reward og swap – 5 korte leksjoner.",
+      "laast3": "Åpner når uke to er gjort.",
+      "hafta4": "Uke fire",
+      "hafta4_under": "Hodet og trading: FOMO, revenge trading, overtrading, trading plan og når du ikke skal trade – 5 korte leksjoner.",
+      "laast4": "Åpner når uke tre er gjort.",
+      "lyd_feil": "Lyden startet ikke – sjekk volumet og trykk igjen.",
+      "call_join": "Bli med i callen",
+      "call_browser": "Åpne lenken i Chrome eller Safari. Ikke inne i WhatsApp eller Element.",
+      "call_blokk": "Jitsi er ikke tilgjengelig nå (nett/brannmur). Prøv gruppelenken, eller igjen i nettleseren om litt.",
+      "stuck_btn": "Jeg trenger hjelp",
+      "stuck_btn_n": "Spør {N} om hjelp",
+      "stuck_msg": "Hei {N}, jeg trenger hjelp med Aimpire-leksjonen «{t}». Kan du hjelpe?",
+      "stuck_element": "Åpne Aimpire-gruppa (Questions)",
+      "stuck_soft": "WhatsApp åpnet ikke – spør i gruppa, eller kopier meldingen.",
+      "stuck_hint": "Send aldri passord eller skjermbilde av innlogging.",
+      "stuck_kopi": "Kopier melding",
+      "stuck_wa": "WhatsApp",
+      "cta_foyer": "Start Academy: {t}",
+      "cta_foyer_min": "{m} min",
+      "cta_foyer_done": "Neste Academy-leksjon: {t}",
+      "port_pk": "Pakistan",
+      "port_andre": "Flere språk",
+      "intro_u_ny": "Først: én kort Academy-leksjon — ca. 1 minutt. Konto senere.",
+      "steg_sabaq": "Første Academy-leksjon nå",
+      "leder_venter": "Lenke mottatt — navn når lista er online.",
+      "reg_gate_t": "Konto senere",
+      "reg_laast": "Først {n} Academy-leksjoner ({a}/{n}) — deretter lederens kontolenke.",
+      "reg_klar": "Academy OK — åpne konto via lederens lenke.",
+      "reg_gate_risk": "Omtrent {n}/100 som handler CFD taper penger. Vi ber aldri om passord eller penger.",
+      "reg_laast_cta": "Academy først",
+      "foyer_risk": "CFD-trading: omtrent {n}/100 taper penger. Vi lærer — ingen inntektsløfter.",
+      "leder_hvem": "Hvem inviterte deg? Velg én – den blir lederen din.",
+      "aapne": "Åpne i Chrome eller Safari – ikke inne i appen.",
+      "inapp_bar": "Åpnet inne i {APP} – sponsorlenken kan ryke her.",
+      "inapp_any": "appen",
+      "inapp_ios": "⋮ → Åpne i Safari / Chrome",
+      "open_chrome": "Åpne i Chrome",
+      "call_oppsum": "Forrige call på 5 minutter",
+      "call_oppsum_u": "{d}, {m} min",
+      "reg_forst": "Academy først ({a}/{n}) – lenken ligger her når du er klar.",
+      "reg_guide": "Guide: KYC, innskudd og apper – steg for steg",
+      "reg_gate_t_klar": "Åpne konto – når du er klar",
+      "mer_guide": "Guide: konto, KYC, innskudd og apper",
+      "guide_tilbake": "Guiden står der du forlot den – under «Mer».",
+      "nav": {
+        "ghar": "Hjem",
+        "academy": "Academy",
+        "paisa": "Penger",
+        "mazeed": "Mer"
+      },
+      "paisa_t": "Penger",
+      "p_sonic_linje": "Kopihandel som handler i din egen konto",
+      "p_historikk": "Historikk",
+      "p_hist_linje": "{m} måneder · {total} totalt · største dupp {dip}",
+      "p_konto": "Konto",
+      "p_konto_u": "Ti steg. Trykk på hvert når det er gjort – appen husker.",
+      "p_konto_linje": "{n}/{N} steg",
+      "p_uttak": "Uttak",
+      "p_faq": "Spørsmål",
+      "p_risiko": "Husk: du kan tape alt. Historikk er ikke et løfte.",
+      "p_se_historikk": "Se historikken",
+      "p_kilde": "Kilde",
+      "p_sjekk": "Sjekk deg selv",
+      "p_ferdig": "Gjort",
+      "p_ferdig_angre": "Ikke gjort ennå",
+      "p_verve": "Invitere en venn",
+      "p_verve_linje": "Del lenken din – valgfritt, forstå først",
+      "p_ib": "IB og bonuser",
+      "p_ib_mer": "Om IB og bonuser",
+      "p_bonuser": "Bonuser",
+      "p_uverifisert": "Tallene er fra meglerens presentasjon; Aimpire har ikke verifisert dem. Dine ekte tall finnes bare i IB-portalen.",
+      "p_uttak_linje": "Gevinst når som helst; innskuddet 30 dager etter første handel",
+      "henter": "Et øyeblikk…",
+      "nett_feil": "Ingen forbindelse. Prøv igjen om litt.",
+      "v_h1": "{N} har invitert deg til Aimpire",
+      "v_lede": "Vi lærer trading sammen. Og Sonic – en kopihandel-strategi som går i din egen konto.",
+      "v_sann1": "Pengene dine ligger hos megleren – aldri hos Aimpire eller {N}.",
+      "v_sann3": "Omtrent {p} av 100 taper penger på CFD-handel. Sett bare inn det du tåler å tape helt.",
+      "v_cta": "Opprett konto – med lenken til {N}, steg for steg",
+      "v_laer": "Først en leksjon på 1 minutt",
+      "v_dhoka_t": "Er dette svindel?",
+      "cta_dohr": "Repeter: {t}",
+      "cta_dohr_hint": "{n} leksjoner å repetere i dag – 1 minutt hver",
+      "ld_lenke_laer": "Læringslenke",
+      "ld_lenke_konto": "Kontolenke",
+      "ld_lenke_u": "Har vennen hørt om det før? Kontolenke. Ny og nysgjerrig? Læringslenke.",
+      "v_sann2": "Gevinst kan tas ut når som helst – ta ut litt først og se selv.",
+      "p_halal": "Er det halal?",
+      "p_madad": "Når du står fast",
+      "p_juridisk": "Om Aimpire og ditt ansvar",
+      "p_apper": "De to appene",
+      "p_amplify": "Slik setter du opp Sonic",
+      "p_spor_sponsor": "Hei, jeg trenger hjelp med Aimpire:",
+      "p_tafseel": "Detaljer",
+      "mg_laer": "Verktøy å lære med",
+      "mg_madad": "Hjelp",
+      "mg_apna": "Ditt",
+      "mg_dost": "For venner",
+      "p_tapsrekke": "Taprekker – prøv selv",
+      "p_gull_pris": "Gullprisen – se den i appen din og skriv den inn"
+    },
+    "hi": {
+      "velg_sprak": "आप किस भाषा में पढ़ना चाहते हैं?",
+      "hafta": "पहला हफ़्ता",
+      "hafta_under": "बुनियादी बातें – 5 छोटे lessons, हर एक 1–2 मिनट।",
+      "call": "बुधवार की live call",
+      "call_tid": "रात 10 बजे, पाकिस्तान समय",
+      "call_link": "Video बंद रखें, सिर्फ़ आवाज़ – net पर हल्का रहता है।",
+      "call_om": "{d} दिन {h} घंटे बाक़ी",
+      "call_om_t": "{h} घंटे {m} मिनट बाक़ी",
+      "call_naa": "अभी live",
+      "leder": "आपको बुलाया है",
+      "leder_ingen": "अभी कोई leader link नहीं। अपने leader से link माँगें।",
+      "navnelenke_venter": "यह link अभी activate हो रहा है। कुछ मिनट बाद फिर कोशिश करें।",
+      "reg_u_venter": "जब leader का नाम दिखे, तब account link खुलेगा।",
+      "trygg": "हम कभी password या पैसे नहीं माँगते।",
+      "sabaq": "Lesson",
+      "min": "मिनट",
+      "dekh": "देखें",
+      "dobara": "फिर से",
+      "prov": "ख़ुद करके देखें",
+      "sawal": "1 सवाल",
+      "sahi": "सही!",
+      "galat": "पूरी तरह नहीं –",
+      "neste": "अगला lesson",
+      "ferdig_u": "हफ़्ता पूरा। बुधवार को call पर मिलते हैं।",
+      "kal_wapis": "कल: 1 सवाल + लगभग 1 मिनट audio। कोई जल्दी नहीं – जब तैयार हों, वापस आइए।",
+      "kal_wapis_call": "Call का समय",
+      "dohrana": "दोहराना",
+      "dohrana_under": "जो सीखा उसे याद करें – याद रखने का सबसे परखा हुआ तरीक़ा।",
+      "dohrana_tom": "आज दोहराने को कुछ नहीं। कल फिर देखें।",
+      "frem": "आप कहाँ हैं",
+      "nivaa": [
+        "देखा",
+        "करके देखा",
+        "सही जवाब"
+      ],
+      "risk_t": "पहले सच, फिर account",
+      "risk_b": "हर 100 में से लगभग {n} लोग CFD trading में पैसे गँवाते हैं।",
+      "risk_k": "Broker का अपना आँकड़ा।",
+      "reg": "अपने leader के link से account खोलें",
+      "reg_u": "तभी, जब lessons समझ आ जाएँ।",
+      "mer": "और",
+      "verktoy": "Calculator, journal",
+      "ledere": "Leaders के लिए",
+      "bytt": "कोई और? यहाँ से नए सिरे से शुरू करें।",
+      "bytt_bekreft": "नया व्यक्ति? भाषा, leader और progress Sab clear हो जाएगा। Journal भी। पहले recovery code की photo लें।",
+      "bytt_ja": "हाँ, नया शुरू",
+      "bytt_nei": "वापस",
+      "gjen": "Progress save / restore",
+      "gjen_u": "Phone बदला या Safari ने data मिटाया? Code या link की photo लें। नए phone पर paste — कोई server नहीं, सिर्फ आपके पास।",
+      "gjen_foto": "इस code की photo लें",
+      "gjen_kode": "Recovery code",
+      "gjen_lenke": "या यह link",
+      "gjen_kopi": "Code copy",
+      "gjen_kopi_lenke": "Link copy",
+      "gjen_lim": "Code या link यहाँ paste",
+      "gjen_bruk": "Restore करें",
+      "gjen_ok": "Progress वापस आ गया ✓",
+      "gjen_feil": "Code समझ नहीं आया — photo check करें।",
+      "gjen_tom": "अभी save करने को कुछ नहीं — पहले एक Academy lesson try करें।",
+      "gjen_qr": "QR की भी photo ले सकते हैं",
+      "ios_hjem": "Home Screen पर add",
+      "ios_u": "iPhone: Safari 7 दिन बाद data मिटा सकता है। Home Screen पर रखें — progress ज़्यादा safe।",
+      "ios_s1": "Safari में Share दबाएँ (box + arrow)",
+      "ios_s2": "नीचे scroll: Add to Home Screen",
+      "ios_s3": "Add — Aimpire icon Home पर",
+      "ios_note": "सिर्फ Safari। Chrome iPhone पर यह option नहीं देता।",
+      "fot": "साथ मिलकर सीखना – यह financial advice नहीं है।",
+      "lyd_kommer": "Hindi audio जल्द आ रहा है।",
+      "anim_kommer": "Animation जल्द आ रहा है – तब तक नीचे पढ़ें।",
+      "lyd": "सुनें",
+      "lyd_stopp": "रोकें",
+      "hafta2": "दूसरा हफ़्ता",
+      "hafta2_under": "Candlesticks, leverage, news, demo और journal – 5 छोटे lessons।",
+      "laast": "पहला हफ़्ता पूरा होने पर खुलेगा।",
+      "mk": "अभी markets",
+      "mk_u": "आपके फ़ोन के समय में।",
+      "open": "खुला",
+      "closed": "बंद",
+      "overlap": "London और New York एक साथ {A}–{B} – आम तौर पर सबसे ज़्यादा हलचल।",
+      "weekend": "Weekend – market बंद है। खुलेगा {T}।",
+      "byer": {
+        "Sydney": "Sydney",
+        "Tokyo": "Tokyo",
+        "London": "London",
+        "New York": "New York"
+      },
+      "kalk": "Calculator",
+      "kalk_u": "जब आप पहले से तय कर लें कि कितना खोने को तैयार हैं, तो यह बताता है कि trade कितनी बड़ी होगी। यह हिसाब है, सलाह नहीं।",
+      "journal": "Journal",
+      "journal_u": "सिर्फ़ इसी फ़ोन पर। यहाँ कभी password या account number न लिखें।",
+      "jn": {
+        "pehle": "पहले – trade खोलने से पहले",
+        "baad": "बाद में",
+        "inst": "Pair",
+        "dir": "Buy / Sell",
+        "buy": "Buy",
+        "sell": "Sell",
+        "lot": "Lot",
+        "stop": "Stop (pips)",
+        "why": "क्यों? (एक लाइन)",
+        "res": "Result $ (loss = minus)",
+        "feel": "कैसा लगा?",
+        "feels": [
+          "शांति",
+          "डर",
+          "लालच",
+          "ग़ुस्सा"
+        ],
+        "lagre": "Save करें",
+        "band": "Trade बंद करें",
+        "slett": "मिटाएँ",
+        "tom": "अभी कोई trade नहीं। पहले trade से पहले लिखें।",
+        "open_t": "खुले trades",
+        "closed_t": "बंद trades",
+        "stat": "{N} trades · {W} जीते · {L} हारे",
+        "total": "कुल",
+        "prosess": "Stop पहले लिखा: {P} %",
+        "importert": "पुरानी app से {N} trades लाए गए।",
+        "tendens": "20 से कम = सिर्फ़ एक रुझान।"
+      },
+      "grp": "Aimpire group (backup)",
+      "ics": "Calendar में जोड़ें",
+      "del": "किसी दोस्त को भेजें",
+      "del_tekst": "Aimpire Academy पर मेरे साथ सीखें – मुफ़्त lessons, हर बुधवार live call. {url}",
+      "kopiert": "Link copy हो गया।",
+      "ld": {
+        "t": "Leaders के लिए",
+        "kit": "अपना link भेजें",
+        "u": "पहले invite: copy, WhatsApp, share, QR. Profile बाद में.",
+        "invite": "Invite करें",
+        "meri": "आपका invite link",
+        "kode": "अपना 6-letter code",
+        "sjekk": "Unlock",
+        "sjekker": "Check हो रहा…",
+        "feil": "यह code list में नहीं।",
+        "ok": "Verified",
+        "kopi": "Copy",
+        "wa": "WhatsApp",
+        "bhej": "Share",
+        "qr": "QR दिखाएँ",
+        "qr_feil": "QR load नहीं हुआ – Copy इस्तेमाल करें।",
+        "dekhe": "Invitee क्या देखेगा",
+        "dekhe_t": "नया member यह देखेगा",
+        "dekhe_u": "{N} का नाम, Academy का पहला lesson, बुध call. Markets पहले नहीं.",
+        "khud": "अपने link से खुद account न बनाएँ – IB गलत sponsor दिखाता है।",
+        "min": "Min side · code unlock",
+        "min_u": "Email वाला 6-letter code यहाँ लिखें। एक बार unlock, toolbox यहीं रहती है।",
+        "offline": "List अभी नहीं खुली (net/Sheets)। बाद में try करें – saved link पहले से हो तो वह चलेगा।",
+        "offline_ok": "Sheets बंद है, लेकिन आपका saved link चल रहा है।",
+        "full": "Leader page (apply, approval, email)",
+        "ingen": "पहले अपना code unlock करें (email में) – फिर यहाँ से invite भेजें।",
+        "qr_scan": "Camera से scan करें – Chrome या Safari में खोलें।",
+        "bio_title": "Bio में लगाएँ",
+        "bio_body": "Instagram / TikTok bio में सिर्फ़ यही link। जो दबाए, आपका नाम देखेगा और आप sponsor। Bio सीधी: कमाई का वादा नहीं।",
+        "bio_copy": "Bio के लिए link कॉपी",
+        "bio_done": "Copy हो गया ✓",
+        "aapne": "Chrome या Safari में खोलें – app के अंदर नहीं।",
+        "dekhe_open": "पूरा page खोलें (जैसे member देखेगा)",
+        "full_u": "Apply, approval और email के लिए leader page खोलें।",
+        "dekhe_tilbake": "Invite पर वापस"
+      },
+      "intro_t": "हम साथ मिलकर trading सीखते हैं।",
+      "intro_u": "हर हफ़्ते: एक live call, 5 छोटे lessons, आपकी अपनी journal। पहले समझें, फिर account।",
+      "call_aaj": "आज रात 10 बजे PKT, {h} घंटे {m} मिनट बाक़ी",
+      "call_kal": "कल रात 10 बजे PKT, {h} घंटे बाक़ी",
+      "call_dager": "{d} दिन बाक़ी, बुधवार रात 10 बजे PKT",
+      "sawal_t": "Call के लिए आपके सवाल",
+      "sawal_u": "App ने इकट्ठा किए – जो साफ़ नहीं हुआ, call पर पूछें।",
+      "sawal_feil": "{t} – इसे फिर से देखें",
+      "sawal_jn": "Journal: {n} trade में {f} – इस पर बात करें",
+      "sawal_kopi": "Copy",
+      "sawal_tom": "",
+      "se_hor": "देखें और सुनें",
+      "hafta3": "तीसरा हफ़्ता",
+      "hafta3_under": "Sessions, trend, support/resistance, risk:reward और swap – 5 छोटे lessons।",
+      "laast3": "दूसरा हफ़्ता पूरा होने पर खुलेगा।",
+      "hafta4": "चौथा हफ़्ता",
+      "hafta4_under": "दिमाग़ और trading: FOMO, revenge trade, overtrading, trading plan और कब trade न करें – 5 छोटे lessons।",
+      "laast4": "तीसरा हफ़्ता पूरा होने पर खुलेगा।",
+      "lyd_feil": "आवाज़ शुरू नहीं हुई – volume check करें और फिर से tap करें।",
+      "call_join": "Call में शामिल हों",
+      "call_browser": "Link browser में खोलें – Chrome या Safari। WhatsApp/Element के अंदर न खोलें।",
+      "call_blokk": "Jitsi अभी नहीं खुल रहा (net/firewall)। Group link से try करें, या थोड़ी देर बाद browser में फिर से।",
+      "stuck_btn": "मुझे मदद चाहिए",
+      "stuck_btn_n": "{N} से मदद माँगें",
+      "stuck_msg": "नमस्ते {N}, मुझे Aimpire के lesson «{t}» में मदद चाहिए। क्या आप help कर सकते हैं?",
+      "stuck_element": "Aimpire group (Questions) खोलें",
+      "stuck_soft": "WhatsApp नहीं खुला – group में पूछें, या message कॉपी करें।",
+      "stuck_hint": "कभी password या login का screenshot न भेजें।",
+      "stuck_kopi": "Message कॉपी करें",
+      "stuck_wa": "WhatsApp",
+      "cta_foyer": "Academy शुरू: {t}",
+      "cta_foyer_min": "{m} min",
+      "cta_foyer_done": "अगला Academy पाठ: {t}",
+      "port_pk": "Pakistan",
+      "port_andre": "और भाषाएँ",
+      "intro_u_ny": "पहले एक छोटा Academy lesson — लगभग 1 मिनट। Account बाद में।",
+      "steg_sabaq": "पहला Academy lesson अभी",
+      "leder_venter": "Link मिल गया — नाम list online होने पर।",
+      "reg_gate_t": "Account बाद में",
+      "reg_laast": "पहले {n} Academy lessons ({a}/{n}) — फिर leader का account link।",
+      "reg_klar": "Academy OK — account leader के link से।",
+      "reg_gate_risk": "लगभग {n}/100 CFD traders पैसे खो देते हैं। हम कभी password या पैसे नहीं मांगते।",
+      "reg_laast_cta": "पहले Academy",
+      "foyer_risk": "CFD trading: लगभग {n}/100 पैसे खो देते हैं। हम सीखते हैं — income का वादा नहीं।",
+      "leder_hvem": "आपको किसने invite किया? एक चुनें – वही आपके leader रहेंगे।",
+      "aapne": "Chrome या Safari में खोलें – app के अंदर नहीं।",
+      "inapp_bar": "{APP} के अंदर खुला है – sponsor link यहाँ टूट सकती है।",
+      "inapp_any": "App",
+      "inapp_ios": "⋮ → Open in Safari / Chrome",
+      "open_chrome": "Chrome में खोलें",
+      "call_oppsum": "पिछली call का सार",
+      "call_oppsum_u": "{d}, {m} मिनट",
+      "reg_forst": "पहले Academy ({a}/{n}) – link यहाँ है, जब आप तैयार हों।",
+      "reg_guide": "Guide: KYC, deposit और apps – कदम दर कदम",
+      "reg_gate_t_klar": "Account खोलना – जब आप तैयार हों",
+      "mer_guide": "Guide: account, KYC, deposit और apps",
+      "guide_tilbake": "Guide वहीं है जहाँ आप रुके थे – «और» में «Guide»।",
+      "nav": {
+        "ghar": "घर",
+        "academy": "Academy",
+        "paisa": "पैसा",
+        "mazeed": "और"
+      },
+      "paisa_t": "पैसा",
+      "p_sonic_linje": "Copy trading जो आपके अपने account में trade करता है",
+      "p_historikk": "रिकॉर्ड",
+      "p_hist_linje": "{m} महीने · कुल {total} · सबसे बड़ी गिरावट {dip}",
+      "p_konto": "Account",
+      "p_konto_u": "दस steps। जो हो जाए उस पर tap करें – app याद रखता है।",
+      "p_konto_linje": "{n}/{N} steps",
+      "p_uttak": "Withdraw",
+      "p_faq": "सवाल-जवाब",
+      "p_risiko": "याद रखें: आप सब कुछ खो सकते हैं। पिछला रिकॉर्ड आगे का वादा नहीं।",
+      "p_se_historikk": "रिकॉर्ड देखें",
+      "p_kilde": "स्रोत",
+      "p_sjekk": "खुद check करें",
+      "p_ferdig": "हो गया",
+      "p_ferdig_angre": "अभी नहीं हुआ",
+      "p_verve": "दोस्त को invite करना",
+      "p_verve_linje": "Link share करें – optional, पहले समझें",
+      "p_ib": "IB और bonus",
+      "p_ib_mer": "IB और bonus के बारे में",
+      "p_bonuser": "Bonus",
+      "p_uverifisert": "ये numbers broker की presentation से हैं, Aimpire ने verify नहीं किए। अपने असली numbers सिर्फ़ IB Portal में देखें।",
+      "p_uttak_linje": "Profit कभी भी; deposit पहली trade के 30 दिन बाद",
+      "henter": "थोड़ी देर… ला रहा है",
+      "nett_feil": "Net नहीं मिला। थोड़ी देर बाद दोबारा।",
+      "v_h1": "{N} ने आपको Aimpire में बुलाया है",
+      "v_lede": "हम मिलकर trading सीखते हैं। और Sonic – एक copy-trading strategy जो आपके अपने account में चलती है।",
+      "v_sann1": "आपका पैसा broker के पास रहता है – कभी Aimpire या {N} के पास नहीं।",
+      "v_sann3": "लगभग {p}/100 लोग CFD trading में पैसे खो देते हैं। सिर्फ़ उतना डालें जितना पूरा खो सकें।",
+      "v_cta": "Account बनाएँ – {N} के link से, step by step",
+      "v_laer": "पहले 1 मिनट का सबक",
+      "v_dhoka_t": "क्या यह धोखा है?",
+      "cta_dohr": "दोहराएँ: {t}",
+      "cta_dohr_hint": "आज {n} सबक दोहराने हैं – हर एक 1 मिनट",
+      "ld_lenke_laer": "सीखने का link",
+      "ld_lenke_konto": "Account का link",
+      "ld_lenke_u": "दोस्त ने पहले से सुना है? Account का link। नया और curious? सीखने का link।",
+      "v_sann2": "Profit कभी भी निकाल सकते हैं – पहले थोड़ा निकालकर खुद देखें।",
+      "p_halal": "क्या यह हलाल है?",
+      "p_madad": "जब आप अटक जाएँ",
+      "p_juridisk": "Aimpire और आपकी ज़िम्मेदारी",
+      "p_apper": "दोनों apps",
+      "p_amplify": "Sonic कैसे set करें",
+      "p_spor_sponsor": "नमस्ते, मुझे Aimpire में मदद चाहिए:",
+      "p_tafseel": "विवरण",
+      "mg_laer": "सीखने के tools",
+      "mg_madad": "मदद",
+      "mg_apna": "आपका",
+      "mg_dost": "दोस्तों के लिए",
+      "p_tapsrekke": "लगातार नुकसान – खुद आज़माएँ",
+      "p_gull_pris": "सोने की कीमत – अपनी app में देखकर लिखें"
+    },
+    "ar": {
+      "velg_sprak": "بأي لغة تفضّلون القراءة؟",
+      "hafta": "الأسبوع الأول",
+      "hafta_under": "الأساسيات – 5 دروس قصيرة، كل درس 1–2 دقيقة.",
+      "call": "الـ live call يوم الأربعاء",
+      "call_tid": "الساعة 10 مساءً، بتوقيت باكستان",
+      "call_link": "أبقِ الفيديو مغلقًا، الصوت فقط – أخف على الشبكة.",
+      "call_om": "باقٍ {d} أيام و{h} ساعات",
+      "call_om_t": "باقٍ {h} ساعة و{m} دقيقة",
+      "call_naa": "مباشر الآن",
+      "leder": "الدعوة من",
+      "leder_ingen": "لا يوجد رابط leader بعد. يمكن طلب الرابط من الـ leader.",
+      "navnelenke_venter": "هذا الرابط قيد التفعيل الآن. حاول مرة أخرى بعد دقائق.",
+      "reg_u_venter": "يفتح رابط الحساب عندما يظهر اسم قائدك.",
+      "trygg": "لا نطلب أبدًا كلمات مرور أو أموالًا.",
+      "sabaq": "درس",
+      "min": "دقيقة",
+      "dekh": "مشاهدة",
+      "dobara": "إعادة",
+      "prov": "تجربة عملية",
+      "sawal": "سؤال واحد",
+      "sahi": "صحيح!",
+      "galat": "ليس تمامًا –",
+      "neste": "الدرس التالي",
+      "ferdig_u": "انتهى الأسبوع. نلتقي في الـ call يوم الأربعاء.",
+      "kal_wapis": "غدًا: سؤال واحد + نحو دقيقة من الصوت. بلا استعجال – عُد عندما تكون جاهزًا.",
+      "kal_wapis_call": "وقت الـ call",
+      "dohrana": "مراجعة",
+      "dohrana_under": "استرجاع ما تم تعلّمه – أكثر طريقة مُثبتة للتذكّر.",
+      "dohrana_tom": "لا شيء للمراجعة اليوم. نتحقق مجددًا غدًا.",
+      "frem": "أين وصلتم",
+      "nivaa": [
+        "شوهد",
+        "جُرّب",
+        "إجابة صحيحة"
+      ],
+      "risk_t": "الحقيقة أولًا، ثم الحساب",
+      "risk_b": "نحو {n} من كل 100 شخص يخسرون المال في تداول CFD.",
+      "risk_k": "الرقم من الوسيط نفسه.",
+      "reg": "فتح حساب عبر رابط الـ leader",
+      "reg_u": "فقط بعد فهم الدروس.",
+      "mer": "المزيد",
+      "verktoy": "Calculator، journal",
+      "ledere": "للـ leaders",
+      "bytt": "شخص آخر؟ البدء من جديد هنا.",
+      "bytt_bekreft": "شخص آخر؟ ستُمسح اللغة والقائد والتقدّم والـ journal. صوّر recovery code أولاً.",
+      "bytt_ja": "نعم، ابدأ من جديد",
+      "bytt_nei": "رجوع",
+      "gjen": "حفظ / استعادة التقدّم",
+      "gjen_u": "هاتف جديد أو Safari مسح البيانات؟ صوّر الرمز أو الرابط. الصق على الهاتف الجديد — بلا خادم، عندك فقط.",
+      "gjen_foto": "صوّر هذا الرمز",
+      "gjen_kode": "Recovery code",
+      "gjen_lenke": "أو هذا الرابط",
+      "gjen_kopi": "نسخ الرمز",
+      "gjen_kopi_lenke": "نسخ الرابط",
+      "gjen_lim": "الصق الرمز أو الرابط هنا",
+      "gjen_bruk": "استعادة",
+      "gjen_ok": "عاد التقدّم ✓",
+      "gjen_feil": "لم يُفهم الرمز — راجع الصورة.",
+      "gjen_tom": "لا شيء للحفظ بعد — جرّب درس Academy أولاً.",
+      "gjen_qr": "يمكن تصوير QR أيضاً",
+      "ios_hjem": "أضف إلى الشاشة الرئيسية",
+      "ios_u": "iPhone: قد يمسح Safari البيانات بعد 7 أيام. أضف Aimpire للشاشة الرئيسية — التقدّم أكثر أماناً.",
+      "ios_s1": "في Safari اضغط Share (مربع بسهم)",
+      "ios_s2": "مرّر للأسفل: Add to Home Screen",
+      "ios_s3": "اضغط Add — أيقونة Aimpire على الشاشة",
+      "ios_note": "Safari فقط. Chrome على iPhone لا يوفّر هذا.",
+      "fot": "نتعلّم معًا – هذه ليست نصيحة مالية.",
+      "lyd_kommer": "الصوت بالعربية قريبًا.",
+      "anim_kommer": "الرسوم المتحركة قريبًا – يمكن القراءة أدناه الآن.",
+      "lyd": "استمع",
+      "lyd_stopp": "إيقاف",
+      "hafta2": "الأسبوع الثاني",
+      "hafta2_under": "Candlesticks و leverage والأخبار و demo و journal – 5 دروس قصيرة.",
+      "laast": "يُفتح بعد إنهاء الأسبوع الأول.",
+      "mk": "الأسواق الآن",
+      "mk_u": "بتوقيت الهاتف.",
+      "open": "مفتوح",
+      "closed": "مغلق",
+      "overlap": "تداخل London و New York {A}–{B} – عادةً أكثر الساعات حركة.",
+      "weekend": "عطلة نهاية الأسبوع – السوق مغلق. يُفتح {T}.",
+      "byer": {
+        "Sydney": "Sydney",
+        "Tokyo": "Tokyo",
+        "London": "London",
+        "New York": "New York"
+      },
+      "kalk": "Calculator",
+      "kalk_u": "كم يكون حجم الصفقة حين تقرّر مسبقاً كم أنت مستعد أن تخسر. عملية حسابية، لا نصيحة.",
+      "journal": "Journal",
+      "journal_u": "على هذا الهاتف فقط. لا تُكتب هنا أبدًا كلمات المرور أو أرقام الحسابات.",
+      "jn": {
+        "pehle": "قبل – قبل فتح الصفقة",
+        "baad": "بعد",
+        "inst": "Pair",
+        "dir": "Buy / Sell",
+        "buy": "Buy",
+        "sell": "Sell",
+        "lot": "Lot",
+        "stop": "Stop (pips)",
+        "why": "لماذا؟ (سطر واحد)",
+        "res": "النتيجة $ (الخسارة = سالب)",
+        "feel": "ما الشعور؟",
+        "feels": [
+          "هدوء",
+          "خوف",
+          "طمع",
+          "غضب"
+        ],
+        "lagre": "حفظ",
+        "band": "إغلاق الصفقة",
+        "slett": "حذف",
+        "tom": "لا صفقات بعد. الكتابة تكون قبل أول صفقة.",
+        "open_t": "صفقات مفتوحة",
+        "closed_t": "صفقات مغلقة",
+        "stat": "{N} صفقات · {W} رابحة · {L} خاسرة",
+        "total": "المجموع",
+        "prosess": "الـ stop كُتب أولًا: {P} %",
+        "importert": "تم استيراد {N} صفقات من التطبيق القديم.",
+        "tendens": "أقل من 20 = مجرد اتجاه."
+      },
+      "grp": "مجموعة Aimpire (احتياطي)",
+      "ics": "إضافة إلى التقويم",
+      "del": "إرسال إلى صديق",
+      "del_tekst": "انضم إلي في Aimpire Academy – دروس مجانية و live call كل أربعاء. {url}",
+      "kopiert": "تم نسخ الرابط.",
+      "ld": {
+        "t": "للـ leaders",
+        "kit": "أرسل رابطك",
+        "u": "الدعوة أولاً: نسخ، WhatsApp، مشاركة، QR. الملف لاحقاً.",
+        "invite": "أدوات الدعوة",
+        "meri": "رابط الدعوة لديك",
+        "kode": "رمزك المكوّن من 6 أحرف",
+        "sjekk": "فتح",
+        "sjekker": "جارٍ التحقق…",
+        "feil": "هذا الرمز ليس في القائمة.",
+        "ok": "Verified",
+        "kopi": "نسخ",
+        "wa": "WhatsApp",
+        "bhej": "مشاركة",
+        "qr": "عرض QR",
+        "qr_feil": "تعذّر تحميل QR – استخدم النسخ.",
+        "dekhe": "ماذا يرى المدعو",
+        "dekhe_t": "العضو الجديد يرى هذا",
+        "dekhe_u": "اسم {N}، أول درس في Academy، مكالمة الأربعاء. ليس الـ markets أولاً.",
+        "khud": "لا تفتح حساباً عبر رابطك أنت – الـ IB يُظهر sponsor خاطئاً.",
+        "min": "صفحتي · فتح الرمز",
+        "min_u": "اكتب الرمز من بريدك (6 أحرف). مرة واحدة؛ تبقى الأدوات هنا.",
+        "offline": "القائمة لم تُفتح (شبكة/Sheets). جرّب لاحقاً – الرابط المحفوظ ما زال يعمل.",
+        "offline_ok": "Sheets متوقف، لكن رابطك المحفوظ يعمل.",
+        "full": "صفحة الـ leader (تقديم، موافقة، بريد)",
+        "ingen": "افتح رمزك أولاً (من البريد) – ثم أرسل الدعوة من هنا.",
+        "qr_scan": "امسح بالكاميرا – وافتح في Chrome أو Safari.",
+        "bio_title": "ضعه في الـ bio",
+        "bio_body": "ضع هذا الرابط فقط في bio على Instagram أو TikTok. من يضغط يرى اسمك ويصبح أنت الـ sponsor. اجعل الـ bio صادقاً: لا وعود بالدخل.",
+        "bio_copy": "انسخ الرابط للـ bio",
+        "bio_done": "تم النسخ ✓",
+        "aapne": "افتحه في Chrome أو Safari – لا داخل التطبيق.",
+        "dekhe_open": "افتح الصفحة كاملة (كما يراها العضو)",
+        "full_u": "للتقديم والموافقة والبريد الإلكتروني، افتح صفحة الـ leader.",
+        "dekhe_tilbake": "العودة إلى الدعوة"
+      },
+      "intro_t": "نتعلّم trading معًا.",
+      "intro_u": "كل أسبوع: live call واحد، 5 دروس قصيرة، و journal خاص. الفهم أولًا، ثم الحساب.",
+      "call_aaj": "الليلة 10 مساءً PKT، باقٍ {h} ساعة و{m} دقيقة",
+      "call_kal": "غدًا 10 مساءً PKT، باقٍ {h} ساعة",
+      "call_dager": "باقٍ {d} أيام، الأربعاء 10 مساءً PKT",
+      "sawal_t": "أسئلتكم للـ call",
+      "sawal_u": "جمعها التطبيق – ما لم يتضح يمكن السؤال عنه في الـ call.",
+      "sawal_feil": "{t} – تستحق المراجعة مرة أخرى",
+      "sawal_jn": "Journal: {f} في {n} صفقة – للنقاش",
+      "sawal_kopi": "نسخ",
+      "sawal_tom": "",
+      "se_hor": "مشاهدة واستماع",
+      "hafta3": "الأسبوع الثالث",
+      "hafta3_under": "Sessions و trend و support/resistance و risk:reward و swap – 5 دروس قصيرة.",
+      "laast3": "يُفتح بعد إنهاء الأسبوع الثاني.",
+      "hafta4": "الأسبوع الرابع",
+      "hafta4_under": "العقل والتداول: FOMO و revenge trading و overtrading و trading plan ومتى يُفضَّل عدم التداول – 5 دروس قصيرة.",
+      "laast4": "يُفتح بعد إنهاء الأسبوع الثالث.",
+      "lyd_feil": "لم يبدأ الصوت – تحقق من مستوى الصوت واضغط مرة أخرى.",
+      "call_join": "انضم إلى الـ call",
+      "call_browser": "افتح الرابط في Chrome أو Safari. لا تفتحه داخل WhatsApp أو Element.",
+      "call_blokk": "Jitsi غير متاح الآن (شبكة/جدار ناري). جرّب رابط المجموعة، أو أعد المحاولة في المتصفح بعد قليل.",
+      "stuck_btn": "أحتاج مساعدة",
+      "stuck_btn_n": "اطلب مساعدة {N}",
+      "stuck_msg": "مرحبًا {N}، أحتاج مساعدة في درس Aimpire «{t}». هل يمكنك المساعدة؟",
+      "stuck_element": "افتح مجموعة Aimpire (Questions)",
+      "stuck_soft": "لم يُفتح WhatsApp – اسأل في المجموعة، أو انسخ الرسالة.",
+      "stuck_hint": "لا ترسل كلمة مرور أو لقطة شاشة لتسجيل الدخول أبداً.",
+      "stuck_kopi": "انسخ الرسالة",
+      "stuck_wa": "WhatsApp",
+      "cta_foyer": "ابدأ Academy: {t}",
+      "cta_foyer_min": "{m} دق",
+      "cta_foyer_done": "درس Academy التالي: {t}",
+      "port_pk": "باكستان",
+      "port_andre": "لغات أخرى",
+      "intro_u_ny": "أولًا: درس Academy قصير — نحو دقيقة. الحساب لاحقًا.",
+      "steg_sabaq": "درس Academy الأول الآن",
+      "leder_venter": "وصل الرابط — الاسم عند توفر القائمة.",
+      "reg_gate_t": "الحساب لاحقًا",
+      "reg_laast": "أولًا {n} دروس Academy ({a}/{n}) — ثم رابط الحساب من قائدك.",
+      "reg_klar": "Academy جاهز — افتح حسابًا عبر رابط القائد.",
+      "reg_gate_risk": "حوالي {n}/100 من متداولي CFD يخسرون المال. لا نطلب كلمة مرور أو مالًا أبدًا.",
+      "reg_laast_cta": "Academy أولًا",
+      "foyer_risk": "CFD trading: حوالي {n}/100 يخسرون المال. نتعلّم — بلا وعود بدخل.",
+      "leder_hvem": "من دعاك؟ اختر واحدًا – سيبقى هو الـ leader الخاص بك.",
+      "aapne": "افتحه في Chrome أو Safari – لا داخل التطبيق.",
+      "inapp_bar": "فُتح داخل {APP} – قد ينكسر رابط الـ sponsor هنا.",
+      "inapp_any": "التطبيق",
+      "inapp_ios": "⋮ → Open in Safari / Chrome",
+      "open_chrome": "افتح في Chrome",
+      "call_oppsum": "ملخّص آخر call",
+      "call_oppsum_u": "{d}، {m} دقائق",
+      "reg_forst": "Academy أولًا ({a}/{n}) – الرابط هنا عندما تكون جاهزًا.",
+      "reg_guide": "الدليل: KYC والإيداع والتطبيقات – خطوة بخطوة",
+      "reg_gate_t_klar": "فتح حساب – عندما تكون جاهزًا",
+      "mer_guide": "الدليل: الحساب وKYC والإيداع والتطبيقات",
+      "guide_tilbake": "الدليل حيث تركته – ضمن «المزيد».",
+      "nav": {
+        "ghar": "الرئيسية",
+        "academy": "Academy",
+        "paisa": "المال",
+        "mazeed": "المزيد"
+      },
+      "paisa_t": "المال",
+      "p_sonic_linje": "تداول بالنسخ يتداول في حسابك الخاص",
+      "p_historikk": "السجل",
+      "p_hist_linje": "{m} شهرًا · الإجمالي {total} · أكبر تراجع {dip}",
+      "p_konto": "الحساب",
+      "p_konto_u": "عشر خطوات. اضغط على كل خطوة عند إتمامها – التطبيق يتذكر.",
+      "p_konto_linje": "{n}/{N} خطوات",
+      "p_uttak": "السحب",
+      "p_faq": "أسئلة",
+      "p_risiko": "تذكّر: قد تخسر كل شيء. السجل السابق ليس وعدًا.",
+      "p_se_historikk": "اعرض السجل",
+      "p_kilde": "المصدر",
+      "p_sjekk": "تحقّق بنفسك",
+      "p_ferdig": "تم",
+      "p_ferdig_angre": "لم يتم بعد",
+      "p_verve": "دعوة صديق",
+      "p_verve_linje": "شارك رابطك – اختياري، افهم أولًا",
+      "p_ib": "IB والمكافآت",
+      "p_ib_mer": "عن IB والمكافآت",
+      "p_bonuser": "المكافآت",
+      "p_uverifisert": "هذه الأرقام من عرض الوسيط؛ لم تتحقق Aimpire منها. أرقامك الحقيقية موجودة فقط في بوابة IB.",
+      "p_uttak_linje": "الربح في أي وقت؛ الإيداع بعد 30 يومًا من أول صفقة",
+      "henter": "لحظة…",
+      "nett_feil": "لا يوجد اتصال. حاول مرة أخرى بعد قليل.",
+      "v_h1": "دعاك {N} إلى Aimpire",
+      "v_lede": "نتعلّم التداول معًا. وSonic – استراتيجية نسخ تداول تعمل في حسابك الخاص.",
+      "v_sann1": "أموالك تبقى لدى الوسيط – لا لدى Aimpire ولا لدى {N}.",
+      "v_sann3": "نحو {p} من كل 100 شخص يخسرون المال في تداول CFD. ضع فقط ما تستطيع خسارته بالكامل.",
+      "v_cta": "افتح حسابك – برابط {N}، خطوة بخطوة",
+      "v_laer": "أولًا درس مدته دقيقة",
+      "v_dhoka_t": "هل هذا احتيال؟",
+      "cta_dohr": "مراجعة: {t}",
+      "cta_dohr_hint": "{n} دروس للمراجعة اليوم – دقيقة لكل درس",
+      "ld_lenke_laer": "رابط التعلّم",
+      "ld_lenke_konto": "رابط الحساب",
+      "ld_lenke_u": "سمع صديقك عنه من قبل؟ رابط الحساب. جديد وفضولي؟ رابط التعلّم.",
+      "v_sann2": "يمكنك سحب الربح في أي وقت – اسحب مبلغًا صغيرًا أولًا وتحقّق بنفسك.",
+      "p_halal": "هل هو حلال؟",
+      "p_madad": "عندما تتعثّر",
+      "p_juridisk": "عن Aimpire ومسؤوليتك",
+      "p_apper": "التطبيقان",
+      "p_amplify": "كيف تُعِدّ Sonic",
+      "p_spor_sponsor": "مرحبًا، أحتاج مساعدة في Aimpire:",
+      "p_tafseel": "التفاصيل",
+      "mg_laer": "أدوات للتعلّم",
+      "mg_madad": "مساعدة",
+      "mg_apna": "لك",
+      "mg_dost": "للأصدقاء",
+      "p_tapsrekke": "سلاسل الخسارة – جرّبها بنفسك",
+      "p_gull_pris": "سعر الذهب – تحقّق منه في تطبيقك واكتبه"
+    }
+  },
+  "risk_prosent": 85,
+  "uke1": [
+    {
+      "id": "pip",
+      "min": 1,
+      "anim": "leksjon/pip.html",
+      "prov": "pip",
+      "t": {
+        "ur_rm": "Pip kya hai?",
+        "ur": "Pip کیا ہے؟",
+        "en": "What is a pip?",
+        "no": "Hva er en pip?",
+        "hi": "Pip क्या है?",
+        "ar": "ما هو الـ pip؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Pip = price kitni move hui.",
+          "EUR/USD pe 4th decimal = 1 pip.",
+          "0.01 lot pe 1 pip ≈ $0.10.",
+          "Gold: pips nahi, dollar dekhein."
+        ],
+        "ur": [
+          "Pip = قیمت کتنی ہلی۔",
+          "EUR/USD پر چوتھا اعشاریہ = 1 pip۔",
+          "0.01 lot پر 1 pip ≈ $0.10۔",
+          "گولڈ: pips نہیں، ڈالر دیکھیں۔"
+        ],
+        "en": [
+          "A pip is how far the price moved.",
+          "On EUR/USD the 4th decimal is 1 pip.",
+          "At 0.01 lot, 1 pip ≈ $0.10.",
+          "Gold: think in dollars, not pips."
+        ],
+        "no": [
+          "En pip er hvor langt prisen flyttet seg.",
+          "På EUR/USD er fjerde desimal 1 pip.",
+          "Med 0,01 lot er 1 pip ≈ $0,10.",
+          "Gull: tenk i dollar, ikke pips."
+        ],
+        "hi": [
+          "Pip = price कितना हिला।",
+          "EUR/USD पर चौथा decimal = 1 pip।",
+          "0.01 lot पर 1 pip ≈ $0.10।",
+          "Gold: pips नहीं, dollar में सोचें।"
+        ],
+        "ar": [
+          "الـ pip = مقدار تحرّك السعر.",
+          "في EUR/USD الخانة العشرية الرابعة = 1 pip.",
+          "عند 0.01 lot، 1 pip ≈ $0.10.",
+          "الذهب: الحساب بالدولار، لا بالـ pips."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "EUR/USD 1.0850 → 1.0853. Kitne pips?",
+          "o": [
+            "3 pips",
+            "30 pips",
+            "0.3 pips"
+          ],
+          "r": 0,
+          "hvorfor": "4th decimal badla: 50 → 53 = 3."
+        },
+        "ur": {
+          "q": "EUR/USD 1.0850 → 1.0853۔ کتنے pips؟",
+          "o": [
+            "3 pips",
+            "30 pips",
+            "0.3 pips"
+          ],
+          "r": 0,
+          "hvorfor": "چوتھا اعشاریہ بدلا: 50 → 53 = 3۔"
+        },
+        "en": {
+          "q": "EUR/USD 1.0850 → 1.0853. How many pips?",
+          "o": [
+            "3 pips",
+            "30 pips",
+            "0.3 pips"
+          ],
+          "r": 0,
+          "hvorfor": "The 4th decimal moved: 50 → 53 = 3."
+        },
+        "no": {
+          "q": "EUR/USD 1,0850 → 1,0853. Hvor mange pips?",
+          "o": [
+            "3 pips",
+            "30 pips",
+            "0,3 pips"
+          ],
+          "r": 0,
+          "hvorfor": "Fjerde desimal flyttet seg: 50 → 53 = 3."
+        },
+        "hi": {
+          "q": "EUR/USD 1.0850 → 1.0853। कितने pips?",
+          "o": [
+            "3 pips",
+            "30 pips",
+            "0.3 pips"
+          ],
+          "r": 0,
+          "hvorfor": "चौथा decimal बदला: 50 → 53 = 3।"
+        },
+        "ar": {
+          "q": "EUR/USD 1.0850 → 1.0853. كم pip؟",
+          "o": [
+            "3 pips",
+            "30 pips",
+            "0.3 pips"
+          ],
+          "r": 0,
+          "hvorfor": "تغيّرت الخانة الرابعة: 50 → 53 = 3."
+        }
+      }
+    },
+    {
+      "id": "lot",
+      "min": 1,
+      "anim": "leksjon/lot.html",
+      "prov": "lot",
+      "t": {
+        "ur_rm": "Lot kya hai?",
+        "ur": "Lot کیا ہے؟",
+        "en": "What is a lot?",
+        "no": "Hva er en lot?",
+        "hi": "Lot क्या है?",
+        "ar": "ما هو الـ lot؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Lot = trade ka size.",
+          "0.01 / 0.10 / 1.00 lot = $0.10 / $1 / $10 har pip pe.",
+          "Lot bara = profit bhi bara, loss bhi utna hi bara.",
+          "Pehle risk, phir lot."
+        ],
+        "ur": [
+          "Lot = ٹریڈ کا سائز۔",
+          "0.01 / 0.10 / 1.00 lot = $0.10 / $1 / $10 ہر pip پر۔",
+          "Lot بڑا = منافع بھی بڑا، نقصان بھی اتنا ہی بڑا۔",
+          "پہلے رسک، پھر lot۔"
+        ],
+        "en": [
+          "A lot is the size of your trade.",
+          "0.01 / 0.10 / 1.00 lot = $0.10 / $1 / $10 per pip.",
+          "Bigger lot: bigger gain, and just as big a loss.",
+          "Risk first, then lot."
+        ],
+        "no": [
+          "Lot er størrelsen på handelen.",
+          "0,01 / 0,10 / 1,00 lot = $0,10 / $1 / $10 per pip.",
+          "Større lot: større gevinst, og like stort tap.",
+          "Risiko først, så lot."
+        ],
+        "hi": [
+          "Lot = आपके trade का आकार।",
+          "0.01 / 0.10 / 1.00 lot = $0.10 / $1 / $10 प्रति pip।",
+          "बड़ा lot: बड़ा फ़ायदा, और उतना ही बड़ा loss।",
+          "पहले risk, फिर lot।"
+        ],
+        "ar": [
+          "الـ lot = حجم الصفقة.",
+          "0.01 / 0.10 / 1.00 lot = $0.10 / $1 / $10 لكل pip.",
+          "Lot أكبر: ربح أكبر، وخسارة بالحجم نفسه.",
+          "الـ risk أولًا، ثم الـ lot."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "0.01 lot pe 1 pip ≈ kitna?",
+          "o": [
+            "$0.10",
+            "$1",
+            "$10"
+          ],
+          "r": 0,
+          "hvorfor": "1.00 lot = $10, 0.01 lot = sau guna chhota = $0.10."
+        },
+        "ur": {
+          "q": "0.01 lot پر 1 pip ≈ کتنا؟",
+          "o": [
+            "$0.10",
+            "$1",
+            "$10"
+          ],
+          "r": 0,
+          "hvorfor": "1.00 lot = $10، 0.01 lot = سو گنا چھوٹا = $0.10۔"
+        },
+        "en": {
+          "q": "At 0.01 lot, 1 pip ≈ how much?",
+          "o": [
+            "$0.10",
+            "$1",
+            "$10"
+          ],
+          "r": 0,
+          "hvorfor": "1.00 lot = $10; 0.01 lot is a hundred times smaller = $0.10."
+        },
+        "no": {
+          "q": "Med 0,01 lot er 1 pip ≈ hvor mye?",
+          "o": [
+            "$0,10",
+            "$1",
+            "$10"
+          ],
+          "r": 0,
+          "hvorfor": "1,00 lot = $10; 0,01 lot er hundre ganger mindre = $0,10."
+        },
+        "hi": {
+          "q": "0.01 lot पर 1 pip ≈ कितना?",
+          "o": [
+            "$0.10",
+            "$1",
+            "$10"
+          ],
+          "r": 0,
+          "hvorfor": "1.00 lot = $10; 0.01 lot सौ गुना छोटा = $0.10।"
+        },
+        "ar": {
+          "q": "عند 0.01 lot، 1 pip ≈ كم؟",
+          "o": [
+            "$0.10",
+            "$1",
+            "$10"
+          ],
+          "r": 0,
+          "hvorfor": "1.00 lot = $10؛ و 0.01 lot أصغر بمئة مرة = $0.10."
+        }
+      }
+    },
+    {
+      "id": "spread",
+      "min": 1,
+      "anim": "leksjon/spread.html",
+      "prov": "",
+      "fig": "spread",
+      "t": {
+        "ur_rm": "Spread kya hai?",
+        "ur": "Spread کیا ہے؟",
+        "en": "What is the spread?",
+        "no": "Hva er spread?",
+        "hi": "Spread क्या है?",
+        "ar": "ما هو الـ spread؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Har pair ke 2 price hoti hain: buy aur sell.",
+          "Farq = spread. Yeh broker ki fees hai.",
+          "Is liye nayi trade thodi minus mein shuru hoti hai.",
+          "News ke waqt spread bara ho jata hai."
+        ],
+        "ur": [
+          "ہر پیئر کے 2 پرائس ہوتی ہیں: Buy اور Sell۔",
+          "فرق = spread۔ یہ بروکر کی فیس ہے۔",
+          "اس لیے نئی ٹریڈ تھوڑی مائنس میں شروع ہوتی ہے۔",
+          "خبروں کے وقت spread بڑا ہو جاتا ہے۔"
+        ],
+        "en": [
+          "Every pair has two prices: buy and sell.",
+          "The gap is the spread – the broker's fee.",
+          "That's why a new trade starts slightly in the red.",
+          "The spread widens around news."
+        ],
+        "no": [
+          "Hvert par har to priser: kjøp og salg.",
+          "Gapet er spread – meglerens gebyr.",
+          "Derfor starter en ny handel litt i minus.",
+          "Spread blir større rundt nyheter."
+        ],
+        "hi": [
+          "हर pair के दो price होते हैं: buy और sell।",
+          "इनके बीच का फ़र्क़ spread है – broker की fee।",
+          "इसीलिए नया trade थोड़े minus में शुरू होता है।",
+          "News के आसपास spread बढ़ जाता है।"
+        ],
+        "ar": [
+          "لكل pair سعران: buy و sell.",
+          "الفرق بينهما هو الـ spread – رسوم الوسيط.",
+          "لهذا تبدأ الصفقة الجديدة بخسارة بسيطة.",
+          "يتّسع الـ spread حول الأخبار."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Nayi trade kholte hi thoda minus kyun?",
+          "o": [
+            "Spread (broker ki fees)",
+            "Internet slow tha",
+            "App ki galti"
+          ],
+          "r": 0,
+          "hvorfor": "Buy aur sell price ka farq pehle se minus hota hai."
+        },
+        "ur": {
+          "q": "نئی ٹریڈ کھولتے ہی تھوڑا مائنس کیوں؟",
+          "o": [
+            "Spread (بروکر کی فیس)",
+            "انٹرنیٹ سلو تھا",
+            "ایپ کی غلطی"
+          ],
+          "r": 0,
+          "hvorfor": "Buy اور Sell پرائس کا فرق پہلے سے مائنس ہوتا ہے۔"
+        },
+        "en": {
+          "q": "Why is a brand-new trade slightly negative?",
+          "o": [
+            "The spread (broker's fee)",
+            "Slow internet",
+            "A bug in the app"
+          ],
+          "r": 0,
+          "hvorfor": "The gap between buy and sell price is paid up front."
+        },
+        "no": {
+          "q": "Hvorfor er en helt ny handel litt i minus?",
+          "o": [
+            "Spread (meglerens gebyr)",
+            "Tregt nett",
+            "En feil i appen"
+          ],
+          "r": 0,
+          "hvorfor": "Gapet mellom kjøps- og salgspris betales med en gang."
+        },
+        "hi": {
+          "q": "बिल्कुल नया trade थोड़ा minus में क्यों होता है?",
+          "o": [
+            "Spread (broker की fee)",
+            "धीमा internet",
+            "App में गड़बड़ी"
+          ],
+          "r": 0,
+          "hvorfor": "Buy और sell price का फ़र्क़ शुरू में ही चुकाया जाता है।"
+        },
+        "ar": {
+          "q": "لماذا تكون الصفقة الجديدة تمامًا سالبة قليلًا؟",
+          "o": [
+            "الـ spread (رسوم الوسيط)",
+            "إنترنت بطيء",
+            "خلل في التطبيق"
+          ],
+          "r": 0,
+          "hvorfor": "الفرق بين سعر buy و sell يُدفع من البداية."
+        }
+      }
+    },
+    {
+      "id": "stop",
+      "min": 1,
+      "anim": "leksjon/stop.html",
+      "prov": "",
+      "fig": "stop",
+      "t": {
+        "ur_rm": "Stop loss kya hai?",
+        "ur": "Stop loss کیا ہے؟",
+        "en": "What is a stop loss?",
+        "no": "Hva er stop loss?",
+        "hi": "Stop loss क्या है?",
+        "ar": "ما هو الـ stop loss؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Stop loss = woh price jahan trade khud band ho jaye.",
+          "Pehle tay karein: kitna khona qabool hai.",
+          "Bina stop ke ek trade poora account le sakti hai.",
+          "Stop lagana sharam ki baat nahi – yeh hisaab hai."
+        ],
+        "ur": [
+          "Stop loss = وہ پرائس جہاں ٹریڈ خود بند ہو جائے۔",
+          "پہلے طے کریں: کتنا کھونا قبول ہے۔",
+          "بغیر stop کے ایک ٹریڈ پورا اکاؤنٹ لے سکتی ہے۔",
+          "Stop لگانا شرم کی بات نہیں – یہ حساب ہے۔"
+        ],
+        "en": [
+          "A stop loss is the price where the trade closes by itself.",
+          "Decide first how much you accept to lose.",
+          "Without a stop, one trade can take the whole account.",
+          "Setting a stop isn't weakness – it's arithmetic."
+        ],
+        "no": [
+          "Stop loss er prisen der handelen lukker seg selv.",
+          "Bestem først hvor mye du godtar å tape.",
+          "Uten stop kan én handel ta hele kontoen.",
+          "Å sette stop er ikke svakhet – det er regning."
+        ],
+        "hi": [
+          "Stop loss वह price है जहाँ trade अपने-आप बंद हो जाता है।",
+          "पहले तय करें कि कितना loss मंज़ूर है।",
+          "Stop के बिना एक trade पूरा account ले जा सकता है।",
+          "Stop लगाना कमज़ोरी नहीं – हिसाब है।"
+        ],
+        "ar": [
+          "الـ stop loss هو السعر الذي تُغلق عنده الصفقة تلقائيًا.",
+          "يُحدَّد أولًا مقدار الخسارة المقبولة.",
+          "بلا stop، قد تأخذ صفقة واحدة الحساب كله.",
+          "وضع الـ stop ليس ضعفًا – إنه حساب."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Stop loss kab tay karein?",
+          "o": [
+            "Trade kholne se pehle",
+            "Jab loss bara ho jaye",
+            "Kabhi nahi"
+          ],
+          "r": 0,
+          "hvorfor": "Pehle hisaab, phir trade – loss mein faisla mushkil hota hai."
+        },
+        "ur": {
+          "q": "Stop loss کب طے کریں؟",
+          "o": [
+            "ٹریڈ کھولنے سے پہلے",
+            "جب نقصان بڑا ہو جائے",
+            "کبھی نہیں"
+          ],
+          "r": 0,
+          "hvorfor": "پہلے حساب، پھر ٹریڈ – نقصان میں فیصلہ مشکل ہوتا ہے۔"
+        },
+        "en": {
+          "q": "When do you set the stop loss?",
+          "o": [
+            "Before opening the trade",
+            "Once the loss gets big",
+            "Never"
+          ],
+          "r": 0,
+          "hvorfor": "Decide before, not during – decisions made in a loss are the worst ones."
+        },
+        "no": {
+          "q": "Når setter du stop loss?",
+          "o": [
+            "Før du åpner handelen",
+            "Når tapet blir stort",
+            "Aldri"
+          ],
+          "r": 0,
+          "hvorfor": "Bestem før, ikke underveis – valg tatt i tap er de dårligste."
+        },
+        "hi": {
+          "q": "Stop loss कब लगाया जाता है?",
+          "o": [
+            "Trade खोलने से पहले",
+            "जब loss बड़ा हो जाए",
+            "कभी नहीं"
+          ],
+          "r": 0,
+          "hvorfor": "पहले तय करें, बीच में नहीं – loss में लिए फ़ैसले सबसे बुरे होते हैं।"
+        },
+        "ar": {
+          "q": "متى يُوضع الـ stop loss؟",
+          "o": [
+            "قبل فتح الصفقة",
+            "عندما تكبر الخسارة",
+            "أبدًا"
+          ],
+          "r": 0,
+          "hvorfor": "القرار قبل، لا أثناء – القرارات وقت الخسارة هي الأسوأ."
+        }
+      }
+    },
+    {
+      "id": "risk",
+      "min": 2,
+      "anim": "leksjon/risk.html",
+      "prov": "risk",
+      "fig": "risk",
+      "t": {
+        "ur_rm": "Har trade pe kitna risk?",
+        "ur": "ہر ٹریڈ پر کتنا رسک؟",
+        "en": "How much risk per trade?",
+        "no": "Hvor mye risiko per handel?",
+        "hi": "हर trade पर कितना risk?",
+        "ar": "كم risk في كل صفقة؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Ek tareeqa: har trade pe account ka 1–2 %.",
+          "$100 account, 2 % = $2 risk.",
+          "$2 ÷ (20 pips × $10 per lot) = 0.01 lot.",
+          "Yeh misaal hai, mashwara nahi – apna number khud tay karein."
+        ],
+        "ur": [
+          "ایک طریقہ: ہر ٹریڈ پر اکاؤنٹ کا 1–2 %۔",
+          "$100 اکاؤنٹ، 2 % = $2 رسک۔",
+          "$2 ÷ (20 pips × $10 فی lot) = 0.01 lot۔",
+          "یہ مثال ہے، مشورہ نہیں – اپنا نمبر خود طے کریں۔"
+        ],
+        "en": [
+          "One common method: 1–2 % of the account per trade.",
+          "$100 account, 2 % = $2 at risk.",
+          "$2 ÷ (20 pips × $10 per lot) = 0.01 lot.",
+          "An example, not advice – pick your own number."
+        ],
+        "no": [
+          "Én vanlig metode: 1–2 % av kontoen per handel.",
+          "$100 konto, 2 % = $2 i risiko.",
+          "$2 ÷ (20 pips × $10 per lot) = 0,01 lot.",
+          "Et eksempel, ikke råd – velg ditt eget tall."
+        ],
+        "hi": [
+          "एक आम तरीक़ा: हर trade पर account का 1–2 %।",
+          "$100 account, 2 % = $2 risk पर।",
+          "$2 ÷ (20 pips × $10 प्रति lot) = 0.01 lot।",
+          "यह एक उदाहरण है, सलाह नहीं – अपना नंबर ख़ुद चुनें।"
+        ],
+        "ar": [
+          "طريقة شائعة: 1–2 % من الحساب في كل صفقة.",
+          "حساب $100، و 2 % = $2 في خطر.",
+          "$2 ÷ (20 pips × $10 لكل lot) = 0.01 lot.",
+          "مثال وليس نصيحة – الرقم يُختار شخصيًا."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "$200 account, 2 % risk = ?",
+          "o": [
+            "$4",
+            "$40",
+            "$0.40"
+          ],
+          "r": 0,
+          "hvorfor": "200 × 2 ÷ 100 = 4."
+        },
+        "ur": {
+          "q": "$200 اکاؤنٹ، 2 % رسک = ؟",
+          "o": [
+            "$4",
+            "$40",
+            "$0.40"
+          ],
+          "r": 0,
+          "hvorfor": "200 × 2 ÷ 100 = 4۔"
+        },
+        "en": {
+          "q": "$200 account, 2 % risk = ?",
+          "o": [
+            "$4",
+            "$40",
+            "$0.40"
+          ],
+          "r": 0,
+          "hvorfor": "200 × 2 ÷ 100 = 4."
+        },
+        "no": {
+          "q": "$200 konto, 2 % risiko = ?",
+          "o": [
+            "$4",
+            "$40",
+            "$0,40"
+          ],
+          "r": 0,
+          "hvorfor": "200 × 2 ÷ 100 = 4."
+        },
+        "hi": {
+          "q": "$200 account, 2 % risk = ?",
+          "o": [
+            "$4",
+            "$40",
+            "$0.40"
+          ],
+          "r": 0,
+          "hvorfor": "200 × 2 ÷ 100 = 4।"
+        },
+        "ar": {
+          "q": "حساب $200، risk 2 % = ؟",
+          "o": [
+            "$4",
+            "$40",
+            "$0.40"
+          ],
+          "r": 0,
+          "hvorfor": "200 × 2 ÷ 100 = 4."
+        }
+      }
+    }
+  ],
+  "prov_ui": {
+    "ur_rm": {
+      "drag": "Price hilane ke liye kheenchein",
+      "gold": "Gold",
+      "inst": "Instrument",
+      "konto": "Account balance ($)",
+      "risk": "Risk per trade (%)",
+      "stop": "Stop distance (pips)",
+      "stop_d": "Stop distance (gold price, $)",
+      "lot_ut": "Lot size",
+      "risk_usd": "Aap ka risk",
+      "tap": "Agar stop lage: loss",
+      "floor": "Yeh sab se chhote size (0.01) se bhi kam hai. Yahan 0.01 lot par bhi {X} ka risk hoga — aap ke account ka {P}.",
+      "check": "Contract size har broker mein alag hota hai. Trade se pehle MT5 mein Specification dekhein.",
+      "formula": "lots = risk $ ÷ (stop × 1.00 lot ki value), neeche 0.01 tak round",
+      "risk_chip": "Risk %",
+      "gold_note": "Gold: pips nahi, dollar. Broker ka contract size dekhein."
+    },
+    "ur": {
+      "drag": "قیمت ہلانے کے لیے کھینچیں",
+      "gold": "Gold",
+      "inst": "Instrument",
+      "konto": "Account کا balance ($)",
+      "risk": "ہر trade پر risk (%)",
+      "stop": "Stop کا فاصلہ (pips)",
+      "stop_d": "Stop کا فاصلہ (gold کی قیمت، $)",
+      "lot_ut": "Lot size",
+      "risk_usd": "آپ کا risk",
+      "tap": "اگر stop لگے: نقصان",
+      "floor": "یہ سب سے چھوٹے size (0.01) سے بھی کم ہے۔ یہاں 0.01 lot پر بھی {X} کا risk ہوگا — آپ کے account کا {P}۔",
+      "check": "Contract size ہر broker میں الگ ہوتا ہے۔ Trade سے پہلے MT5 میں Specification دیکھیں۔",
+      "formula": "lots = risk $ ÷ (stop × 1.00 lot کی value)، نیچے 0.01 تک round",
+      "risk_chip": "Risk %",
+      "gold_note": "گولڈ: pips نہیں، ڈالر۔ بروکر کا کنٹریکٹ سائز دیکھیں۔"
+    },
+    "en": {
+      "drag": "Drag to move the price",
+      "gold": "Gold",
+      "inst": "Instrument",
+      "konto": "Account balance ($)",
+      "risk": "Risk per trade (%)",
+      "stop": "Stop distance (pips)",
+      "stop_d": "Stop distance (gold price, $)",
+      "lot_ut": "Lot size",
+      "risk_usd": "You risk",
+      "tap": "If the stop hits: loss",
+      "floor": "Below the smallest size (0.01). Even 0.01 lot would risk {X} here — {P} of your account.",
+      "check": "Contract sizes differ between brokers. Check Specification in MT5 before you trade.",
+      "formula": "lots = risk in $ ÷ (stop × value of 1.00 lot), rounded down to 0.01",
+      "risk_chip": "Risk %",
+      "gold_note": "Gold: dollars, not pips. Check your broker's contract size."
+    },
+    "no": {
+      "drag": "Dra for å flytte prisen",
+      "gold": "Gull",
+      "inst": "Instrument",
+      "konto": "Saldo på kontoen ($)",
+      "risk": "Risiko per handel (%)",
+      "stop": "Avstand til stop (pips)",
+      "stop_d": "Avstand til stop (gullpris, $)",
+      "lot_ut": "Lot-størrelse",
+      "risk_usd": "Du risikerer",
+      "tap": "Hvis stoppen treffer: tap",
+      "floor": "Under minste størrelse (0,01). Selv 0,01 lot ville risikert {X} her — {P} av kontoen din.",
+      "check": "Kontraktsstørrelser varierer mellom meglere. Sjekk Specification i MT5 før du handler.",
+      "formula": "lots = risiko i $ ÷ (stop × verdi av 1,00 lot), rundet ned til 0,01",
+      "risk_chip": "Risiko %",
+      "gold_note": "Gull: dollar, ikke pips. Sjekk contract size hos megleren."
+    },
+    "hi": {
+      "drag": "Price हिलाने के लिए खींचें",
+      "gold": "Gold",
+      "inst": "Instrument",
+      "konto": "Account का balance ($)",
+      "risk": "हर trade पर risk (%)",
+      "stop": "Stop की दूरी (pips)",
+      "stop_d": "Stop की दूरी (gold की क़ीमत, $)",
+      "lot_ut": "Lot size",
+      "risk_usd": "आपका risk",
+      "tap": "अगर stop लगा: loss",
+      "floor": "यह सबसे छोटे size (0.01) से भी कम है। यहाँ 0.01 lot पर भी {X} का risk होगा — आपके account का {P}।",
+      "check": "Contract size हर broker में अलग होता है। Trade से पहले MT5 में Specification देखें।",
+      "formula": "lots = risk $ ÷ (stop × 1.00 lot की value), नीचे 0.01 तक round",
+      "risk_chip": "Risk %",
+      "gold_note": "Gold: pips नहीं, dollar। अपने broker का contract size देखें।"
+    },
+    "ar": {
+      "drag": "السحب لتحريك السعر",
+      "gold": "الذهب",
+      "inst": "Instrument",
+      "konto": "رصيد الحساب ($)",
+      "risk": "Risk لكل صفقة (%)",
+      "stop": "مسافة الـ stop (pips)",
+      "stop_d": "مسافة الـ stop (سعر الذهب، $)",
+      "lot_ut": "Lot size",
+      "risk_usd": "مخاطرتك",
+      "tap": "إذا ضُرب الـ stop: الخسارة",
+      "floor": "أقل من أصغر حجم (0.01). حتى 0.01 lot كان سيخاطر هنا بـ {X} — أي {P} من حسابك.",
+      "check": "يختلف contract size بين الـ brokers. راجع Specification في MT5 قبل التداول.",
+      "formula": "lots = risk $ ÷ (stop × قيمة 1.00 lot)، مقرّبة نزولاً إلى 0.01",
+      "risk_chip": "Risk %",
+      "gold_note": "الذهب: بالدولار، لا بالـ pips. التحقق من contract size لدى الوسيط."
+    }
+  },
+  "lyd": {
+    "_om": "Leksjonslyd per språk: lyd/<id>-<sp>.mp3, manus i tools/lydmanus.json (mer kontekst enn skjermteksten), bygges av tools/lag_lyd.py. ur-sporet brukes for både ur og ur_rm. Urdu setningsvis med ro mellom (samme rytme som norsk), alle spor −19 LUFS. Founder er morsmålssjekken for urdu.",
+    "stemmer": {
+      "ur": "ur-PK-AsadNeural",
+      "no": "nb-NO-FinnNeural",
+      "en": "en-US-AndrewNeural"
+    },
+    "spor": {
+      "ur": [
+        "pip",
+        "lot",
+        "spread",
+        "stop",
+        "risk",
+        "candle",
+        "giring",
+        "news",
+        "demo",
+        "journal",
+        "sessions",
+        "trend",
+        "sr",
+        "rr",
+        "swap",
+        "fomo",
+        "revenge",
+        "overtrading",
+        "plan",
+        "rukna"
+      ],
+      "no": [
+        "pip",
+        "lot",
+        "spread",
+        "stop",
+        "risk",
+        "candle",
+        "giring",
+        "news",
+        "demo",
+        "journal",
+        "sessions",
+        "trend",
+        "sr",
+        "rr",
+        "swap",
+        "fomo",
+        "revenge",
+        "overtrading",
+        "plan",
+        "rukna"
+      ],
+      "en": [
+        "pip",
+        "lot",
+        "spread",
+        "stop",
+        "risk",
+        "candle",
+        "giring",
+        "news",
+        "demo",
+        "journal",
+        "sessions",
+        "trend",
+        "sr",
+        "rr",
+        "swap",
+        "fomo",
+        "revenge",
+        "overtrading",
+        "plan",
+        "rukna"
+      ]
+    }
+  },
+  "sesjoner": {
+    "_om": "Samme timer som huben (content.json sessions.hours): bytid i byens egen tidssone, nettleseren tar sommertid. Helg = fredag 17:00 New York til søndag 17:00 New York.",
+    "byer": [
+      [
+        "Sydney",
+        "Australia/Sydney",
+        7,
+        16
+      ],
+      [
+        "Tokyo",
+        "Asia/Tokyo",
+        9,
+        18
+      ],
+      [
+        "London",
+        "Europe/London",
+        8,
+        17
+      ],
+      [
+        "New York",
+        "America/New_York",
+        8,
+        17
+      ]
+    ]
+  },
+  "uke2": [
+    {
+      "id": "candle",
+      "min": 1,
+      "anim": "leksjon/candle.html",
+      "prov": "",
+      "fig": "candle",
+      "t": {
+        "ur_rm": "Candlestick kya hai?",
+        "ur": "Candlestick کیا ہے؟",
+        "en": "What is a candlestick?",
+        "no": "Hva er en candlestick?",
+        "hi": "Candlestick क्या है?",
+        "ar": "ما هي الـ candlestick؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Ek candlestick = ek waqt ka tukra (M15 = 15 minute).",
+          "Body: kahan khuli (open), kahan band hui (close).",
+          "Wick: us waqt mein sabse upar (high) aur sabse neeche (low).",
+          "Candlestick batati hai price kahan GAYI – kahan jayegi, nahi."
+        ],
+        "ur": [
+          "ایک candlestick = ایک وقت کا ٹکڑا (M15 = 15 منٹ)۔",
+          "Body: کہاں کھلی (open)، کہاں بند ہوئی (close)۔",
+          "Wick: اس وقت میں سب سے اوپر (high) اور سب سے نیچے (low)۔",
+          "Candlestick بتاتی ہے قیمت کہاں گئی – کہاں جائے گی، نہیں۔"
+        ],
+        "en": [
+          "One candlestick = one slice of time (M15 = 15 minutes).",
+          "Body: where it opened and where it closed.",
+          "Wick: the highest and lowest price in that time.",
+          "A candlestick shows where price went – not where it will go."
+        ],
+        "no": [
+          "Én candlestick = én tidsbit (M15 = 15 minutter).",
+          "Body: hvor den åpnet (open) og hvor den stengte (close).",
+          "Wick: høyeste (high) og laveste (low) pris i den tiden.",
+          "En candlestick viser hvor prisen gikk – ikke hvor den skal."
+        ],
+        "hi": [
+          "एक candlestick = समय का एक टुकड़ा (M15 = 15 मिनट)।",
+          "Body: कहाँ खुला और कहाँ बंद हुआ।",
+          "Wick: उस समय का सबसे ऊँचा और सबसे नीचा price।",
+          "Candlestick दिखाती है price कहाँ गया – यह नहीं कि कहाँ जाएगा।"
+        ],
+        "ar": [
+          "Candlestick واحدة = شريحة واحدة من الوقت (M15 = 15 دقيقة).",
+          "الـ body: أين افتُتح وأين أُغلق.",
+          "الـ wick: أعلى وأدنى سعر في ذلك الوقت.",
+          "الـ candlestick تُظهر أين ذهب السعر – لا أين سيذهب."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Lamba upar wala wick kya batata hai?",
+          "o": [
+            "Price upar gayi, phir wapas neeche aayi",
+            "Price sirf upar gayi",
+            "Volume zyada tha"
+          ],
+          "r": 0,
+          "hvorfor": "Wick = high tak gayi, lekin close neeche hua."
+        },
+        "ur": {
+          "q": "لمبا اوپر والا wick کیا بتاتا ہے؟",
+          "o": [
+            "قیمت اوپر گئی، پھر واپس نیچے آئی",
+            "قیمت صرف اوپر گئی",
+            "والیوم زیادہ تھا"
+          ],
+          "r": 0,
+          "hvorfor": "Wick = high تک گئی، لیکن close نیچے ہوا۔"
+        },
+        "en": {
+          "q": "What does a long upper wick tell you?",
+          "o": [
+            "Price went up, then came back down",
+            "Price only went up",
+            "Volume was high"
+          ],
+          "r": 0,
+          "hvorfor": "The wick reached the high, but the close ended lower."
+        },
+        "no": {
+          "q": "Hva forteller en lang øvre wick?",
+          "o": [
+            "Prisen gikk opp, så ned igjen",
+            "Prisen gikk bare opp",
+            "Volumet var høyt"
+          ],
+          "r": 0,
+          "hvorfor": "Wicken nådde high, men close ble lavere."
+        },
+        "hi": {
+          "q": "लंबी ऊपरी wick क्या बताती है?",
+          "o": [
+            "Price ऊपर गया, फिर वापस नीचे आया",
+            "Price सिर्फ़ ऊपर गया",
+            "Volume ज़्यादा था"
+          ],
+          "r": 0,
+          "hvorfor": "Wick high तक पहुँची, पर close नीचे हुआ।"
+        },
+        "ar": {
+          "q": "ماذا يعني wick علوي طويل؟",
+          "o": [
+            "صعد السعر ثم عاد للنزول",
+            "صعد السعر فقط",
+            "كان الـ volume مرتفعًا"
+          ],
+          "r": 0,
+          "hvorfor": "وصل الـ wick إلى الـ high، لكن الإغلاق كان أدنى."
+        }
+      }
+    },
+    {
+      "id": "giring",
+      "min": 1,
+      "anim": "leksjon/leverage.html",
+      "prov": "",
+      "fig": "giring",
+      "t": {
+        "ur_rm": "Leverage kya hai?",
+        "ur": "Leverage کیا ہے؟",
+        "en": "What is leverage?",
+        "no": "Hva er leverage?",
+        "hi": "Leverage क्या है?",
+        "ar": "ما هو الـ leverage؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "1:100 leverage: $100 margin se $10,000 ki position.",
+          "Profit bhi 100 guna, loss bhi 100 guna.",
+          "Account kam ho jaye to broker trade khud band kar deta hai (stop out).",
+          "Leverage sirf margin kam karta hai – asal risk lot se tay hota hai. Chhota lot, chhota risk."
+        ],
+        "ur": [
+          "1:100 leverage: $100 margin سے $10,000 کی position۔",
+          "منافع بھی 100 گنا، نقصان بھی 100 گنا۔",
+          "اکاؤنٹ کم ہو جائے تو بروکر ٹریڈ خود بند کر دیتا ہے (stop out)۔",
+          "Leverage صرف margin کم کرتا ہے – اصل رسک lot سے طے ہوتا ہے۔ چھوٹا lot، چھوٹا رسک۔"
+        ],
+        "en": [
+          "1:100 leverage: $100 margin controls a $10,000 position.",
+          "Gains ×100 – and losses ×100.",
+          "If the account runs low, the broker closes trades for you (stop out).",
+          "Leverage only lowers the margin – your real risk is set by the lot. Small lot, small risk."
+        ],
+        "no": [
+          "1:100 leverage: $100 margin styrer en posisjon på $10 000.",
+          "Gevinst ×100 – og tap ×100.",
+          "Blir kontoen for lav, lukker megleren handlene for deg (stop out).",
+          "Leverage senker bare marginen – den reelle risikoen settes av lot. Liten lot, liten risiko."
+        ],
+        "hi": [
+          "1:100 leverage: $100 margin से $10,000 की position।",
+          "फ़ायदा ×100 – और loss भी ×100।",
+          "Account कम होने पर broker ख़ुद trades बंद कर देता है (stop out)।",
+          "Leverage सिर्फ़ margin घटाता है – असली risk lot से तय होता है। छोटा lot, छोटा risk।"
+        ],
+        "ar": [
+          "Leverage 1:100: هامش $100 يتحكم في position بقيمة $10,000.",
+          "الأرباح ×100 – والخسائر ×100.",
+          "إذا انخفض الحساب، يُغلق الوسيط الصفقات تلقائيًا (stop out).",
+          "الـ leverage يخفّض الـ margin فقط – الـ risk الحقيقي يحدّده الـ lot. lot صغير، risk صغير."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Leverage se kya barhta hai?",
+          "o": [
+            "Profit aur loss dono",
+            "Sirf profit",
+            "Sirf spread"
+          ],
+          "r": 0,
+          "hvorfor": "Leverage dono taraf multiply karta hai."
+        },
+        "ur": {
+          "q": "Leverage سے کیا بڑھتا ہے؟",
+          "o": [
+            "منافع اور نقصان دونوں",
+            "صرف منافع",
+            "صرف spread"
+          ],
+          "r": 0,
+          "hvorfor": "Leverage دونوں طرف ضرب دیتا ہے۔"
+        },
+        "en": {
+          "q": "What does leverage multiply?",
+          "o": [
+            "Both gains and losses",
+            "Only gains",
+            "Only the spread"
+          ],
+          "r": 0,
+          "hvorfor": "Leverage multiplies in both directions."
+        },
+        "no": {
+          "q": "Hva ganger leverage opp?",
+          "o": [
+            "Både gevinst og tap",
+            "Bare gevinst",
+            "Bare spread"
+          ],
+          "r": 0,
+          "hvorfor": "Leverage ganger opp begge veier."
+        },
+        "hi": {
+          "q": "Leverage किसे गुणा करता है?",
+          "o": [
+            "फ़ायदा और loss दोनों",
+            "सिर्फ़ फ़ायदा",
+            "सिर्फ़ spread"
+          ],
+          "r": 0,
+          "hvorfor": "Leverage दोनों तरफ़ गुणा करता है।"
+        },
+        "ar": {
+          "q": "ماذا يضاعف الـ leverage؟",
+          "o": [
+            "الأرباح والخسائر معًا",
+            "الأرباح فقط",
+            "الـ spread فقط"
+          ],
+          "r": 0,
+          "hvorfor": "الـ leverage يضاعف في الاتجاهين."
+        }
+      }
+    },
+    {
+      "id": "news",
+      "min": 1,
+      "anim": "leksjon/news.html",
+      "prov": "",
+      "fig": "news",
+      "t": {
+        "ur_rm": "News ke waqt kya hota hai?",
+        "ur": "News کے وقت کیا ہوتا ہے؟",
+        "en": "What happens around news?",
+        "no": "Hva skjer rundt nyheter?",
+        "hi": "News के आसपास क्या होता है?",
+        "ar": "ماذا يحدث حول الأخبار؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Bari news (NFP, CPI, interest rate): price seconds mein dono taraf uchhalti hai.",
+          "Spread bara ho jata hai – trade mehengi.",
+          "Stop loss kabhi kabhi tay price se aage lagta hai (slippage).",
+          "Calendar dekhein (ForexFactory) – apne time zone mein. Bohat log news ke ±15 minute nayi trade nahi lagate."
+        ],
+        "ur": [
+          "بڑی news (NFP، CPI، شرحِ سود): قیمت سیکنڈوں میں دونوں طرف اچھلتی ہے۔",
+          "Spread بڑا ہو جاتا ہے – ٹریڈ مہنگی۔",
+          "Stop loss کبھی کبھی طے شدہ قیمت سے آگے لگتا ہے (slippage)۔",
+          "کیلنڈر دیکھیں (ForexFactory) – اپنے ٹائم زون میں۔ بہت لوگ خبر کے ±15 منٹ نئی ٹریڈ نہیں لگاتے۔"
+        ],
+        "en": [
+          "Big news (NFP, CPI, rate decisions): price jumps both ways within seconds.",
+          "The spread widens – trading gets expensive.",
+          "A stop loss can fill past its price (slippage).",
+          "Check the calendar (ForexFactory) in your time zone. Many people avoid new trades ±15 minutes."
+        ],
+        "no": [
+          "Store nyheter (NFP, KPI, rentebeslutninger): prisen hopper begge veier på sekunder.",
+          "Spread blir større – handelen blir dyr.",
+          "En stop loss kan fylles forbi prisen (slippage).",
+          "Sjekk kalenderen (ForexFactory) i din tidssone. Mange lar være å åpne nytt ±15 minutter."
+        ],
+        "hi": [
+          "बड़ी news (NFP, CPI, rate decisions): कुछ सेकंड में price दोनों तरफ़ उछलता है।",
+          "Spread बढ़ जाता है – trading महँगी हो जाती है।",
+          "Stop loss अपने price से आगे जाकर लग सकता है (slippage)।",
+          "Calendar (ForexFactory) अपने time zone में देखें। बहुत लोग ±15 मिनट नए trades से बचते हैं।"
+        ],
+        "ar": [
+          "الأخبار الكبيرة (NFP و CPI وقرارات الفائدة): يقفز السعر في الاتجاهين خلال ثوانٍ.",
+          "يتّسع الـ spread – يصبح التداول مكلفًا.",
+          "قد يُنفَّذ الـ stop loss بعد سعره (slippage).",
+          "التقويم (ForexFactory) بالتوقيت المحلي. كثيرون يتجنبون صفقات جديدة ±15 دقيقة."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Bari news ke waqt spread ka kya hota hai?",
+          "o": [
+            "Bara ho jata hai",
+            "Chhota ho jata hai",
+            "Same rehta hai"
+          ],
+          "r": 0,
+          "hvorfor": "News ke waqt price tez bhaagti hai, is liye spread bara ho jata hai – trade mehengi."
+        },
+        "ur": {
+          "q": "بڑی news کے وقت spread کا کیا ہوتا ہے؟",
+          "o": [
+            "بڑا ہو جاتا ہے",
+            "چھوٹا ہو جاتا ہے",
+            "ویسا ہی رہتا ہے"
+          ],
+          "r": 0,
+          "hvorfor": "News کے وقت قیمت تیز بھاگتی ہے، اس لیے spread بڑا ہو جاتا ہے – ٹریڈ مہنگی۔"
+        },
+        "en": {
+          "q": "What happens to the spread during big news?",
+          "o": [
+            "It widens",
+            "It narrows",
+            "It stays the same"
+          ],
+          "r": 0,
+          "hvorfor": "Less liquidity, wider spread – that's why trading then is expensive."
+        },
+        "no": {
+          "q": "Hva skjer med spread under store nyheter?",
+          "o": [
+            "Den blir større",
+            "Den blir mindre",
+            "Den er lik"
+          ],
+          "r": 0,
+          "hvorfor": "Mindre likviditet, større spread – derfor er det dyrt å handle da."
+        },
+        "hi": {
+          "q": "बड़ी news के दौरान spread का क्या होता है?",
+          "o": [
+            "बढ़ जाता है",
+            "घट जाता है",
+            "वैसा ही रहता है"
+          ],
+          "r": 0,
+          "hvorfor": "कम liquidity, ज़्यादा spread – इसीलिए तब trading महँगी है।"
+        },
+        "ar": {
+          "q": "ماذا يحدث للـ spread أثناء الأخبار الكبيرة؟",
+          "o": [
+            "يتّسع",
+            "يضيق",
+            "يبقى كما هو"
+          ],
+          "r": 0,
+          "hvorfor": "سيولة أقل و spread أوسع – لهذا يكون التداول حينها مكلفًا."
+        }
+      }
+    },
+    {
+      "id": "demo",
+      "min": 1,
+      "anim": "leksjon/demo.html",
+      "prov": "",
+      "fig": "demo",
+      "t": {
+        "ur_rm": "Demo account kyun?",
+        "ur": "ڈیمو اکاؤنٹ کیوں؟",
+        "en": "Why a demo account?",
+        "no": "Hvorfor demokonto?",
+        "hi": "Demo account क्यों?",
+        "ar": "لماذا حساب demo؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Demo: price asli, paise nakli. MT5 pe free.",
+          "Apna tareeqa demo pe 20+ trades mein aazmayein – phir dekhein yeh kaam karta hai ya nahi.",
+          "Farq ek hai: demo pe dar nahi hota. Asli pe hota hai.",
+          "Is liye asli pe chhote lot se shuru karein – wahi dar sikhata hai."
+        ],
+        "ur": [
+          "ڈیمو: قیمت اصلی، پیسے نقلی۔ MT5 پر مفت۔",
+          "اپنا طریقہ ڈیمو پر 20+ ٹریڈز میں آزمائیں – پھر دیکھیں یہ کام کرتا ہے یا نہیں۔",
+          "فرق ایک ہے: ڈیمو پر ڈر نہیں ہوتا۔ اصلی پر ہوتا ہے۔",
+          "اس لیے اصلی پر چھوٹے lot سے شروع کریں – وہی ڈر سکھاتا ہے۔"
+        ],
+        "en": [
+          "Demo: real prices, fake money. Free on MT5.",
+          "Run your rule for 20+ demo trades before saying it works.",
+          "One difference: on demo there's no fear. On real there is.",
+          "That's why real starts with a tiny lot – the fear is the lesson."
+        ],
+        "no": [
+          "Demo: ekte priser, falske penger. Gratis i MT5.",
+          "Kjør regelen din 20+ demohandler før du sier den virker.",
+          "Én forskjell: på demo er det ingen frykt. På ekte er det.",
+          "Derfor starter ekte med bitte liten lot – frykten er leksjonen."
+        ],
+        "hi": [
+          "Demo: असली price, नक़ली पैसे। MT5 पर मुफ़्त।",
+          "कहने से पहले कि आपका नियम काम करता है, 20+ demo trades करें।",
+          "एक फ़र्क़: demo पर डर नहीं होता। Real पर होता है।",
+          "इसीलिए real बहुत छोटे lot से शुरू होता है – डर ही सबक़ है।"
+        ],
+        "ar": [
+          "الـ demo: أسعار حقيقية، أموال وهمية. مجاني على MT5.",
+          "20+ صفقة demo بالقاعدة نفسها قبل الحكم بأنها تنجح.",
+          "فرق واحد: في الـ demo لا يوجد خوف. في الحقيقي يوجد.",
+          "لهذا يبدأ الحقيقي بـ lot صغير جدًا – الخوف هو الدرس."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Demo mein kya asli hai?",
+          "o": [
+            "Price",
+            "Paise",
+            "Dono"
+          ],
+          "r": 0,
+          "hvorfor": "Price market se aati hai; paise sirf number hain."
+        },
+        "ur": {
+          "q": "ڈیمو میں کیا اصلی ہے؟",
+          "o": [
+            "قیمت",
+            "پیسے",
+            "دونوں"
+          ],
+          "r": 0,
+          "hvorfor": "قیمت مارکیٹ سے آتی ہے؛ پیسے صرف نمبر ہیں۔"
+        },
+        "en": {
+          "q": "What is real on a demo account?",
+          "o": [
+            "The prices",
+            "The money",
+            "Both"
+          ],
+          "r": 0,
+          "hvorfor": "Prices come from the market; the money is just a number."
+        },
+        "no": {
+          "q": "Hva er ekte på en demokonto?",
+          "o": [
+            "Prisene",
+            "Pengene",
+            "Begge"
+          ],
+          "r": 0,
+          "hvorfor": "Prisene kommer fra markedet; pengene er bare et tall."
+        },
+        "hi": {
+          "q": "Demo account पर क्या असली है?",
+          "o": [
+            "Price",
+            "पैसे",
+            "दोनों"
+          ],
+          "r": 0,
+          "hvorfor": "Price market से आते हैं; पैसे सिर्फ़ एक नंबर हैं।"
+        },
+        "ar": {
+          "q": "ما الحقيقي في حساب الـ demo؟",
+          "o": [
+            "الأسعار",
+            "الأموال",
+            "كلاهما"
+          ],
+          "r": 0,
+          "hvorfor": "الأسعار تأتي من السوق؛ والأموال مجرد رقم."
+        }
+      }
+    },
+    {
+      "id": "journal",
+      "min": 1,
+      "anim": "leksjon/journal.html",
+      "prov": "",
+      "fig": "journal",
+      "t": {
+        "ur_rm": "Journal kyun?",
+        "ur": "جرنل کیوں؟",
+        "en": "Why a journal?",
+        "no": "Hvorfor journal?",
+        "hi": "Journal क्यों?",
+        "ar": "لماذا الـ journal؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Trade se PEHLE likhein: kyun, stop kahan, lot kitna.",
+          "Trade ke BAAD likhein: result aur aap ne kya mehsoos kiya.",
+          "Har hafte parhein. Wahi galti teesri baar? Ab aap jaante hain.",
+          "20 trades se kam = sirf rujhan, saboot nahi."
+        ],
+        "ur": [
+          "ٹریڈ سے پہلے لکھیں: کیوں، stop کہاں، lot کتنا۔",
+          "ٹریڈ کے بعد لکھیں: نتیجہ اور آپ نے کیا محسوس کیا۔",
+          "ہر ہفتے پڑھیں۔ وہی غلطی تیسری بار؟ اب آپ جانتے ہیں۔",
+          "20 ٹریڈز سے کم = صرف رجحان، ثبوت نہیں۔"
+        ],
+        "en": [
+          "Before the trade, write: why, where's the stop, what lot.",
+          "After the trade, write: the result and how you felt.",
+          "Read it weekly. Same mistake a third time? Now you know.",
+          "Fewer than 20 trades = a tendency, not proof."
+        ],
+        "no": [
+          "Før handelen, skriv: hvorfor, hvor er stoppen, hvilken lot.",
+          "Etter handelen, skriv: resultatet og hva du følte.",
+          "Les den hver uke. Samme feil tredje gang? Nå vet du det.",
+          "Under 20 handler = en tendens, ikke bevis."
+        ],
+        "hi": [
+          "Trade से पहले लिखें: क्यों, stop कहाँ, कितना lot।",
+          "Trade के बाद लिखें: result और कैसा लगा।",
+          "हर हफ़्ते पढ़ें। वही ग़लती तीसरी बार? अब पता है।",
+          "20 से कम trades = रुझान, सबूत नहीं।"
+        ],
+        "ar": [
+          "قبل الصفقة يُكتب: لماذا، وأين الـ stop، وكم lot.",
+          "بعد الصفقة يُكتب: النتيجة والشعور.",
+          "القراءة كل أسبوع. الخطأ نفسه للمرة الثالثة؟ الآن صار معروفًا.",
+          "أقل من 20 صفقة = اتجاه، لا دليل."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Trade se PEHLE journal mein kya likhein?",
+          "o": [
+            "Kyun, stop, lot",
+            "Sirf profit target",
+            "Kuch nahi – baad mein"
+          ],
+          "r": 0,
+          "hvorfor": "Pehle likhne se faisla saaf hota hai – baad mein yaad badal jaati hai."
+        },
+        "ur": {
+          "q": "ٹریڈ سے پہلے جرنل میں کیا لکھیں؟",
+          "o": [
+            "کیوں، stop، lot",
+            "صرف پرافٹ ٹارگٹ",
+            "کچھ نہیں – بعد میں"
+          ],
+          "r": 0,
+          "hvorfor": "پہلے لکھنے سے فیصلہ صاف ہوتا ہے – بعد میں یاد بدل جاتی ہے۔"
+        },
+        "en": {
+          "q": "What do you write BEFORE the trade?",
+          "o": [
+            "Why, stop, lot",
+            "Only the profit target",
+            "Nothing – afterwards"
+          ],
+          "r": 0,
+          "hvorfor": "Writing first makes the decision clear – memory rewrites itself afterwards."
+        },
+        "no": {
+          "q": "Hva skriver du FØR handelen?",
+          "o": [
+            "Hvorfor, stop, lot",
+            "Bare gevinstmålet",
+            "Ingenting – etterpå"
+          ],
+          "r": 0,
+          "hvorfor": "Å skrive først gjør valget tydelig – minnet skriver om etterpå."
+        },
+        "hi": {
+          "q": "Trade से पहले क्या लिखा जाता है?",
+          "o": [
+            "क्यों, stop, lot",
+            "सिर्फ़ profit target",
+            "कुछ नहीं – बाद में"
+          ],
+          "r": 0,
+          "hvorfor": "पहले लिखने से फ़ैसला साफ़ होता है – बाद में याददाश्त ख़ुद को बदल लेती है।"
+        },
+        "ar": {
+          "q": "ماذا يُكتب قبل الصفقة؟",
+          "o": [
+            "لماذا، الـ stop، الـ lot",
+            "هدف الربح فقط",
+            "لا شيء – بعدها"
+          ],
+          "r": 0,
+          "hvorfor": "الكتابة أولًا توضّح القرار – الذاكرة تعيد كتابة نفسها لاحقًا."
+        }
+      }
+    }
+  ],
+  "ledere_side": "../ledere.html",
+  "names_csv": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQCUbvpu8cXdh-V-XkfvqAevZlabu876V-j8HNNd_qJGDOpPhbwVukJa--Vum5QWLuyQwEQM9Y5gMSc/pub?gid=22159740&single=true&output=csv",
+  "approved_csv": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQCUbvpu8cXdh-V-XkfvqAevZlabu876V-j8HNNd_qJGDOpPhbwVukJa--Vum5QWLuyQwEQM9Y5gMSc/pub?gid=2115650304&single=true&output=csv",
+  "uke3": [
+    {
+      "id": "sessions",
+      "min": 1,
+      "anim": "leksjon/sessions.html",
+      "prov": "",
+      "fig": "sessions",
+      "t": {
+        "ur_rm": "Market kab chalti hai?",
+        "ur": "مارکیٹ کب چلتی ہے؟",
+        "en": "When is the market open?",
+        "no": "Når er markedet åpent?",
+        "hi": "Market कब खुला रहता है?",
+        "ar": "متى يكون السوق مفتوحًا؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Forex 24 ghante chalti hai, Monday se Friday.",
+          "4 sessions: Sydney, Tokyo, London, New York.",
+          "London aur New York ek saath = aam taur pe sabse zyada move aur kam spread.",
+          "Weekend pe market band – Monday ko gap ke saath khul sakti hai."
+        ],
+        "ur": [
+          "فاریکس 24 گھنٹے چلتی ہے، پیر سے جمعہ۔",
+          "4 sessions: Sydney، Tokyo، London، New York۔",
+          "London اور New York ایک ساتھ = عام طور پر سب سے زیادہ move اور کم spread۔",
+          "ویک اینڈ پر مارکیٹ بند – پیر کو gap کے ساتھ کھل سکتی ہے۔"
+        ],
+        "en": [
+          "Forex runs 24 hours, Monday to Friday.",
+          "4 sessions: Sydney, Tokyo, London, New York.",
+          "London and New York together = usually the most movement and the lowest spread.",
+          "Closed at the weekend – it can open on Monday with a gap."
+        ],
+        "no": [
+          "Forex går 24 timer, mandag til fredag.",
+          "4 sessions: Sydney, Tokyo, London, New York.",
+          "London og New York samtidig = vanligvis mest bevegelse og lavest spread.",
+          "Stengt i helgen – kan åpne mandag med et gap."
+        ],
+        "hi": [
+          "Forex 24 घंटे चलता है, सोमवार से शुक्रवार।",
+          "4 sessions: Sydney, Tokyo, London, New York।",
+          "London और New York एक साथ = आम तौर पर सबसे ज़्यादा हलचल और सबसे कम spread।",
+          "Weekend पर बंद – सोमवार को gap के साथ खुल सकता है।"
+        ],
+        "ar": [
+          "الفوركس يعمل 24 ساعة، من الاثنين إلى الجمعة.",
+          "4 sessions: Sydney و Tokyo و London و New York.",
+          "London و New York معًا = عادةً أكثر حركة وأقل spread.",
+          "مغلق في عطلة نهاية الأسبوع – قد يُفتح يوم الاثنين مع gap."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Price aam taur pe sabse zyada kab hilti hai?",
+          "o": [
+            "London aur New York ek saath",
+            "Weekend pe",
+            "Sirf Sydney session mein"
+          ],
+          "r": 0,
+          "hvorfor": "Do bari markets ek saath khuli hoti hain – zyada log trade karte hain."
+        },
+        "ur": {
+          "q": "عام طور پر قیمت سب سے زیادہ کب ہلتی ہے؟",
+          "o": [
+            "London اور New York ایک ساتھ",
+            "ویک اینڈ پر",
+            "صرف Sydney session میں"
+          ],
+          "r": 0,
+          "hvorfor": "دو بڑی مارکیٹس ایک ساتھ کھلی ہوتی ہیں – زیادہ لوگ ٹریڈ کرتے ہیں۔"
+        },
+        "en": {
+          "q": "When is there usually the most movement?",
+          "o": [
+            "When London and New York overlap",
+            "At the weekend",
+            "Only in the Sydney session"
+          ],
+          "r": 0,
+          "hvorfor": "Two big markets are open at once – more people are trading."
+        },
+        "no": {
+          "q": "Når er det vanligvis mest bevegelse?",
+          "o": [
+            "Når London og New York overlapper",
+            "I helgen",
+            "Bare i Sydney-sessionen"
+          ],
+          "r": 0,
+          "hvorfor": "To store markeder er åpne samtidig – flere handler."
+        },
+        "hi": {
+          "q": "आम तौर पर सबसे ज़्यादा हलचल कब होती है?",
+          "o": [
+            "जब London और New York एक साथ खुले हों",
+            "Weekend पर",
+            "सिर्फ़ Sydney session में"
+          ],
+          "r": 0,
+          "hvorfor": "दो बड़े market एक साथ खुले हैं – ज़्यादा लोग trade कर रहे हैं।"
+        },
+        "ar": {
+          "q": "متى تكون الحركة عادةً في أعلاها؟",
+          "o": [
+            "عندما يتداخل London و New York",
+            "في عطلة نهاية الأسبوع",
+            "في session Sydney فقط"
+          ],
+          "r": 0,
+          "hvorfor": "سوقان كبيران مفتوحان معًا – عدد أكبر من المتداولين."
+        }
+      }
+    },
+    {
+      "id": "trend",
+      "min": 1,
+      "anim": "leksjon/trend.html",
+      "prov": "",
+      "fig": "trend",
+      "t": {
+        "ur_rm": "Trend kya hai?",
+        "ur": "Trend کیا ہے؟",
+        "en": "What is a trend?",
+        "no": "Hva er en trend?",
+        "hi": "Trend क्या है?",
+        "ar": "ما هو الـ trend؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Uptrend: har naya high pichle se upar, aur har naya low bhi.",
+          "Downtrend: highs aur lows dono neeche aate hain.",
+          "Range: price ek dabbe mein upar neeche hoti rehti hai.",
+          "Trend batata hai ab tak kya hua – aage ki guarantee nahi."
+        ],
+        "ur": [
+          "Uptrend: ہر نیا high پچھلے سے اوپر، اور ہر نیا low بھی۔",
+          "Downtrend: highs اور lows دونوں نیچے آتے ہیں۔",
+          "Range: قیمت ایک ڈبے میں اوپر نیچے ہوتی رہتی ہے۔",
+          "Trend بتاتا ہے اب تک کیا ہوا – آگے کی گارنٹی نہیں۔"
+        ],
+        "en": [
+          "Uptrend: each new high is above the last one, and each new low too.",
+          "Downtrend: highs and lows both keep coming down.",
+          "Range: price keeps moving up and down inside a box.",
+          "A trend shows what has happened so far – no guarantee of what comes next."
+        ],
+        "no": [
+          "Uptrend: hver nye high er over forrige, og hver nye low også.",
+          "Downtrend: både highs og lows kommer lavere.",
+          "Range: prisen går opp og ned inne i en boks.",
+          "En trend viser hva som har skjedd hittil – ingen garanti for det som kommer."
+        ],
+        "hi": [
+          "Uptrend: हर नया high पिछले से ऊपर, और हर नया low भी।",
+          "Downtrend: highs और lows दोनों नीचे आते रहते हैं।",
+          "Range: price एक डिब्बे के अंदर ऊपर-नीचे होता रहता है।",
+          "Trend दिखाता है अब तक क्या हुआ – आगे की कोई गारंटी नहीं।"
+        ],
+        "ar": [
+          "Uptrend: كل high جديد أعلى من السابق، وكل low جديد كذلك.",
+          "Downtrend: الـ highs والـ lows تستمر في النزول.",
+          "Range: يتحرك السعر صعودًا ونزولًا داخل صندوق.",
+          "الـ trend يُظهر ما حدث حتى الآن – بلا ضمان لما سيأتي."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Higher high aur higher low = ?",
+          "o": [
+            "Uptrend",
+            "Downtrend",
+            "Range"
+          ],
+          "r": 0,
+          "hvorfor": "Highs bhi upar, lows bhi upar – yeh uptrend ki pehchan hai."
+        },
+        "ur": {
+          "q": "Higher high اور higher low = ؟",
+          "o": [
+            "Uptrend",
+            "Downtrend",
+            "Range"
+          ],
+          "r": 0,
+          "hvorfor": "Highs بھی اوپر، lows بھی اوپر – یہ uptrend کی پہچان ہے۔"
+        },
+        "en": {
+          "q": "Higher highs and higher lows = ?",
+          "o": [
+            "Uptrend",
+            "Downtrend",
+            "Range"
+          ],
+          "r": 0,
+          "hvorfor": "Highs rising and lows rising – that's what an uptrend looks like."
+        },
+        "no": {
+          "q": "Higher highs og higher lows = ?",
+          "o": [
+            "Uptrend",
+            "Downtrend",
+            "Range"
+          ],
+          "r": 0,
+          "hvorfor": "Både highs og lows stiger – slik ser en uptrend ut."
+        },
+        "hi": {
+          "q": "ऊँचे highs और ऊँचे lows = ?",
+          "o": [
+            "Uptrend",
+            "Downtrend",
+            "Range"
+          ],
+          "r": 0,
+          "hvorfor": "Highs बढ़ रहे और lows बढ़ रहे – uptrend ऐसा दिखता है।"
+        },
+        "ar": {
+          "q": "Highs أعلى و lows أعلى = ؟",
+          "o": [
+            "Uptrend",
+            "Downtrend",
+            "Range"
+          ],
+          "r": 0,
+          "hvorfor": "الـ highs ترتفع والـ lows ترتفع – هكذا يبدو الـ uptrend."
+        }
+      }
+    },
+    {
+      "id": "sr",
+      "min": 1,
+      "anim": "leksjon/sr.html",
+      "prov": "",
+      "fig": "sr",
+      "t": {
+        "ur_rm": "Support aur resistance",
+        "ur": "Support اور resistance",
+        "en": "Support and resistance",
+        "no": "Support og resistance",
+        "hi": "Support और resistance",
+        "ar": "Support و resistance"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Support: woh level jahan price pehle neeche ruki aur wapas upar gayi.",
+          "Resistance: woh level jahan price pehle upar ruki aur wapas neeche aayi.",
+          "Yeh patli line nahi, zone hai – price wahan ruk bhi sakti hai, aage nikal bhi sakti hai.",
+          "Level toot jaye to kabhi kabhi role badal jata hai: resistance, support ban jata hai."
+        ],
+        "ur": [
+          "Support: وہ level جہاں قیمت پہلے نیچے رکی اور واپس اوپر گئی۔",
+          "Resistance: وہ level جہاں قیمت پہلے اوپر رکی اور واپس نیچے آئی۔",
+          "یہ پتلی لائن نہیں، zone ہے – قیمت وہاں رک بھی سکتی ہے، آگے نکل بھی سکتی ہے۔",
+          "Level ٹوٹ جائے تو کبھی کبھی role بدل جاتا ہے: resistance، support بن جاتا ہے۔"
+        ],
+        "en": [
+          "Support: a level where price stopped falling before and turned up.",
+          "Resistance: a level where price stopped rising before and turned down.",
+          "It's a zone, not a thin line – price can stop there, or break through.",
+          "When a level breaks, it sometimes flips: old resistance becomes support."
+        ],
+        "no": [
+          "Support: et nivå der prisen tidligere stoppet fallet og snudde opp.",
+          "Resistance: et nivå der prisen tidligere stoppet stigningen og snudde ned.",
+          "Det er en zone, ikke en tynn strek – prisen kan stoppe der, eller bryte gjennom.",
+          "Brytes et nivå, bytter det av og til rolle: gammel resistance blir support."
+        ],
+        "hi": [
+          "Support: वह level जहाँ पहले price गिरना रुका और ऊपर मुड़ा।",
+          "Resistance: वह level जहाँ पहले price चढ़ना रुका और नीचे मुड़ा।",
+          "यह एक zone है, पतली लाइन नहीं – price वहाँ रुक सकता है या तोड़कर निकल सकता है।",
+          "Level टूटने पर कभी-कभी पलट जाता है: पुराना resistance support बन जाता है।"
+        ],
+        "ar": [
+          "Support: مستوى توقف عنده السعر عن الهبوط سابقًا وارتدّ صعودًا.",
+          "Resistance: مستوى توقف عنده السعر عن الصعود سابقًا وارتدّ نزولًا.",
+          "إنها منطقة، لا خط رفيع – قد يتوقف السعر عندها أو يخترقها.",
+          "عند كسر المستوى ينقلب أحيانًا: الـ resistance القديم يصبح support."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Support kya hai?",
+          "o": [
+            "Jahan price pehle ruk kar upar gayi",
+            "Jahan price hamesha rukegi",
+            "Broker ki fees"
+          ],
+          "r": 0,
+          "hvorfor": "Support pichli history hai – guarantee nahi."
+        },
+        "ur": {
+          "q": "Support کیا ہے؟",
+          "o": [
+            "جہاں قیمت پہلے رک کر اوپر گئی",
+            "جہاں قیمت ہمیشہ رکے گی",
+            "بروکر کی فیس"
+          ],
+          "r": 0,
+          "hvorfor": "Support پچھلا ریکارڈ ہے – گارنٹی نہیں۔"
+        },
+        "en": {
+          "q": "What is support?",
+          "o": [
+            "Where price stopped before and turned up",
+            "Where price will always stop",
+            "The broker's fee"
+          ],
+          "r": 0,
+          "hvorfor": "Support is past behaviour – not a guarantee."
+        },
+        "no": {
+          "q": "Hva er support?",
+          "o": [
+            "Der prisen tidligere stoppet og snudde opp",
+            "Der prisen alltid vil stoppe",
+            "Meglerens gebyr"
+          ],
+          "r": 0,
+          "hvorfor": "Support er historikk – ikke en garanti."
+        },
+        "hi": {
+          "q": "Support क्या है?",
+          "o": [
+            "जहाँ पहले price रुका और ऊपर मुड़ा",
+            "जहाँ price हमेशा रुकेगा",
+            "Broker की fee"
+          ],
+          "r": 0,
+          "hvorfor": "Support पिछला व्यवहार है – कोई गारंटी नहीं।"
+        },
+        "ar": {
+          "q": "ما هو الـ support؟",
+          "o": [
+            "حيث توقف السعر سابقًا وارتدّ صعودًا",
+            "حيث سيتوقف السعر دائمًا",
+            "رسوم الوسيط"
+          ],
+          "r": 0,
+          "hvorfor": "الـ support سلوك سابق – لا ضمان."
+        }
+      }
+    },
+    {
+      "id": "rr",
+      "min": 1,
+      "anim": "leksjon/rr.html",
+      "prov": "",
+      "fig": "rr",
+      "t": {
+        "ur_rm": "Risk:reward kya hai?",
+        "ur": "Risk:reward کیا ہے؟",
+        "en": "What is risk:reward?",
+        "no": "Hva er risk:reward?",
+        "hi": "Risk:reward क्या है?",
+        "ar": "ما هو الـ risk:reward؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Risk = entry se stop tak. Reward = entry se target tak.",
+          "Stop 20 pips, target 40 pips = 1:2.",
+          "1:2 pe 3 mein se sirf 1 trade jeete to bhi barabar (spread se pehle): −20 −20 +40 = 0.",
+          "R:R akela kaafi nahi – kitni trades jeetti hain, woh bhi dekhein."
+        ],
+        "ur": [
+          "Risk = entry سے stop تک۔ Reward = entry سے target تک۔",
+          "Stop 20 pips، target 40 pips = 1:2۔",
+          "1:2 پر 3 میں سے صرف 1 ٹریڈ جیتے تو بھی برابر (spread سے پہلے): −20 −20 +40 = 0۔",
+          "R:R اکیلا کافی نہیں – کتنی ٹریڈز جیتتی ہیں، وہ بھی دیکھیں۔"
+        ],
+        "en": [
+          "Risk = entry to stop. Reward = entry to target.",
+          "Stop 20 pips, target 40 pips = 1:2.",
+          "At 1:2, winning just 1 trade in 3 breaks even (before spread): −20 −20 +40 = 0.",
+          "R:R alone isn't enough – how often you win matters too."
+        ],
+        "no": [
+          "Risk = fra entry til stop. Reward = fra entry til target.",
+          "Stop 20 pips, target 40 pips = 1:2.",
+          "Med 1:2 går du i null hvis bare 1 av 3 handler vinner (før spread): −20 −20 +40 = 0.",
+          "R:R alene holder ikke – hvor ofte du vinner teller også."
+        ],
+        "hi": [
+          "Risk = entry से stop तक। Reward = entry से target तक।",
+          "Stop 20 pips, target 40 pips = 1:2।",
+          "1:2 पर 3 में से सिर्फ़ 1 trade जीतना बराबरी है (spread से पहले): −20 −20 +40 = 0।",
+          "सिर्फ़ R:R काफ़ी नहीं – कितनी बार जीतते हैं, वह भी मायने रखता है।"
+        ],
+        "ar": [
+          "الـ risk = من الدخول إلى الـ stop. الـ reward = من الدخول إلى الهدف.",
+          "Stop 20 pips، هدف 40 pips = 1:2.",
+          "عند 1:2، ربح صفقة واحدة من 3 يعني التعادل (قبل الـ spread): −20 −20 +40 = 0.",
+          "الـ R:R وحده لا يكفي – عدد مرات الربح مهم أيضًا."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Stop 15 pips, target 45 pips = ?",
+          "o": [
+            "1:3",
+            "1:2",
+            "3:1"
+          ],
+          "r": 0,
+          "hvorfor": "45 ÷ 15 = 3, to risk:reward 1:3."
+        },
+        "ur": {
+          "q": "Stop 15 pips، target 45 pips = ؟",
+          "o": [
+            "1:3",
+            "1:2",
+            "3:1"
+          ],
+          "r": 0,
+          "hvorfor": "45 ÷ 15 = 3، تو risk:reward 1:3۔"
+        },
+        "en": {
+          "q": "Stop 15 pips, target 45 pips = ?",
+          "o": [
+            "1:3",
+            "1:2",
+            "3:1"
+          ],
+          "r": 0,
+          "hvorfor": "45 ÷ 15 = 3, so risk:reward is 1:3."
+        },
+        "no": {
+          "q": "Stop 15 pips, target 45 pips = ?",
+          "o": [
+            "1:3",
+            "1:2",
+            "3:1"
+          ],
+          "r": 0,
+          "hvorfor": "45 ÷ 15 = 3, så risk:reward er 1:3."
+        },
+        "hi": {
+          "q": "Stop 15 pips, target 45 pips = ?",
+          "o": [
+            "1:3",
+            "1:2",
+            "3:1"
+          ],
+          "r": 0,
+          "hvorfor": "45 ÷ 15 = 3, इसलिए risk:reward 1:3 है।"
+        },
+        "ar": {
+          "q": "Stop 15 pips، هدف 45 pips = ؟",
+          "o": [
+            "1:3",
+            "1:2",
+            "3:1"
+          ],
+          "r": 0,
+          "hvorfor": "45 ÷ 15 = 3، إذن الـ risk:reward هو 1:3."
+        }
+      }
+    },
+    {
+      "id": "swap",
+      "min": 1,
+      "anim": "leksjon/swap.html",
+      "prov": "",
+      "fig": "swap",
+      "t": {
+        "ur_rm": "Swap kya hai?",
+        "ur": "Swap کیا ہے؟",
+        "en": "What is swap?",
+        "no": "Hva er swap?",
+        "hi": "Swap क्या है?",
+        "ar": "ما هو الـ swap؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Swap = raat bhar trade khuli rakhne ki fees (kabhi kabhi credit).",
+          "Har pair aur gold ka swap alag hai – MT5 mein Specification dekhein.",
+          "Kai brokers pe hafte mein ek raat 3 guna swap lagta hai (weekend ka).",
+          "Lambi trade = har raat swap jama hota hai – hisaab mein shamil karein."
+        ],
+        "ur": [
+          "Swap = رات بھر ٹریڈ کھلی رکھنے کی فیس (کبھی کبھی کریڈٹ)۔",
+          "ہر پیئر اور گولڈ کا swap الگ ہے – MT5 میں Specification دیکھیں۔",
+          "کئی بروکرز پر ہفتے میں ایک رات 3 گنا swap لگتا ہے (ویک اینڈ کا)۔",
+          "لمبی ٹریڈ = ہر رات swap جمع ہوتا ہے – حساب میں شامل کریں۔"
+        ],
+        "en": [
+          "Swap = the fee for keeping a trade open overnight (sometimes a credit).",
+          "Every pair and gold has its own swap – check Specification in MT5.",
+          "Many brokers charge triple swap one night a week (for the weekend).",
+          "A long trade = swap adds up every night – include it in your maths."
+        ],
+        "no": [
+          "Swap = gebyret for å holde en handel åpen over natten (av og til en kreditt).",
+          "Hvert par og gull har sin egen swap – sjekk Specification i MT5.",
+          "Mange meglere tar trippel swap én natt i uka (for helgen).",
+          "En lang handel = swap legger seg på hver natt – ta det med i regnestykket."
+        ],
+        "hi": [
+          "Swap = trade को रात भर खुला रखने की fee (कभी-कभी credit)।",
+          "हर pair और gold का अपना swap होता है – MT5 में Specification देखें।",
+          "बहुत से brokers हफ़्ते में एक रात triple swap लेते हैं (weekend के लिए)।",
+          "लंबा trade = swap हर रात जुड़ता है – इसे हिसाब में रखें।"
+        ],
+        "ar": [
+          "الـ swap = رسوم إبقاء الصفقة مفتوحة خلال الليل (وأحيانًا إضافة).",
+          "لكل pair وللذهب swap خاص – في MT5 تحت Specification.",
+          "كثير من الوسطاء يحتسبون triple swap ليلة واحدة في الأسبوع (عن عطلة نهاية الأسبوع).",
+          "صفقة طويلة = الـ swap يتراكم كل ليلة – يدخل في الحساب."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Swap kab lagta hai?",
+          "o": [
+            "Jab trade raat bhar khuli rahe",
+            "Har trade kholte waqt",
+            "Jab stop loss lage"
+          ],
+          "r": 0,
+          "hvorfor": "Rollover pe swap lagta hai – jab trade agle din tak khuli ho."
+        },
+        "ur": {
+          "q": "Swap کب لگتا ہے؟",
+          "o": [
+            "جب ٹریڈ رات بھر کھلی رہے",
+            "ہر ٹریڈ کھولتے وقت",
+            "جب stop loss لگے"
+          ],
+          "r": 0,
+          "hvorfor": "Rollover پر swap لگتا ہے – جب ٹریڈ اگلے دن تک کھلی ہو۔"
+        },
+        "en": {
+          "q": "When is swap charged?",
+          "o": [
+            "When a trade stays open overnight",
+            "Every time you open a trade",
+            "When the stop loss hits"
+          ],
+          "r": 0,
+          "hvorfor": "Swap is charged at rollover – when a trade is held into the next day."
+        },
+        "no": {
+          "q": "Når belastes swap?",
+          "o": [
+            "Når en handel står åpen over natten",
+            "Hver gang du åpner en handel",
+            "Når stop loss treffer"
+          ],
+          "r": 0,
+          "hvorfor": "Swap belastes ved rollover – når handelen holdes inn i neste dag."
+        },
+        "hi": {
+          "q": "Swap कब लगता है?",
+          "o": [
+            "जब trade रात भर खुला रहे",
+            "हर बार trade खोलने पर",
+            "जब stop loss लगे"
+          ],
+          "r": 0,
+          "hvorfor": "Swap rollover पर लगता है – जब trade अगले दिन तक रखा जाए।"
+        },
+        "ar": {
+          "q": "متى يُحتسب الـ swap؟",
+          "o": [
+            "عندما تبقى الصفقة مفتوحة خلال الليل",
+            "عند كل فتح صفقة",
+            "عندما يُضرب الـ stop loss"
+          ],
+          "r": 0,
+          "hvorfor": "يُحتسب الـ swap عند الـ rollover – عند إبقاء الصفقة إلى اليوم التالي."
+        }
+      }
+    }
+  ],
+  "uke4": [
+    {
+      "id": "fomo",
+      "min": 1,
+      "anim": "leksjon/fomo.html",
+      "prov": "",
+      "fig": "fomo",
+      "t": {
+        "ur_rm": "FOMO kya hai?",
+        "ur": "FOMO کیا ہے؟",
+        "en": "What is FOMO?",
+        "no": "Hva er FOMO?",
+        "hi": "FOMO क्या है?",
+        "ar": "ما هو FOMO؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "FOMO = 'move nikal na jaye' ka dar.",
+          "Price pehle hi bohat chal chuki ho, tab trade lena – aksar der se, aur plan ke baghair.",
+          "Plan mein entry nahi thi? To trade bhi nahi.",
+          "Move chhoot jaye to koi nuqsan nahi – plan ke baghair trade se ho sakta hai."
+        ],
+        "ur": [
+          "FOMO = 'move نکل نہ جائے' کا ڈر۔",
+          "قیمت پہلے ہی بہت چل چکی ہو، تب ٹریڈ لینا – اکثر دیر سے، اور plan کے بغیر۔",
+          "Plan میں entry نہیں تھی؟ تو ٹریڈ بھی نہیں۔",
+          "Move چھوٹ جائے تو کوئی نقصان نہیں – plan کے بغیر ٹریڈ سے ہو سکتا ہے۔"
+        ],
+        "en": [
+          "FOMO = the fear of missing the move.",
+          "Jumping in after price has already run – usually late, and without a plan.",
+          "No entry in your plan? Then no trade.",
+          "Missing a move costs nothing – a trade without a plan can."
+        ],
+        "no": [
+          "FOMO = frykten for å gå glipp av bevegelsen.",
+          "Å hoppe inn etter at prisen allerede har løpt – som regel sent, og uten plan.",
+          "Ingen entry i planen din? Da ingen trade.",
+          "Å gå glipp av en bevegelse koster ingenting – en trade uten plan kan koste."
+        ],
+        "hi": [
+          "FOMO = 'move निकल न जाए' का डर।",
+          "Price पहले ही बहुत चल चुकी हो, तब trade लेना – अक्सर देर से, और plan के बिना।",
+          "Plan में entry नहीं थी? तो trade भी नहीं।",
+          "Move छूट जाए तो कोई नुक़सान नहीं – plan के बिना trade से हो सकता है।"
+        ],
+        "ar": [
+          "FOMO = الخوف من فوات الحركة.",
+          "الدخول بعد أن تحرّك السعر كثيرًا – غالبًا متأخرًا، وبلا خطة.",
+          "لا entry في الخطة؟ إذن لا صفقة.",
+          "فوات الحركة لا يكلّف شيئًا – أمّا الصفقة بلا خطة فقد تكلّف."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Price 80 pips chal chuki hai, plan mein entry nahi thi. Plan kya kehta hai?",
+          "o": [
+            "Ruk jayein – yeh trade plan mein nahi",
+            "Foran trade mein kood jayein",
+            "Lot double karke trade lein"
+          ],
+          "r": 0,
+          "hvorfor": "Plan pehle bana tha jab dimagh thanda tha – FOMO plan nahi hai."
+        },
+        "ur": {
+          "q": "قیمت 80 pips چل چکی ہے، plan میں entry نہیں تھی۔ Plan کیا کہتا ہے؟",
+          "o": [
+            "رک جائیں – یہ ٹریڈ plan میں نہیں",
+            "فوراً ٹریڈ میں کود جائیں",
+            "Lot ڈبل کر کے ٹریڈ لیں"
+          ],
+          "r": 0,
+          "hvorfor": "Plan پہلے بنا تھا جب دماغ ٹھنڈا تھا – FOMO کوئی plan نہیں۔"
+        },
+        "en": {
+          "q": "Price has run 80 pips and your plan had no entry. What does the plan say?",
+          "o": [
+            "Wait – this trade isn't in the plan",
+            "Jump in right now",
+            "Jump in with double the lot"
+          ],
+          "r": 0,
+          "hvorfor": "The plan was made with a calm head – FOMO is not a plan."
+        },
+        "no": {
+          "q": "Prisen har løpt 80 pips, og planen hadde ingen entry. Hva sier planen?",
+          "o": [
+            "Vent – denne traden står ikke i planen",
+            "Hopp inn med en gang",
+            "Hopp inn med dobbel lot"
+          ],
+          "r": 0,
+          "hvorfor": "Planen ble laget med rolig hode – FOMO er ingen plan."
+        },
+        "hi": {
+          "q": "Price 80 pips चल चुकी है, plan में entry नहीं थी। Plan क्या कहता है?",
+          "o": [
+            "रुकें – यह trade plan में नहीं",
+            "तुरंत trade में कूद जाएँ",
+            "Lot दोगुना करके trade लें"
+          ],
+          "r": 0,
+          "hvorfor": "Plan तब बना था जब दिमाग़ ठंडा था – FOMO plan नहीं है।"
+        },
+        "ar": {
+          "q": "تحرّك السعر 80 pips ولم يكن في الخطة entry. ماذا تقول الخطة؟",
+          "o": [
+            "الانتظار – هذه الصفقة ليست في الخطة",
+            "الدخول فورًا",
+            "الدخول بضعف الـ lot"
+          ],
+          "r": 0,
+          "hvorfor": "وُضعت الخطة بذهن هادئ – FOMO ليس خطة."
+        }
+      }
+    },
+    {
+      "id": "revenge",
+      "min": 1,
+      "anim": "leksjon/revenge.html",
+      "prov": "",
+      "fig": "revenge",
+      "t": {
+        "ur_rm": "Revenge trade kya hai?",
+        "ur": "Revenge trade کیا ہے؟",
+        "en": "What is revenge trading?",
+        "no": "Hva er revenge trading?",
+        "hi": "Revenge trade क्या है?",
+        "ar": "ما هو revenge trading؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Loss ke baad foran bari trade – 'paise wapas' lene ke liye.",
+          "Gussa + bara lot = aksar doosra, aur bara loss.",
+          "Ek tareeqa: loss ke baad 15 minute break, phir journal likhein.",
+          "Loss trading ka hissa hai – stop ne apna kaam kiya."
+        ],
+        "ur": [
+          "Loss کے بعد فوراً بڑی ٹریڈ – 'پیسے واپس' لینے کے لیے۔",
+          "غصہ + بڑا lot = اکثر دوسرا، اور بڑا loss۔",
+          "ایک طریقہ: loss کے بعد 15 منٹ وقفہ، پھر journal لکھیں۔",
+          "Loss ٹریڈنگ کا حصہ ہے – stop نے اپنا کام کیا۔"
+        ],
+        "en": [
+          "A big trade right after a loss – to 'win it back'.",
+          "Anger + a big lot = often a second, bigger loss.",
+          "One method: after a loss, a 15-minute break, then write in your journal.",
+          "Losses are part of trading – the stop did its job."
+        ],
+        "no": [
+          "En stor trade rett etter et tap – for å «vinne det tilbake».",
+          "Sinne + stor lot = ofte et nytt, større tap.",
+          "Én metode: etter et tap, 15 minutters pause, så skriv i journalen.",
+          "Tap er en del av trading – stoppen gjorde jobben sin."
+        ],
+        "hi": [
+          "Loss के बाद तुरंत बड़ी trade – 'पैसे वापस' लेने के लिए।",
+          "ग़ुस्सा + बड़ा lot = अक्सर दूसरा, और बड़ा loss।",
+          "एक तरीक़ा: loss के बाद 15 मिनट का break, फिर journal लिखें।",
+          "Loss trading का हिस्सा है – stop ने अपना काम किया।"
+        ],
+        "ar": [
+          "صفقة كبيرة مباشرة بعد خسارة – 'لاسترداد المال'.",
+          "الغضب + lot كبير = غالبًا خسارة ثانية أكبر.",
+          "إحدى الطرق: بعد الخسارة، استراحة 15 دقيقة، ثم الكتابة في الـ journal.",
+          "الخسارة جزء من التداول – الـ stop أدّى عمله."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Loss ke baad sabse acha pehla qadam?",
+          "o": [
+            "Break lein aur journal likhein",
+            "Foran bari trade lein",
+            "Agli trade se stop hata dein"
+          ],
+          "r": 0,
+          "hvorfor": "Pehle dimagh thanda – phir faisla."
+        },
+        "ur": {
+          "q": "Loss کے بعد سب سے اچھا پہلا قدم؟",
+          "o": [
+            "وقفہ لیں اور journal لکھیں",
+            "فوراً بڑی ٹریڈ لیں",
+            "اگلی ٹریڈ سے stop ہٹا دیں"
+          ],
+          "r": 0,
+          "hvorfor": "پہلے دماغ ٹھنڈا – پھر فیصلہ۔"
+        },
+        "en": {
+          "q": "The best first step after a loss?",
+          "o": [
+            "Take a break and write in the journal",
+            "Take a big trade right away",
+            "Remove the stop from the next trade"
+          ],
+          "r": 0,
+          "hvorfor": "Calm head first – then decide."
+        },
+        "no": {
+          "q": "Det beste første steget etter et tap?",
+          "o": [
+            "Ta en pause og skriv i journalen",
+            "Ta en stor trade med en gang",
+            "Fjern stoppen på neste trade"
+          ],
+          "r": 0,
+          "hvorfor": "Rolig hode først – så bestemmer du."
+        },
+        "hi": {
+          "q": "Loss के बाद सबसे अच्छा पहला क़दम?",
+          "o": [
+            "Break लें और journal लिखें",
+            "तुरंत बड़ी trade लें",
+            "अगली trade से stop हटा दें"
+          ],
+          "r": 0,
+          "hvorfor": "पहले दिमाग़ ठंडा – फिर फ़ैसला।"
+        },
+        "ar": {
+          "q": "أفضل خطوة أولى بعد الخسارة؟",
+          "o": [
+            "استراحة ثم الكتابة في الـ journal",
+            "صفقة كبيرة فورًا",
+            "إزالة الـ stop من الصفقة التالية"
+          ],
+          "r": 0,
+          "hvorfor": "الهدوء أولًا – ثم القرار."
+        }
+      }
+    },
+    {
+      "id": "overtrading",
+      "min": 1,
+      "anim": "leksjon/overtrading.html",
+      "prov": "",
+      "fig": "overtrading",
+      "t": {
+        "ur_rm": "Overtrading kya hai?",
+        "ur": "Overtrading کیا ہے؟",
+        "en": "What is overtrading?",
+        "no": "Hva er overtrading?",
+        "hi": "Overtrading क्या है?",
+        "ar": "ما هو overtrading؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Overtrading = bohat zyada trades, har chhoti move pe.",
+          "Har trade pe spread lagta hai – zyada trades = zyada kharcha.",
+          "Thakan mein faisle kharab hote hain.",
+          "Apni had pehle se tay karein: din mein zyada se zyada kitni trades."
+        ],
+        "ur": [
+          "Overtrading = بہت زیادہ ٹریڈز، ہر چھوٹی move پر۔",
+          "ہر ٹریڈ پر spread لگتا ہے – زیادہ ٹریڈز = زیادہ خرچہ۔",
+          "تھکن میں فیصلے خراب ہوتے ہیں۔",
+          "اپنی حد پہلے سے طے کریں: دن میں زیادہ سے زیادہ کتنی ٹریڈز۔"
+        ],
+        "en": [
+          "Overtrading = too many trades, on every small move.",
+          "Every trade pays the spread – more trades = more cost.",
+          "Tired decisions are worse decisions.",
+          "Set your limit in advance: the most trades you'll take in a day."
+        ],
+        "no": [
+          "Overtrading = for mange trades, på hver lille bevegelse.",
+          "Du betaler spread på hver trade – flere trades = høyere kostnad.",
+          "Når du er sliten, tar du dårligere valg.",
+          "Sett grensen på forhånd: hvor mange trades du maks tar på en dag."
+        ],
+        "hi": [
+          "Overtrading = बहुत ज़्यादा trades, हर छोटी move पर।",
+          "हर trade पर spread लगता है – ज़्यादा trades = ज़्यादा ख़र्च।",
+          "थकान में फ़ैसले ख़राब होते हैं।",
+          "अपनी हद पहले से तय करें: दिन में ज़्यादा से ज़्यादा कितनी trades।"
+        ],
+        "ar": [
+          "Overtrading = صفقات كثيرة جدًا، عند كل حركة صغيرة.",
+          "يُدفع الـ spread في كل صفقة – صفقات أكثر = تكلفة أكبر.",
+          "التعب يُضعف القرار.",
+          "تحديد الحدّ مسبقًا: أقصى عدد من الصفقات في اليوم."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Zyada trades ka ek pakka kharcha?",
+          "o": [
+            "Har trade pe spread",
+            "Demo account ki fees",
+            "Koi kharcha nahi"
+          ],
+          "r": 0,
+          "hvorfor": "Spread har trade pe dena parta hai – jeet ho ya haar."
+        },
+        "ur": {
+          "q": "زیادہ ٹریڈز کا ایک پکا خرچہ؟",
+          "o": [
+            "ہر ٹریڈ پر spread",
+            "ڈیمو account کی فیس",
+            "کوئی خرچہ نہیں"
+          ],
+          "r": 0,
+          "hvorfor": "Spread ہر ٹریڈ پر دینا پڑتا ہے – جیت ہو یا ہار۔"
+        },
+        "en": {
+          "q": "One certain cost of many trades?",
+          "o": [
+            "The spread on every trade",
+            "A demo account fee",
+            "No cost at all"
+          ],
+          "r": 0,
+          "hvorfor": "You pay the spread on every trade – win or lose."
+        },
+        "no": {
+          "q": "Én sikker kostnad ved mange trades?",
+          "o": [
+            "Spread på hver trade",
+            "Gebyr på demokontoen",
+            "Ingen kostnad"
+          ],
+          "r": 0,
+          "hvorfor": "Du betaler spread på hver trade – enten du vinner eller taper."
+        },
+        "hi": {
+          "q": "ज़्यादा trades का एक पक्का ख़र्च?",
+          "o": [
+            "हर trade पर spread",
+            "Demo account की fees",
+            "कोई ख़र्च नहीं"
+          ],
+          "r": 0,
+          "hvorfor": "Spread हर trade पर देना पड़ता है – जीत हो या हार।"
+        },
+        "ar": {
+          "q": "تكلفة مؤكدة لكثرة الصفقات؟",
+          "o": [
+            "الـ spread في كل صفقة",
+            "رسوم حساب الـ demo",
+            "لا تكلفة"
+          ],
+          "r": 0,
+          "hvorfor": "الـ spread يُدفع في كل صفقة – ربحًا أو خسارة."
+        }
+      }
+    },
+    {
+      "id": "plan",
+      "min": 1,
+      "anim": "leksjon/plan.html",
+      "prov": "",
+      "fig": "plan",
+      "t": {
+        "ur_rm": "Trading plan kya hai?",
+        "ur": "Trading plan کیا ہے؟",
+        "en": "What is a trading plan?",
+        "no": "Hva er en trading plan?",
+        "hi": "Trading plan क्या है?",
+        "ar": "ما هي الـ trading plan؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Trade se pehle likha hua: kab entry, stop kahan, target kahan, lot kitna.",
+          "Plan = faisla pehle, jab dimagh thanda ho.",
+          "Trade ke dauraan plan na badlein – baad mein journal se seekhein.",
+          "Plan aap ka apna hai – kisi aur ka signal plan nahi."
+        ],
+        "ur": [
+          "ٹریڈ سے پہلے لکھا ہوا: کب entry، stop کہاں، target کہاں، lot کتنا۔",
+          "Plan = فیصلہ پہلے، جب دماغ ٹھنڈا ہو۔",
+          "ٹریڈ کے دوران plan نہ بدلیں – بعد میں journal سے سیکھیں۔",
+          "Plan آپ کا اپنا ہے – کسی اور کا signal آپ کا plan نہیں۔"
+        ],
+        "en": [
+          "Written before the trade: when to enter, where the stop is, where the target is, what lot size.",
+          "A plan = the decision made first, with a calm head.",
+          "Don't change the plan during the trade – learn from the journal afterwards.",
+          "The plan is your own – someone else's signal is not a plan."
+        ],
+        "no": [
+          "Skrevet før traden: hvor entry er, hvor stoppen er, hvor target er og hvor stor lot.",
+          "En plan = valget tatt først, med rolig hode.",
+          "Ikke endre planen underveis – lær av journalen etterpå.",
+          "Planen er din egen – andres signal er ingen plan."
+        ],
+        "hi": [
+          "Trade से पहले लिखा हुआ: कब entry, stop कहाँ, target कहाँ, कितना lot।",
+          "Plan = फ़ैसला पहले, जब दिमाग़ ठंडा हो।",
+          "Trade के दौरान plan न बदलें – बाद में journal से सीखें।",
+          "Plan आपका अपना है – किसी और का signal plan नहीं।"
+        ],
+        "ar": [
+          "خطة مكتوبة قبل الصفقة: متى الـ entry، وأين الـ stop، وأين الـ target، وكم lot.",
+          "الخطة = القرار أولًا، بذهن هادئ.",
+          "عدم تغيير الخطة أثناء الصفقة – والتعلّم من الـ journal بعدها.",
+          "الخطة شخصية – signal شخص آخر ليس خطة."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "Trading plan kab banta hai?",
+          "o": [
+            "Trade se pehle",
+            "Trade ke dauraan",
+            "Jab price chal chuki ho"
+          ],
+          "r": 0,
+          "hvorfor": "Pehle likha hua plan jazbaat se bachata hai."
+        },
+        "ur": {
+          "q": "Trading plan کب بنتا ہے؟",
+          "o": [
+            "ٹریڈ سے پہلے",
+            "ٹریڈ کے دوران",
+            "جب قیمت چل چکی ہو"
+          ],
+          "r": 0,
+          "hvorfor": "پہلے لکھا ہوا plan جذبات سے بچاتا ہے۔"
+        },
+        "en": {
+          "q": "When is a trading plan made?",
+          "o": [
+            "Before the trade",
+            "During the trade",
+            "After price has already run"
+          ],
+          "r": 0,
+          "hvorfor": "A plan written in advance keeps emotions from making the decision."
+        },
+        "no": {
+          "q": "Når lages en trading plan?",
+          "o": [
+            "Før traden",
+            "Underveis i traden",
+            "Når prisen allerede har løpt"
+          ],
+          "r": 0,
+          "hvorfor": "En plan skrevet på forhånd beskytter mot følelser."
+        },
+        "hi": {
+          "q": "Trading plan कब बनता है?",
+          "o": [
+            "Trade से पहले",
+            "Trade के दौरान",
+            "जब price चल चुकी हो"
+          ],
+          "r": 0,
+          "hvorfor": "पहले लिखा हुआ plan भावनाओं में बहने से बचाता है।"
+        },
+        "ar": {
+          "q": "متى تُوضع الـ trading plan؟",
+          "o": [
+            "قبل الصفقة",
+            "أثناء الصفقة",
+            "بعد أن يتحرّك السعر"
+          ],
+          "r": 0,
+          "hvorfor": "الخطة المكتوبة مسبقًا تحمي من المشاعر."
+        }
+      }
+    },
+    {
+      "id": "rukna",
+      "min": 1,
+      "anim": "leksjon/rukna.html",
+      "prov": "",
+      "fig": "rukna",
+      "t": {
+        "ur_rm": "Kab trade na karein?",
+        "ur": "کب ٹریڈ نہ کریں؟",
+        "en": "When not to trade?",
+        "no": "Når skal du ikke trade?",
+        "hi": "कब trade न करें?",
+        "ar": "متى يُفضَّل عدم التداول؟"
+      },
+      "linjer": {
+        "ur_rm": [
+          "Bari news se pehle aur baad (±15 minute).",
+          "Jab gussa, thakan ya jaldi ho.",
+          "Jab plan wala setup na bane.",
+          "Trade na karna bhi ek faisla hai."
+        ],
+        "ur": [
+          "بڑی news سے پہلے اور بعد (±15 منٹ)۔",
+          "جب غصہ، تھکن یا جلدی ہو۔",
+          "جب plan والا setup نہ بنے۔",
+          "ٹریڈ نہ کرنا بھی ایک فیصلہ ہے۔"
+        ],
+        "en": [
+          "Before and after big news (±15 minutes).",
+          "When you're angry, tired or in a hurry.",
+          "When your plan's setup isn't there.",
+          "Not trading is also a decision."
+        ],
+        "no": [
+          "Før og etter store nyheter (±15 minutter).",
+          "Når du er sint, sliten eller har det travelt.",
+          "Når setupet i planen din ikke er der.",
+          "Å ikke trade er også et valg."
+        ],
+        "hi": [
+          "बड़ी news से पहले और बाद (±15 मिनट)।",
+          "जब ग़ुस्सा, थकान या जल्दी हो।",
+          "जब plan वाला setup न बने।",
+          "Trade न करना भी एक फ़ैसला है।"
+        ],
+        "ar": [
+          "قبل الـ news المهمة وبعدها (±15 دقيقة).",
+          "عند الغضب أو التعب أو الاستعجال.",
+          "حين لا يظهر الـ setup الذي في الخطة.",
+          "عدم التداول قرار أيضًا."
+        ]
+      },
+      "sp": {
+        "ur_rm": {
+          "q": "In mein se kab trade na karna behtar hai?",
+          "o": [
+            "Jab gussa ho",
+            "Jab plan ka setup bane",
+            "Jab dimagh thanda ho"
+          ],
+          "r": 0,
+          "hvorfor": "Gussa faisle ko kharab karta hai."
+        },
+        "ur": {
+          "q": "ان میں سے کب ٹریڈ نہ کرنا بہتر ہے؟",
+          "o": [
+            "جب غصہ ہو",
+            "جب plan کا setup بنے",
+            "جب دماغ ٹھنڈا ہو"
+          ],
+          "r": 0,
+          "hvorfor": "غصہ فیصلہ خراب کرتا ہے۔"
+        },
+        "en": {
+          "q": "Which of these is a time not to trade?",
+          "o": [
+            "When you're angry",
+            "When your plan's setup appears",
+            "When your head is calm"
+          ],
+          "r": 0,
+          "hvorfor": "Anger spoils decisions."
+        },
+        "no": {
+          "q": "Når er det best å la være å trade?",
+          "o": [
+            "Når du er sint",
+            "Når setupet i planen dukker opp",
+            "Når hodet er rolig"
+          ],
+          "r": 0,
+          "hvorfor": "Sinne ødelegger valg."
+        },
+        "hi": {
+          "q": "इनमें से कब trade न करना बेहतर है?",
+          "o": [
+            "जब ग़ुस्सा हो",
+            "जब plan का setup बने",
+            "जब दिमाग़ ठंडा हो"
+          ],
+          "r": 0,
+          "hvorfor": "ग़ुस्सा फ़ैसले बिगाड़ता है।"
+        },
+        "ar": {
+          "q": "أيّ هذه وقتٌ لعدم التداول؟",
+          "o": [
+            "عند الغضب",
+            "حين يظهر setup الخطة",
+            "حين يكون الذهن هادئًا"
+          ],
+          "r": 0,
+          "hvorfor": "الغضب يُفسد القرار."
+        }
+      }
+    }
+  ],
+  "stuck": {
+    "_om": "«Jeg står fast» → WhatsApp (B-040) med leksjon-id/språk; fallback Element Questions. Ingen persondata i URL. Soft-fail hvis Sheets/WA nede.",
+    "element": "https://matrix.to/#/%23aimpire-questions:matrix.org",
+    "names_csv": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQCUbvpu8cXdh-V-XkfvqAevZlabu876V-j8HNNd_qJGDOpPhbwVukJa--Vum5QWLuyQwEQM9Y5gMSc/pub?gid=22159740&single=true&output=csv"
+  },
+  "flyer": {
+    "_om": "shareable Nesté call card. Full copy lives in call-flyer.json (loaded by call-flyer.html). Soft-fail Jitsi; ICS = call.ics.",
+    "side": "call-flyer.html",
+    "json": "call-flyer.json",
+    "ics": "call.ics"
+  },
+  "paisa_kort": {
+    "_om": "Det Paisa-oversikten trenger før paisa.json er hentet: tallene i radene. Resten ligger i paisa.json (lastes ved første besøk i Paisa/Mazeed-detalj).",
+    "stats": [
+      "+30.58 %",
+      "+1.13 %",
+      "−0.86 %",
+      "634",
+      "82–83 %"
+    ],
+    "maaneder": 24,
+    "steg_n": 10
+  },
+  "_risk_kilde": "K-78 (primær, tagmarkets.com, lest 16.10.2026): meglerens risikovarsel er 85 %. Erstatter K-14 (80 %, 13.10). Sjekk igjen når megleren endrer siden."
+}

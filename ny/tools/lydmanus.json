@@ -1,0 +1,410 @@
+{
+  "_om": "Lydmanus per leksjon og språk (#259, founder 20.10 20:02: «lydfilen kan si mer enn det som står der, for mer kontekst»). Talespråk, ikke opplesing av skjermteksten: en hverdagsanalogi, et eksempel med små beløp, fella, og en rolig avslutning. Fagtermer på engelsk i alle språk (språkregelen 14.10). Ingen råd eller løfter (B-030). Founder er morsmålssjekken for urdu før medlemmer får lyden.",
+  "pip": {
+    "ur": [
+      "دیکھیں، EUR/USD کی price 1.3001 ہے۔ آخری ہندسہ، یعنی چوتھا decimal، ایک pip ہے۔ جب price 1.3001 سے 1.3005 گئی، تو یہ پانچ pips اوپر گئی۔ 0.01 lot پر ہر pip تقریباً دس cents کا ہے، تو پانچ pips پچاس cents بنے۔",
+      "اب price واپس نیچے جاتی ہے۔ وہی pips، وہی دس cents فی pip، لیکن اب minus میں۔ Loss اسی حساب سے بنتا ہے جیسے profit۔ یاد رکھیں: pip فاصلہ ناپتا ہے، سمت نہیں۔",
+      "Gold الگ ہے۔ یہاں لوگ pips نہیں، سیدھا dollars میں سوچتے ہیں۔ Price 4350 سے 4351 گئی، یعنی ایک dollar کی move۔ 0.01 lot پر یہ تقریباً ایک dollar ہے، اور 1.00 lot پر وہی move تقریباً سو dollars۔",
+      "حساب سادہ ہے: pips ضرب pip value برابر dollars۔ Lot جتنا بڑا، ہر pip اتنا مہنگا، loss بھی اتنا بڑا اور profit بھی۔ اور ایک بات: اپنے broker کی specification میں دیکھیں کہ ایک lot کتنے کا ہے۔"
+    ],
+    "no": [
+      "Se på prisen på EUR/USD: 1.3001. Det siste sifferet, fjerde desimal, er én pip. Når prisen går fra 1.3001 til 1.3005, har den gått fem pips opp. Med 0.01 lot er hver pip verdt omtrent ti cents, så fem pips ble femti cents.",
+      "Nå går prisen ned igjen. Samme pips, samme ti cents per pip, men nå i minus. Tapet regnes akkurat som gevinsten. Husk: pip måler avstand, ikke retning.",
+      "Gull er annerledes. Her tenker folk ikke i pips, men rett i dollar. Prisen går fra 4350 til 4351, altså én dollar. Med 0.01 lot er det omtrent én dollar, og med 1.00 lot er samme bevegelse omtrent hundre dollar.",
+      "Regnestykket er enkelt: pips ganger pip-verdi er dollar. Jo større lot, jo dyrere hver pip, både tapet og gevinsten. Og én ting til: sjekk i brokerens specification hvor stor én lot er hos deg."
+    ],
+    "en": [
+      "Look at the EUR/USD price: 1.3001. The last digit, the fourth decimal, is one pip. When the price goes from 1.3001 to 1.3005, it has moved five pips up. At 0.01 lot each pip is worth about ten cents, so five pips became fifty cents.",
+      "Now the price goes back down. Same pips, same ten cents per pip, but now in minus. The loss is counted exactly like the profit. Remember: a pip measures distance, not direction.",
+      "Gold is different. Here people don't think in pips, they think straight in dollars. The price goes from 4350 to 4351, a one dollar move. At 0.01 lot that is about one dollar, and at 1.00 lot the same move is about one hundred dollars.",
+      "The maths is simple: pips times pip value equals dollars. The bigger the lot, the pricier each pip, both the loss and the profit. And one more thing: check your broker's specification for how big one lot is."
+    ]
+  },
+  "lot": {
+    "ur": [
+      "Lot آپ کی trade کا سائز ہے۔ تین قطاریں دیکھیں: 0.01 lot پر ایک pip دس cents کا ہے۔ 0.10 lot پر ایک dollar۔ اور 1.00 lot پر دس dollars۔ دس گنا بڑا lot، دس گنا زیادہ فی pip۔",
+      "تینوں کے لیے وہی move: price دس pips اوپر، 1.0850 سے 1.0860۔ 0.01 lot پر یہ ایک dollar ہے۔ 0.10 lot پر دس dollars۔ 1.00 lot پر سو dollars۔ بڑا lot، بڑا profit۔",
+      "اور اب دس pips نیچے، 1.0840 تک۔ Minus ایک، minus دس، minus سو۔ اتنا ہی بڑا loss۔ سوچیں: سو dollars کا account اور 1.00 lot، دس pips میں پورا account ختم۔",
+      "اسی لیے پہلے risk، پھر lot۔ مان لیں آپ کے پاس سو dollars ہیں اور دو فیصد risk قبول ہے، یعنی دو dollars۔ Stop بیس pips دور ہے۔ 1.00 lot پر بیس pips دو سو dollars بنتے ہیں۔ دو تقسیم دو سو برابر 0.01 lot۔ یہ مثال ہے، مشورہ نہیں، اور ہمیشہ نیچے کی طرف round کریں۔",
+      "Lot ہمت سے نہیں، حساب سے چنا جاتا ہے۔ Account اور stop loss دیکھیں، پھر lot۔ اور MT5 میں Specification کھول کر دیکھیں کہ آپ کے broker پر ایک lot کتنا ہے۔"
+    ],
+    "no": [
+      "Lot er størrelsen på traden din. Se de tre radene: med 0.01 lot er én pip verdt ti cents. Med 0.10 lot én dollar. Og med 1.00 lot ti dollar. Ti ganger større lot gir ti ganger mer per pip.",
+      "Samme bevegelse for alle tre: prisen går ti pips opp, fra 1.0850 til 1.0860. Med 0.01 lot er det én dollar. Med 0.10 lot ti dollar. Med 1.00 lot hundre dollar. Større lot, større gevinst.",
+      "Og nå ti pips ned, til 1.0840. Minus én, minus ti, minus hundre. Like stort tap. Tenk på en konto på hundre dollar med 1.00 lot: ti pips er hele kontoen.",
+      "Derfor: først risiko, så lot. Si at du har hundre dollar og tåler to prosent, altså to dollar. Stoppen ligger tjue pips unna. Med 1.00 lot koster tjue pips to hundre dollar. To delt på to hundre gir 0.01 lot. Dette er et eksempel, ikke råd, og rund alltid ned.",
+      "Lot velges med regning, ikke mot. Se på kontoen og stoppen, så velger du lot. Og åpne Specification i MT5 for å se hvor stor én lot er hos din broker."
+    ],
+    "en": [
+      "The lot is the size of your trade. Look at the three rows: at 0.01 lot one pip is worth ten cents. At 0.10 lot one dollar. And at 1.00 lot ten dollars. Ten times the lot gives ten times more per pip.",
+      "The same move for all three: the price goes ten pips up, from 1.0850 to 1.0860. At 0.01 lot that is one dollar. At 0.10 lot ten dollars. At 1.00 lot one hundred dollars. Bigger lot, bigger profit.",
+      "And now ten pips down, to 1.0840. Minus one, minus ten, minus one hundred. Just as big a loss. Think of a one hundred dollar account with 1.00 lot: ten pips is the whole account.",
+      "So: risk first, then lot. Say you have one hundred dollars and accept two percent, that is two dollars. The stop is twenty pips away. At 1.00 lot twenty pips cost two hundred dollars. Two divided by two hundred gives 0.01 lot. This is an example, not advice, and always round down.",
+      "Pick the lot with maths, not courage. Look at the account and the stop, then choose the lot. And open Specification in MT5 to see how big one lot is at your broker."
+    ]
+  },
+  "spread": {
+    "ur": [
+      "کبھی غور کیا کہ trade کھولتے ہی تھوڑا minus کیوں دکھتا ہے؟ یہ spread ہے۔ ہر pair کی دو prices ہوتی ہیں: buy price، جس پر آپ خریدتے ہیں، اور sell price، جس پر آپ بیچتے ہیں۔ مثال: buy 1.0852 اور sell 1.0850۔ بیچ کا فرق دو pips ہے، اور یہی broker کی فیس ہے۔ بالکل ویسے جیسے currency exchange والا dollar بیچتے وقت ایک rate اور خریدتے وقت دوسرا rate دیتا ہے۔",
+      "اب آپ buy کرتے ہیں، 1.0852 پر۔ اسی لمحے آپ کی trade دو pips minus میں ہے، کیونکہ بیچنی ہو تو 1.0850 ملے گا۔ 0.01 lot پر یہ تقریباً بیس cents ہے۔ Price کو پہلے دو pips اوپر جانا ہوگا، صرف برابر آنے کے لیے۔",
+      "اسی لیے بہت چھوٹی حرکت پکڑنے کے چکر میں بار بار trade کرنا مہنگا پڑتا ہے۔ پانچ trades، ہر ایک پر بیس cents فیس، یعنی ایک dollar صرف فیس میں۔ اور یہ تب بھی کٹتی ہے جب trade برابر پر بند ہو۔",
+      "اور ایک بات: news کے وقت spread اچانک بڑا ہو جاتا ہے۔ وہی pair، دو pips کی جگہ دس pips۔ trade کھولتے ہی ایک dollar پیچھے۔ اس لیے news کے وقت پہلے spread دیکھیں، پھر فیصلہ۔",
+      "حساب آسان ہے: spread ضرب pip value برابر فیس۔ اپنے broker کا spread MT5 میں دیکھیں: symbol پر جائیں، پھر Specification۔ کل کی call پر اس پر بات کریں گے، اپنا سوال نوٹ کر لیں۔"
+    ],
+    "no": [
+      "Har du lagt merke til at en ny trade starter litt i minus? Det er spreaden. Hvert par har to priser: buy-prisen du kjøper på, og sell-prisen du selger på. Et eksempel: buy på 1.0852 og sell på 1.0850. Gapet er to pips, og det er megleren sin betaling. Akkurat som vekslingskontoret gir deg én kurs når du kjøper dollar og en annen når du selger.",
+      "Nå kjøper du, på 1.0852. I samme øyeblikk ligger traden to pips i minus, fordi du bare får 1.0850 om du selger. Med 0.01 lot er det omtrent tjue cent. Prisen må først opp to pips, bare for at du skal gå i null.",
+      "Derfor blir det dyrt å jage bitte små bevegelser med mange trades. Fem trades, tjue cent i gebyr hver, det er én dollar bare i gebyr. Og det trekkes selv om traden lukkes i null.",
+      "Og merk deg én ting: rundt nyheter blir spreaden plutselig mye større. Samme par, ti pips i stedet for to. Traden starter én dollar bak. Så rundt nyheter: se på spreaden først, bestem deg etterpå.",
+      "Regnestykket er enkelt: spread ganger pip-verdi er gebyret. Sjekk spreaden hos din egen broker i MT5: trykk på symbolet, så Specification. Det tar vi mer om på onsdagscallen, skriv ned spørsmålet ditt."
+    ],
+    "en": [
+      "Ever noticed that a new trade starts slightly in the red? That is the spread. Every pair has two prices: the buy price you buy at, and the sell price you sell at. An example: buy at 1.0852 and sell at 1.0850. The gap is two pips, and that gap is the broker's fee. Just like the currency exchange shop gives you one rate when you buy dollars and another when you sell.",
+      "Now you buy, at 1.0852. That very moment your trade is two pips in the red, because selling would only get you 1.0850. At 0.01 lot that is about twenty cents. Price first has to climb two pips just for you to break even.",
+      "That is why chasing tiny moves with many trades gets expensive. Five trades, twenty cents of fee each, that is one dollar in fees alone. And it is charged even when a trade closes flat.",
+      "One more thing: around news the spread suddenly widens. Same pair, ten pips instead of two. The trade starts a whole dollar behind. So around news: look at the spread first, decide after.",
+      "The maths is simple: spread times pip value equals the fee. Check the spread at your own broker in MT5: tap the symbol, then Specification. We will talk more about it on the Wednesday call, note down your question."
+    ]
+  },
+  "stop": {
+    "ur": [
+      "Stop loss وہ price ہے جہاں trade خود بند ہو جاتی ہے۔ Account سو dollars، 0.01 lot، buy 1.0850 پر، اور stop 1.0830 پر، بیس pips نیچے۔ دیکھیں price تھوڑی اوپر جاتی ہے، پھر نیچے۔ جیسے ہی stop کو چھوتی ہے، trade بند۔ Loss دو dollars۔ بس۔",
+      "وہی market، لیکن stop کے بغیر۔ Price گرتی جاتی ہے اور کوئی اسے روکتا نہیں۔ Loss بڑھتا جاتا ہے اور آپ دیکھتے رہتے ہیں۔ یہاں 0.01 lot پر چھ dollars۔ 1.00 lot پر یہی move چھ سو dollars ہوتی۔",
+      "اسی لیے پہلے حساب، پھر trade۔ ایک: کتنا کھونا قبول ہے؟ سو کا دو فیصد، دو dollars۔ دو: stop کہاں؟ بیس pips۔ تین: دو dollars تقسیم بیس pips ضرب دس، برابر 0.01 lot۔ Stop لگانا کمزوری نہیں، حساب ہے۔",
+      "Stop پہلے، trade بعد۔ Loss میں فیصلہ سب سے مشکل ہوتا ہے، اسی لیے فیصلہ پہلے۔ یہ مثال ہے، مشورہ نہیں: اپنا نمبر خود طے کریں۔"
+    ],
+    "no": [
+      "Et stop loss er prisen der traden lukker seg selv. Kontoen er hundre dollar, 0.01 lot, kjøpt på 1.0850, med stop på 1.0830, tjue pips under. Se prisen gå litt opp, så ned. I det den treffer stoppen, lukkes traden. Tapet er to dollar. Ferdig.",
+      "Samme marked, men uten stop. Prisen faller videre, og ingen stopper den. Tapet vokser mens du ser på. Her er det seks dollar med 0.01 lot. Med 1.00 lot hadde samme bevegelse vært seks hundre dollar.",
+      "Derfor regner du før du trader. Én: hvor mye tåler du å tape? To prosent av hundre er to dollar. To: hvor er stoppen? Tjue pips. Tre: to dollar delt på tjue pips ganger ti gir 0.01 lot. Å sette stop er ikke svakhet, det er regning.",
+      "Stop først, trade etterpå. I minus er det vanskeligst å bestemme seg, derfor bestemmer du før. Dette er et eksempel, ikke råd: velg ditt eget tall."
+    ],
+    "en": [
+      "A stop loss is the price where the trade closes by itself. The account is one hundred dollars, 0.01 lot, bought at 1.0850, with the stop at 1.0830, twenty pips below. Watch the price go up a little, then down. The moment it touches the stop, the trade closes. The loss is two dollars. Done.",
+      "Same market, but without a stop. The price keeps falling, and nothing stops it. The loss grows while you watch. Here it is six dollars at 0.01 lot. At 1.00 lot the same move would have been six hundred dollars.",
+      "That is why you calculate before you trade. One: how much can you accept to lose? Two percent of one hundred is two dollars. Two: where is the stop? Twenty pips. Three: two dollars divided by twenty pips times ten gives 0.01 lot. Setting a stop is not weakness, it is maths.",
+      "Stop first, trade after. In a loss, deciding is hardest, so you decide before. This is an example, not advice: pick your own number."
+    ]
+  },
+  "risk": {
+    "ur": [
+      "ہر trade میں کتنا risk؟ ایک عام طریقہ سنیں، پھر فیصلہ آپ کا۔ بہت سے لوگ account کا ایک یا دو فیصد فی trade رکھتے ہیں۔ سو dollars کا account ہے تو دو فیصد یعنی دو dollars۔ بس اتنا daanv ہر trade پر، باقی account محفوظ۔",
+      "اب حساب: stop بیس pips دور ہے، اور ایک lot پر ایک pip دس dollars کا۔ تو دو dollars تقسیم بیس pips ضرب دس، جواب 0.01 lot۔ یہی وہ جادو ہے: پہلے risk، پھر lot، نہ کہ الٹا۔",
+      "فائدہ یہ کہ دس غلط trades بھی لگاتار آ جائیں تو account کا صرف بیس فیصد گیا، آپ ابھی کھیل میں ہیں اور سیکھ رہے ہیں۔ اور اگر کوئی دس فیصد فی trade لگائے؟ دس غلط trades، اور account ختم۔ فرق risk کا ہے، قسمت کا نہیں۔",
+      "یاد رہے: یہ ایک مثال ہے، مشورہ نہیں۔ اپنا نمبر خود چنیں اور journal میں لکھیں کیوں چنا۔ نیچے calculator ہے: اپنا account، اپنا risk، اپنا stop ڈالیں، lot خود نکل آئے گا۔"
+    ],
+    "no": [
+      "Hvor mye risiko per trade? Hør en vanlig metode, så er valget ditt. Mange holder seg til én til to prosent av kontoen per trade. Har du en konto på hundre dollar, er to prosent to dollar. Det er hele innsatsen på én trade, resten av kontoen står trygt.",
+      "Så regner du: stoppen ligger tjue pips unna, og med én lot er en pip verdt ti dollar. To dollar delt på tjue pips ganger ti gir 0.01 lot. Det er hele trikset: først risiko, så lot, aldri omvendt.",
+      "Gevinsten er ro: selv ti tapstrades på rad koster bare tjue prosent av kontoen, du er fortsatt med og fortsatt lærende. Og den som setter ti prosent per trade? Ti tap på rad, og kontoen er tom. Forskjellen er risikoen, ikke flaksen.",
+      "Husk at dette er et eksempel, ikke et råd. Velg ditt eget tall, og skriv i journalen hvorfor du valgte det. Kalkulatoren under: legg inn din konto, din risiko og din stop, så kommer loten av seg selv."
+    ],
+    "en": [
+      "How much risk per trade? Here is one common method, then the choice is yours. Many people stay at one to two percent of the account per trade. With a hundred dollar account, two percent is two dollars. That is the whole stake on one trade, the rest of the account stays safe.",
+      "Then you calculate: the stop is twenty pips away, and at one lot a pip is worth ten dollars. Two dollars divided by twenty pips times ten gives 0.01 lot. That is the whole trick: risk first, then lot, never the other way.",
+      "The reward is calm: even ten losing trades in a row cost only twenty percent of the account, you are still in the game and still learning. And someone risking ten percent per trade? Ten losses in a row, and the account is gone. The difference is the risk, not the luck.",
+      "Remember, this is an example, not advice. Pick your own number, and write in your journal why you picked it. The calculator below: enter your account, your risk and your stop, and the lot comes out by itself."
+    ]
+  },
+  "candle": {
+    "ur": [
+      "ایک candlestick پندرہ منٹ کی کہانی ہے، M15 پر۔ وہ open پر شروع ہوتی ہے، 1.0850۔ Price اوپر نیچے جاتی ہے، اور wicks سب سے اونچا اور سب سے نیچا point دکھاتی ہیں۔ پندرہ منٹ پورے ہونے پر وہ close پر بند ہوتی ہے۔ Body open سے close تک ہے۔ Green کا مطلب: جہاں کھلی تھی اس سے اوپر بند ہوئی۔",
+      "وہی پندرہ منٹ، لیکن اب price نیچے بند ہوتی ہے۔ پہلے اوپر گئی، یہ لمبی اوپر والی wick دیکھیں، لیکن واپس آ کر گر گئی۔ Body red ہو جاتی ہے: close open سے نیچے۔",
+      "رنگ صرف سمت بتاتا ہے۔ Close open سے اوپر: green، price اوپر گئی۔ Close open سے نیچے: red، price نیچے گئی۔ لمبی wick کا مطلب price وہاں گئی مگر واپس آئی۔ لمبی body یعنی بڑی move۔ اور یاد رکھیں: candlestick بتاتی ہے price کہاں گئی، کہاں جائے گی نہیں۔",
+      "پہلے candlestick پڑھیں، پھر trade۔ Chart بہت سی candlesticks ہے، اور ہر ایک کی وہی کہانی: open، high، low، close۔ MT5 پر M15 یعنی ہر candlestick پندرہ منٹ، H1 یعنی ایک گھنٹہ۔ آپ چنتے ہیں۔"
+    ],
+    "no": [
+      "En candlestick er historien om femten minutter, på M15. Den starter på open, 1.0850. Prisen går opp og ned, og wick-ene viser det høyeste og det laveste punktet. Når de femten minuttene er over, lukker den på close. Body er fra open til close. Grønn betyr at den lukket høyere enn den åpnet.",
+      "Samme femten minutter, men nå lukker prisen lavere. Den gikk opp først, se den lange øvre wicken, men kom tilbake og falt. Body blir rød: close under open.",
+      "Fargen viser bare retning. Close over open: grønn, prisen gikk opp. Close under open: rød, prisen gikk ned. En lang wick betyr at prisen var der, men kom tilbake. En lang body betyr stor bevegelse. Og husk: en candlestick viser hvor prisen gikk, ikke hvor den skal.",
+      "Les candlesticken først, så trade. En chart er mange candlesticks, og hver forteller det samme: open, high, low, close. I MT5 betyr M15 femten minutter per candlestick, H1 én time. Du velger."
+    ],
+    "en": [
+      "A candlestick is the story of fifteen minutes, on M15. It starts at the open, 1.0850. The price goes up and down, and the wicks show the highest and the lowest point. When the fifteen minutes are over, it closes at the close. The body runs from open to close. Green means it closed higher than it opened.",
+      "The same fifteen minutes, but now the price closes lower. It went up first, see the long upper wick, but came back and fell. The body turns red: close below open.",
+      "The colour only shows direction. Close above open: green, the price went up. Close below open: red, the price went down. A long wick means the price went there but came back. A long body means a big move. And remember: a candlestick shows where the price went, not where it will go.",
+      "Read the candlestick first, then trade. A chart is many candlesticks, and each tells the same story: open, high, low, close. In MT5, M15 means fifteen minutes per candlestick, H1 one hour. You choose."
+    ]
+  },
+  "giring": {
+    "ur": [
+      "1:100 leverage کا مطلب: آپ کا سو dollars margin، یہ چھوٹی ستون، دس ہزار dollars کی position چلاتا ہے، یہ بڑی ستون۔ Broker باقی پیسہ ادھار دیتا ہے۔ لیکن profit اور loss پوری دس ہزار پر لگتے ہیں۔",
+      "Price صرف ایک فیصد ہلتی ہے۔ ایک فیصد اوپر، plus سو dollars۔ ایک فیصد نیچے، minus سو dollars، یعنی آپ کا پورا margin۔ تب broker trade بند کر دیتا ہے۔ اسے stop out کہتے ہیں۔",
+      "اصل risk lot سے طے ہوتا ہے، leverage سے نہیں۔ وہی 0.01 lot اور وہی بیس pips کا stop: 1:50 پر stop لگے تو loss دو dollars۔ 1:500 پر بھی loss دو dollars۔ Leverage صرف margin کم کرتا ہے۔ چھوٹا lot، چھوٹا risk۔",
+      "Leverage دونوں طرف کام کرتا ہے۔ بڑا lot اور بڑا leverage، چھوٹی سی move میں پورا account۔ پہلے risk طے کریں، پھر lot، leverage نہیں۔"
+    ],
+    "no": [
+      "1:100 leverage betyr: din margin på hundre dollar, den lille søylen, styrer en posisjon på ti tusen dollar, den store. Brokeren låner deg resten. Men gevinst og tap regnes på hele ti tusen.",
+      "Prisen beveger seg bare én prosent. Opp én prosent er pluss hundre dollar. Ned én prosent er minus hundre dollar, altså hele marginen din. Da lukker brokeren traden. Det kalles stop out.",
+      "Den virkelige risikoen settes av loten, ikke leveragen. Samme 0.01 lot og samme stop på tjue pips: med 1:50 er tapet to dollar hvis stoppen slår inn. Med 1:500 er tapet også to dollar. Leverage senker bare marginen. Liten lot, liten risiko.",
+      "Leverage virker begge veier. Stor lot og stor leverage betyr hele kontoen på en liten bevegelse. Bestem risikoen først, så loten, ikke leveragen."
+    ],
+    "en": [
+      "1:100 leverage means: your one hundred dollar margin, the small bar, controls a ten thousand dollar position, the big bar. The broker lends you the rest. But profit and loss count on the full ten thousand.",
+      "The price moves just one percent. Up one percent is plus one hundred dollars. Down one percent is minus one hundred dollars, your whole margin. Then the broker closes the trade. That is called stop out.",
+      "The real risk is set by the lot, not the leverage. Same 0.01 lot and same twenty pip stop: at 1:50 the loss is two dollars if the stop hits. At 1:500 the loss is also two dollars. Leverage only lowers the margin. Small lot, small risk.",
+      "Leverage works both ways. Big lot and big leverage means the whole account on a small move. Decide the risk first, then the lot, not the leverage."
+    ]
+  },
+  "news": {
+    "ur": [
+      "news کے وقت market کا موڈ بدل جاتا ہے۔ بڑی خبریں جیسے NFP، CPI یا interest rate کا فیصلہ آتے ہی price سیکنڈوں میں دونوں طرف جھٹکے کھاتی ہے۔ دیکھیں: پہلے شانت، پھر خبر آئی، اور price اوپر، نیچے، پھر اوپر۔",
+      "تین چیزیں ایک ساتھ ہوتی ہیں: پہلی، spread اچانک بڑا ہو جاتا ہے، دو pips سے بارہ، یعنی trade کرنا مہنگا۔ دوسری، slippage: آپ کا stop loss اپنی price سے آگے جا کر لگ سکتا ہے، 1.0830 کی جگہ 1.0822، یعنی نقصان سوچے سے زیادہ۔ تیسری، direction کا دھوکہ: پہلے اوپر، پھر جھٹکے سے نیچے، دونوں طرف کے stops صاف۔",
+      "اسی لیے بہت سے لوگ news سے پندرہ منٹ پہلے اور پندرہ منٹ بعد نئی trade نہیں کھولتے۔ عادت بنائیں: ہر صبح calendar اپنے وقت میں دیکھیں، سرخ خبروں کے وقت نوٹ کریں۔",
+      "خبر دشمن نہیں، بے خبری دشمن ہے۔ پہلے calendar، پھر trade۔ اور trade کرنی ہے یا نہیں، فیصلہ آپ کا، لیکن spread اور slippage دیکھ کر۔"
+    ],
+    "no": [
+      "Rundt nyheter skifter markedet humør. Når store tall som NFP, CPI eller en rentebeslutning slippes, kaster prisen seg begge veier i løpet av sekunder. Se: først rolig, så kommer tallet, og prisen går opp, ned, og opp igjen.",
+      "Tre ting skjer samtidig. For det første blir spreaden plutselig stor, fra to pips til tolv, så trading blir dyrt. For det andre slippage: stop lossen din kan fylles forbi prisen sin, 1.0822 i stedet for 1.0830, så tapet blir større enn planlagt. For det tredje retningslureriet: først opp, så rykk ned, og stops på begge sider ryker.",
+      "Derfor åpner mange ingen ny trade det siste kvarteret før og det første kvarteret etter en stor nyhet. Lag en vane: sjekk kalenderen hver morgen i din egen tidssone, og noter når de røde slippes.",
+      "Nyheten er ikke fienden. Å ikke vite om den er. Først kalenderen, så traden. Og om du skal trade eller ikke, er ditt valg, men se på spreaden og slippagen først."
+    ],
+    "en": [
+      "Around news, the market changes mood. When big numbers like NFP, CPI or a rate decision drop, price jerks both ways within seconds. Watch: calm first, then the number lands, and price goes up, down, and up again.",
+      "Three things happen at once. First, the spread suddenly widens, from two pips to twelve, so trading gets expensive. Second, slippage: your stop loss can fill past its price, 1.0822 instead of 1.0830, so the loss is bigger than planned. Third, the direction trick: first up, then a snap down, clearing stops on both sides.",
+      "That is why many people open no new trade in the fifteen minutes before and after big news. Build the habit: check the calendar every morning in your own time zone, and note when the red ones drop.",
+      "The news is not the enemy. Not knowing about it is. Calendar first, then the trade. And whether you trade or not is your call, but look at the spread and the slippage first."
+    ]
+  },
+  "demo": {
+    "ur": [
+      "پہلے demo کیوں؟ سوچیں کوئی پہلی بار گاڑی چلانا سیکھ رہا ہے۔ خالی میدان میں پریکٹس پہلے، مین روڈ بعد میں۔ demo account وہی خالی میدان ہے: prices اصلی، پیسہ نقلی، MT5 پر مفت۔",
+      "یہاں مقصد تفریح نہیں، ٹیسٹ ہے: اپنا اصول لکھیں اور کم از کم بیس demo trades اسی اصول پر لگائیں، ہر ایک journal میں۔ تب پتا چلتا ہے اصول چلتا بھی ہے یا صرف اچھا لگتا ہے۔",
+      "لیکن ایک سچ بھی سن لیں: demo میں ڈر نہیں ہوتا، کیونکہ کھونے کو کچھ نہیں۔ اصلی پیسے پر وہی chart الگ محسوس ہوتا ہے، ہاتھ کانپتا ہے۔",
+      "اسی لیے جب real پر آئیں تو بالکل چھوٹے lot سے: وہاں سبق skill نہیں، ڈر کو سنبھالنا ہے۔ جلدی کوئی نہیں، میدان کھلا ہے۔"
+    ],
+    "no": [
+      "Hvorfor demo først? Tenk på en som lærer å kjøre bil. Først øvelse på en tom plass, så hovedveien. En demokonto er den tomme plassen: ekte priser, lekepenger, gratis på MT5.",
+      "Målet er ikke underholdning, det er en test: skriv ned regelen din og ta minst tjue demotrades på akkurat den regelen, hver eneste inn i journalen. Først da ser du om regelen faktisk virker, eller bare føles bra.",
+      "Men hør én sannhet til: på demo finnes ingen frykt, for det er ingenting å tape. Med ekte penger kjennes den samme charten helt annerledes, hånden skjelver.",
+      "Derfor starter ekte konto med bitte liten lot: der er ikke leksjonen ferdighet, men å takle frykten. Ingen har det travelt, plassen er åpen."
+    ],
+    "en": [
+      "Why demo first? Think of someone learning to drive. Practice on an empty lot first, the main road later. A demo account is that empty lot: real prices, play money, free on MT5.",
+      "The goal is not entertainment, it is a test: write down your rule and take at least twenty demo trades on exactly that rule, every one into the journal. Only then do you see whether the rule actually works, or just feels good.",
+      "But hear one more truth: on demo there is no fear, because there is nothing to lose. With real money the same chart feels completely different, the hand shakes.",
+      "That is why real starts with a tiny lot: the lesson there is not skill, it is handling the fear. Nobody is in a hurry, the lot is open."
+    ]
+  },
+  "journal": {
+    "ur": [
+      "journal آپ کا سچا آئینہ ہے۔ طریقہ دو منٹ کا ہے: trade سے پہلے تین لائنیں لکھیں: کیوں لے رہا ہوں، stop کہاں ہے، lot کتنا۔ لکھنے سے فیصلہ صاف ہو جاتا ہے، کیونکہ بعد میں یادداشت خود کو بدل لیتی ہے۔",
+      "trade کے بعد دو لائنیں: نتیجہ کیا نکلا، اور محسوس کیا ہوا۔ یہ آخری والی سب سے قیمتی ہے: جلدی تھی؟ ڈر تھا؟ غصہ تھا؟ یہی وہ چیز ہے جو chart نہیں دکھاتا۔",
+      "ہفتے میں ایک بار، شاید جمعہ کی شام، پوری journal پڑھیں۔ آپ خود دیکھیں گے کہ pattern نکل آتے ہیں: شاید ہر نقصان غصے والے دن آیا، یا ہر اچھی trade صبح کے وقت۔ وہی غلطی تیسری بار دکھے تو اب وہ حادثہ نہیں، عادت ہے، اور عادت بدلی جا سکتی ہے۔ ایک احتیاط: بیس trades سے کم پر کوئی فیصلہ نہ کریں، اتنے کم نمونے پر صرف جھکاؤ دکھتا ہے، ثبوت نہیں۔",
+      "app میں journal اسی لیے ہے، دو منٹ کا کام۔ آج ہی پہلی لائن لکھیں۔"
+    ],
+    "no": [
+      "Journalen er ditt ærlige speil. Metoden tar to minutter: før traden skriver du tre linjer: hvorfor tar jeg den, hvor er stoppen, hvilken lot. Å skrive det ned gjør valget klart, for etterpå skriver hukommelsen om på historien.",
+      "Etter traden to linjer til: hva ble resultatet, og hva følte jeg. Den siste er den mest verdifulle: hadde jeg det travelt? Var jeg redd? Var jeg sint? Det er det charten aldri viser.",
+      "Én gang i uka, gjerne fredag kveld, leser du hele journalen. Da ser du mønstrene selv: kanskje kom hvert tap på en sint dag, eller hver god trade om morgenen. Når samme feil dukker opp for tredje gang, er den ikke lenger uflaks, den er en vane, og vaner kan endres. Én forsiktighetsregel: ikke konkluder på færre enn tjue trades, så små utvalg viser bare en tendens, ikke bevis.",
+      "Journalen ligger i appen, det tar to minutter. Skriv den første linjen i dag."
+    ],
+    "en": [
+      "The journal is your honest mirror. The method takes two minutes: before the trade, write three lines: why am I taking it, where is the stop, what lot. Writing it down makes the decision clear, because afterwards memory rewrites the story.",
+      "After the trade, two more lines: what was the result, and what did I feel. That last one is the most valuable: was I in a hurry? Was I afraid? Was I angry? That is the thing the chart never shows.",
+      "Once a week, maybe Friday evening, read the whole journal. You will see the patterns yourself: maybe every loss came on an angry day, or every good trade in the morning. When the same mistake shows up a third time, it is no longer bad luck, it is a habit, and habits can be changed. One caution: do not conclude on fewer than twenty trades, a sample that small shows a tendency, not proof.",
+      "The journal lives in the app, it takes two minutes. Write the first line today."
+    ]
+  },
+  "sessions": {
+    "ur": [
+      "forex کی market چوبیس گھنٹے چلتی ہے، پیر سے جمعہ۔ لیکن چوبیس گھنٹے ایک جیسے نہیں ہوتے۔ دنیا کے چار بڑے شہر باری باری جاگتے ہیں: پہلے Sydney، پھر Tokyo، پھر London، آخر میں New York۔ ہر ایک کا اپنا session ہے۔ پاکستان کے وقت سے دیکھیں تو دوپہر کے بعد London کھلتا ہے اور شام میں New York۔",
+      "اور جب London اور New York دونوں ساتھ کھلے ہوں تو عموماً سب سے زیادہ حرکت اور سب سے چھوٹا spread ملتا ہے۔ صبح کے وقت Tokyo میں حرکت اکثر ہلکی ہوتی ہے اور spread بڑا۔",
+      "ویک اینڈ پر market بند، لیکن ایک بات یاد رکھیں: پیر کو کھلتے وقت price چھلانگ لگا کر الگ جگہ سے کھل سکتی ہے، اسے gap کہتے ہیں۔ اس لیے جمعہ کی رات trade کھلی چھوڑنا سوچ سمجھ کر۔",
+      "app میں sessions کا نقشہ آپ کے اپنے وقت میں دکھتا ہے۔ کسی اور کے وقت کے مطابق نہیں، اپنے وقت کے مطابق دیکھیں۔"
+    ],
+    "no": [
+      "Forexmarkedet går døgnet rundt, mandag til fredag. Men timene er ikke like. Fire store byer våkner etter tur: først Sydney, så Tokyo, så London, til slutt New York. Hver av dem har sin session. Fra norsk tid åpner London på formiddagen og New York på ettermiddagen.",
+      "Og når London og New York er åpne samtidig, får du som regel mest bevegelse og lavest spread. Tidlig på morgenen, i Tokyo-timene, er det ofte roligere og spreaden større.",
+      "I helgen er markedet stengt, men husk én ting: på mandag kan prisen åpne med et hopp fra et annet nivå, det kalles en gap. Derfor tenker man seg om før man lar en trade stå åpen over helgen.",
+      "I appen ser du session-kartet i din egen tidssone. Ikke etter andres klokke, etter din egen."
+    ],
+    "en": [
+      "The forex market runs around the clock, Monday to Friday. But the hours are not equal. Four big cities wake up in turn: first Sydney, then Tokyo, then London, finally New York. Each has its session. In Pakistan time, London opens in the afternoon and New York in the evening.",
+      "And when London and New York are open at the same time, you usually get the most movement and the lowest spread. In the Tokyo hours it is often quieter and the spread wider.",
+      "On the weekend the market is closed, but remember one thing: on Monday, price can open with a jump from a different level, that is called a gap. So think twice before leaving a trade open over the weekend.",
+      "In the app, the session map shows in your own time zone. Not by someone else's clock, by yours."
+    ]
+  },
+  "trend": {
+    "ur": [
+      "trend پہچاننا سیڑھی دیکھنے جیسا ہے۔ uptrend میں price سیڑھی چڑھتی ہے: ہر نئی چوٹی پچھلی سے اوپر، اور ہر نیا گڑھا بھی پچھلے سے اوپر۔ دیکھیں، ہر قدم پچھلے سے اونچا۔",
+      "downtrend الٹی سیڑھی ہے: چوٹیاں بھی نیچے آتی جائیں، گڑھے بھی۔ اور تیسری حالت بھی عام ہے: range، جب price ایک ڈبے میں اوپر نیچے گھومتی رہے، نہ چڑھے نہ اترے۔",
+      "پریکٹس ایسے کریں: chart کھولیں، پیچھے ہٹ کر صرف چوٹیاں اور گڑھے دیکھیں، اور زور سے کہیں: اوپر، ڈبہ، یا نیچے۔ روز پانچ منٹ، نظر خود بننے لگے گی۔",
+      "لیکن ایک جملہ ساتھ رکھیں: trend بتاتا ہے اب تک کیا ہوا۔ آگے بھی وہی ہوگا، اس کی کوئی ضمانت نہیں۔ سیڑھی کبھی بھی ٹوٹ سکتی ہے، اسی لیے stop ہمیشہ ساتھ۔"
+    ],
+    "no": [
+      "Å kjenne igjen en trend er som å se en trapp. I en uptrend klatrer prisen trappen: hver ny topp er høyere enn den forrige, og hver ny bunn også. Se, hvert trinn høyere enn det forrige.",
+      "En downtrend er trappen motsatt vei: både toppene og bunnene kommer lavere. Og den tredje tilstanden er like vanlig: range, når prisen bare går fram og tilbake inni en boks, verken opp eller ned.",
+      "Øv slik: åpne charten, len deg tilbake og se bare på topper og bunner, og si høyt: opp, boks eller ned. Fem minutter om dagen, så setter blikket seg.",
+      "Men hold fast i én setning: trenden forteller hva som har skjedd til nå. Ingen garanti for at det fortsetter. Trappen kan knekke når som helst, derfor har du alltid stop med."
+    ],
+    "en": [
+      "Recognising a trend is like looking at a staircase. In an uptrend, price climbs the stairs: each new high is above the last one, and each new low too. Watch, every step higher than the one before.",
+      "A downtrend is the staircase in reverse: both the highs and the lows keep stepping down. And the third state is just as common: a range, when price just wanders up and down inside a box, going nowhere.",
+      "Practice like this: open the chart, lean back, look only at the highs and lows, and say out loud: up, box, or down. Five minutes a day and the eye builds itself.",
+      "But keep one sentence with you: the trend tells you what has happened so far. No guarantee it continues. The staircase can break at any time, which is why the stop always comes along."
+    ]
+  },
+  "sr": {
+    "ur": [
+      "support اور resistance کو فرش اور چھت سمجھیں۔ support وہ جگہ ہے جہاں price پہلے بھی گر کر رکی اور اوپر پلٹی، جیسے گیند فرش سے اچھلتی ہے۔ resistance وہ جگہ جہاں price چڑھ کر رکی اور نیچے آئی، جیسے چھت سے ٹکرا کر۔ انہیں ڈھونڈنا آسان ہے: chart پر وہ levels تلاش کریں جہاں price بار بار رکی ہو۔ جتنی بار رکی، level اتنا اہم۔",
+      "لیکن پہلی بات یاد رکھیں: یہ باریک لکیر نہیں، zone ہے۔ price تھوڑا اوپر نیچے جھانک کر بھی پلٹ سکتی ہے۔",
+      "دوسری بات: کوئی فرش ہمیشہ نہیں چلتا، ٹوٹ بھی جاتا ہے۔ اور جب ٹوٹے تو اکثر کردار بدل لیتا ہے: پرانی چھت نیا فرش بن جاتی ہے۔",
+      "آج کا کام: اپنے chart پر دو ایسے levels ڈھونڈ کر نشان لگائیں جہاں price بار بار رکی ہو۔"
+    ],
+    "no": [
+      "Tenk på support og resistance som gulv og tak. Support er stedet der prisen har falt, stoppet og snudd opp før, som en ball som spretter på gulvet. Resistance er stedet der prisen har steget, stoppet og snudd ned, som mot et tak. De er lette å finne: se etter nivåer på charten der prisen har stoppet flere ganger. Jo flere ganger, desto viktigere nivå.",
+      "Men husk det første: dette er en sone, ikke en tynn strek. Prisen kan stikke litt gjennom og likevel snu.",
+      "Det andre: ingen gulv holder evig, de brytes også. Og når et nivå brytes, bytter det ofte rolle: det gamle taket blir det nye gulvet.",
+      "Dagens oppgave: finn to slike nivåer på din egen chart, der prisen har stoppet flere ganger, og merk dem."
+    ],
+    "en": [
+      "Think of support and resistance as floor and ceiling. Support is where price fell, stopped and turned up before, like a ball bouncing off the floor. Resistance is where price rose, stopped and turned down, like hitting a ceiling. They are easy to find: look for levels on the chart where price has stopped several times. The more times, the more important the level.",
+      "But remember the first thing: it is a zone, not a thin line. Price can poke slightly through and still turn.",
+      "The second: no floor holds forever, they break too. And when a level breaks, it often switches roles: the old ceiling becomes the new floor.",
+      "Today's task: find two such levels on your own chart, where price has stopped several times, and mark them."
+    ]
+  },
+  "rr": {
+    "ur": [
+      "risk reward ہر trade کا سودا ہے: کتنا داؤ پر، کتنے کے لیے۔ risk ہے entry سے stop تک کا فاصلہ، reward ہے entry سے target تک۔ stop بیس pips اور target چالیس pips، تو سودا one to two ہے: ایک کے داؤ پر دو کا امکان۔",
+      "اب وہ حساب سنیں جو بہت لوگوں کی آنکھ کھول دیتا ہے: one to two پر اگر تین میں سے صرف ایک trade جیتے تو بھی حساب تقریباً برابر رہتا ہے: minus بیس، minus بیس، plus چالیس، جواب صفر۔ یعنی آدھی سے زیادہ trades ہار کر بھی آپ ڈوبے نہیں۔",
+      "لیکن سکہ الٹا بھی ہے: اچھا ratio کافی نہیں، جیتنے کی شرح بھی گنتی میں آتی ہے۔ one to ten کا خواب بیکار ہے اگر target کبھی لگتا ہی نہیں: دس trades، دس بار stop، اور حساب minus دو سو۔",
+      "اپنی journal سے دونوں نمبر نکالیں: اوسط ratio اور جیت کی شرح، پھر بات کریں گے۔ ratio اکیلا کچھ نہیں بتاتا۔"
+    ],
+    "no": [
+      "Risk reward er avtalen i hver trade: hvor mye på spill, for hvor mye. Risk er avstanden fra entry til stop, reward er avstanden fra entry til target. Stop på tjue pips og target på førti gir en til to: én på spill for muligheten til to.",
+      "Hør nå regnestykket som åpner øynene på mange: med en til to kan du vinne bare én av tre trades og fortsatt gå omtrent i null: minus tjue, minus tjue, pluss førti, blir null. Du kan altså tape over halvparten av tradene uten å synke.",
+      "Men mynten har en bakside: et godt ratio alene holder ikke, treffprosenten teller også. En drøm om en til ti er verdiløs hvis targeten aldri nås: ti trades, ti stopper, og regnestykket viser minus to hundre.",
+      "Hent begge tallene fra journalen din: snittratio og treffprosent, så snakker vi. Ratioen alene sier ingenting."
+    ],
+    "en": [
+      "Risk reward is the deal inside every trade: how much at stake, for how much. Risk is the distance from entry to stop, reward is the distance from entry to target. A twenty pip stop and a forty pip target make one to two: one at stake for the chance of two.",
+      "Now hear the sum that opens many eyes: at one to two you can win just one trade in three and still come out about even: minus twenty, minus twenty, plus forty, equals zero. You can lose more than half your trades without sinking.",
+      "But the coin has another side: a good ratio alone is not enough, your win rate counts too. A dream of one to ten is worthless if the target is never reached: ten trades, ten stops, and the sum reads minus two hundred.",
+      "Pull both numbers from your journal: average ratio and win rate, then we can talk. The ratio alone tells you nothing."
+    ]
+  },
+  "swap": {
+    "ur": [
+      "swap وہ خاموش فیس ہے جو بہت سے لوگوں کو پتا ہی نہیں۔ جب آپ trade رات بھر کھلی رکھتے ہیں تو broker ہر رات ایک چھوٹی رقم کاٹتا ہے، اور کبھی کبھار دیتا بھی ہے۔ یہ دونوں currencies کے interest rates کے فرق سے بنتی ہے۔ مثال کے طور پر دس cents ہر رات۔",
+      "ایک رات کی رقم چھوٹی لگتی ہے، لیکن حساب کریں: trade دو ہفتے چلی تو وہی چھوٹی رقم چودہ بار کٹی۔ لمبی trades میں swap خاموشی سے profit کھا سکتا ہے۔",
+      "اور ایک دن ایسا بھی ہے جس کا دھیان رکھیں: ہفتے میں ایک رات، اکثر بدھ کو، تین گنا swap کٹتا ہے، کیونکہ ویک اینڈ کا حساب اسی رات ہوتا ہے۔",
+      "دیکھنا آسان ہے: MT5 میں pair پر Specification کھولیں، وہاں swap long اور swap short دونوں لکھے ہیں۔ لمبی trade کے حساب میں swap شامل کریں، ورنہ حساب ادھورا ہے۔"
+    ],
+    "no": [
+      "Swap er den stille avgiften mange aldri har hørt om. Når du lar en trade stå åpen over natten, trekker brokeren et lite beløp hver natt, og noen ganger betaler den faktisk ut. Beløpet kommer fra renteforskjellen mellom de to valutaene. Som eksempel: ti cent per natt.",
+      "Én natt ser liten ut, men regn etter: står traden i to uker, er det samme lille beløpet trukket fjorten ganger. I lange trades kan swap stille og rolig spise profitten.",
+      "Og merk deg én natt spesielt: én gang i uka, ofte onsdag, trekkes trippel swap, fordi helgen gjøres opp den natten.",
+      "Å sjekke er lett: åpne Specification på paret i MT5, der står både swap long og swap short. Ta swap med i regnestykket på lange trades, ellers er regnestykket ufullstendig."
+    ],
+    "en": [
+      "Swap is the quiet fee many people have never heard of. When you keep a trade open overnight, the broker deducts a small amount each night, and sometimes actually pays you. The amount comes from the interest rate difference between the two currencies. As an example: ten cents a night.",
+      "One night looks tiny, but do the maths: if the trade runs two weeks, that same small amount was taken fourteen times. On long trades, swap can quietly eat the profit.",
+      "And mark one night in particular: once a week, often Wednesday, triple swap is charged, because the weekend is settled that night.",
+      "Checking is easy: open Specification on the pair in MT5, both swap long and swap short are written there. Include swap in the maths of any long trade, otherwise the maths is incomplete."
+    ]
+  },
+  "fomo": {
+    "ur": [
+      "FOMO یعنی یہ ڈر کہ گاڑی نکل گئی تو میں رہ جاؤں گا۔ منظر جانا پہچانا ہے: group میں کسی نے screenshot ڈالا، price اوپر بھاگ رہی ہے، دل کہتا ہے ابھی کود جاؤ ورنہ دیر ہو جائے گی۔",
+      "یہیں رک کر سوچیں: price پہلے ہی بھاگ چکی ہے۔ اب اندر جانے والا اکثر وہ آخری ہوتا ہے جس سے پہلے والے خریدار بیچ کر نکلتے ہیں۔",
+      "نہ آپ کا plan تھا، نہ entry کی جگہ، نہ stop کا حساب، صرف جلدی تھی۔ سچ یہ ہے: حرکت چھوٹ جانے کا خرچہ صفر ہے۔ market کل بھی کھلی ہے، موقع روز آتے ہیں۔ لیکن بغیر plan کی trade کا خرچہ اصلی ہے۔",
+      "اگلی بار FOMO آئے تو ایک کام کریں: trade نہ لیں، بس journal میں لکھیں کہ کیا محسوس ہوا۔ وہ لائن trade سے زیادہ قیمتی ہے۔"
+    ],
+    "no": [
+      "FOMO er frykten for at toget går fra deg. Scenen er velkjent: noen slipper et screenshot i gruppa, prisen løper oppover, og hjertet sier hopp på nå, ellers er det for sent.",
+      "Stopp akkurat der og tenk: prisen har allerede løpt. Den som hopper inn nå, er ofte den siste, den de tidlige kjøperne selger til på vei ut.",
+      "Du hadde ingen plan, ingen entry, ingen stop, bare hastverk. Sannheten er enkel: å gå glipp av en bevegelse koster null. Markedet er åpent i morgen også, det kommer muligheter hver uke. Men en trade uten plan har en ekte pris.",
+      "Neste gang FOMO kommer, gjør én ting: ikke ta traden, bare skriv i journalen hva du kjente. Den linjen er mer verdt enn traden."
+    ],
+    "en": [
+      "FOMO is the fear that the train is leaving without you. The scene is familiar: someone drops a screenshot in the group, price is running up, and your heart says jump in now or it is too late.",
+      "Stop right there and think: price has already run. The one jumping in now is often the last one, the person the early buyers sell to on their way out.",
+      "You had no plan, no entry, no stop, only hurry. The truth is simple: missing a move costs zero. The market is open tomorrow too, chances come every week. But a trade without a plan has a real price.",
+      "Next time FOMO shows up, do one thing: skip the trade and just write in the journal what you felt. That line is worth more than the trade."
+    ]
+  },
+  "revenge": {
+    "ur": [
+      "revenge trading ہر نئے trader کے دروازے پر دستک دیتی ہے، تو پہچان لیں۔ ہوتا یوں ہے: ایک نقصان ہوا، دل جل گیا، اور اندر سے آواز آئی: ابھی واپس لے کر دکھاتا ہوں۔",
+      "اگلی trade جلدی میں، بڑے lot پر، بغیر plan کے۔ غصہ اور بڑا lot مل کر اکثر دوسرا، پہلے سے بڑا نقصان لاتے ہیں، اور پھر تیسرا۔ یہ کمزوری نہیں، انسانی دماغ کا design ہے: نقصان کے فوراً بعد ہم سب خراب فیصلے کرتے ہیں۔",
+      "اسی لیے حل discipline نہیں، فاصلہ ہے۔ ایک آسان طریقہ: نقصان کے بعد پندرہ منٹ کا timer لگائیں، screen سے اٹھ جائیں، پانی پئیں، اور واپس آ کر پہلے journal میں لکھیں کیا ہوا۔ timer ختم ہونے تک غصہ اکثر اتر چکا ہوتا ہے۔",
+      "یاد رکھیں: نقصان trading کا حصہ ہے، stop نے اپنا کام کیا تھا۔ پندرہ منٹ، پھر journal، پھر chart۔"
+    ],
+    "no": [
+      "Revenge trading banker på døra hos hver eneste ny trader, så lær deg å kjenne den igjen. Det skjer slik: et tap svir, og en stemme inni deg sier: nå skal jeg ta det tilbake.",
+      "Neste trade kommer i full fart, med større lot, uten plan. Sinne pluss stor lot gir som regel tap nummer to, større enn det første, og så nummer tre. Dette er ikke svakhet, det er slik hjernen er bygget: rett etter et tap tar vi alle dårligere beslutninger.",
+      "Derfor er løsningen ikke viljestyrke, men avstand. En enkel metode: etter et tap setter du en timer på femten minutter, reiser deg fra skjermen, drikker litt vann, og når du er tilbake skriver du i journalen før noe annet. Når timeren ringer, har sinnet som regel sluppet taket.",
+      "Husk: tap er en del av trading, stoppen gjorde bare jobben sin. Femten minutter, så journalen, så charten."
+    ],
+    "en": [
+      "Revenge trading knocks on every new trader's door, so learn to recognise it. It goes like this: a loss stings, and a voice inside says: I will win it back right now.",
+      "The next trade comes in a hurry, with a bigger lot, without a plan. Anger plus a big lot usually delivers loss number two, bigger than the first, and then number three. This is not weakness, it is how the brain is built: right after a loss, all of us make worse decisions.",
+      "So the fix is not willpower, it is distance. A simple method: after a loss, set a fifteen minute timer, stand up from the screen, drink some water, and when you come back, write in the journal before anything else. By the time the timer rings, the anger has usually let go.",
+      "Remember: losses are part of trading, the stop simply did its job. Fifteen minutes, then the journal, then the chart."
+    ]
+  },
+  "overtrading": {
+    "ur": [
+      "overtrading یعنی ضرورت سے زیادہ trades: ہر چھوٹی حرکت پر انگلی trigger پر۔ لگتا ہے زیادہ trades یعنی زیادہ مواقع، لیکن حساب الٹا چلتا ہے۔",
+      "پہلی وجہ آپ جانتے ہیں: ہر trade پر spread کٹتا ہے۔ دن میں دس trades یعنی دس بار فیس، چاہے جیتیں یا ہاریں۔ مہینے کا جوڑ لگائیں تو یہ خاموش فیس اکثر سب سے بڑا خرچہ نکلتی ہے۔",
+      "دوسری وجہ زیادہ گہری ہے: فیصلے پٹھوں کی طرح تھکتے ہیں۔ دن کی دسویں trade پہلی جیسی سوچی سمجھی نہیں ہوتی، quality گرتی جاتی ہے۔",
+      "حل پہلے سے لکھا ہوا limit ہے: مثلاً زیادہ سے زیادہ تین trades فی دن، اور limit پوری ہو جائے تو screen بند، چاہے کتنا ہی اچھا موقع دکھے۔ کم trades، بہتر trades، پورا حساب آپ کے حق میں۔"
+    ],
+    "no": [
+      "Overtrading betyr for mange trades: fingeren på avtrekkeren ved hver minste bevegelse. Det føles som flere trades gir flere muligheter, men regnestykket går motsatt vei.",
+      "Den første grunnen kjenner du: hver trade betaler spread. Ti trades om dagen er ti gebyrer, uansett om du vinner eller taper. Legg sammen en måned, og den stille avgiften er ofte den største utgiften din.",
+      "Den andre grunnen stikker dypere: beslutninger blir slitne som muskler. Dagens tiende trade er ikke like gjennomtenkt som den første, kvaliteten synker jevnt.",
+      "Løsningen er en grense skrevet ned på forhånd: for eksempel maks tre trades per dag, og når grensen er nådd, skjermen av, uansett hvor fin muligheten ser ut. Færre trades, bedre trades, og hele regnestykket snur i din favør."
+    ],
+    "en": [
+      "Overtrading means too many trades: a finger on the trigger at every tiny move. It feels like more trades means more chances, but the maths runs the other way.",
+      "The first reason you already know: every trade pays the spread. Ten trades a day is ten fees, win or lose. Add up a month and that quiet fee is often your biggest cost.",
+      "The second reason runs deeper: decisions tire like muscles. The tenth trade of the day is never as considered as the first, quality drops steadily.",
+      "The fix is a limit written down in advance: for example three trades per day maximum, and when the limit is reached, screen off, no matter how good the next chance looks. Fewer trades, better trades, and the whole sum turns in your favour."
+    ]
+  },
+  "plan": {
+    "ur": [
+      "trading plan صرف ایک کاغذ ہے، لیکن وہ کاغذ آپ کو خود سے بچاتا ہے۔ plan میں چار چیزیں trade سے پہلے لکھی ہوتی ہیں: کس حالت میں entry لوں گا، stop کہاں، target کہاں، lot کتنا۔ خوبی یہ ہے کہ یہ فیصلے ٹھنڈے دماغ سے ہوتے ہیں، جب پیسہ داؤ پر نہیں۔",
+      "trade کھلنے کے بعد دماغ بدل جاتا ہے: نقصان میں دل کہتا ہے stop تھوڑا اور دور کر لو، منافع میں کہتا ہے ابھی نکل جاؤ۔ دونوں آوازیں اسی لمحے کی ہیں، plan پچھلے سکون کا۔",
+      "اصول سادہ ہے: trade کے دوران plan نہیں بدلتا۔ غلطی دکھی تو trade کے بعد journal میں لکھیں اور اگلا plan بہتر بنائیں۔",
+      "اور آخری بات، جو ہمارے گروپ میں بار بار کہیں گے: کسی اور کا signal آپ کا plan نہیں ہے۔ سمجھ کے بغیر اندھا اعتماد مہنگا پڑتا ہے۔"
+    ],
+    "no": [
+      "En trading plan er bare et stykke papir, men det papiret beskytter deg mot deg selv. I planen står fire ting skrevet før traden: i hvilken situasjon går jeg inn, hvor er stoppen, hvor er targeten, hvilken lot. Styrken er at disse valgene tas med kaldt hode, mens ingenting står på spill.",
+      "Når traden er åpen, skifter hjernen: i minus sier hjertet flytt stoppen litt lenger unna, i pluss sier det ta gevinsten nå. Begge stemmene tilhører øyeblikket, planen tilhører roen fra før.",
+      "Regelen er enkel: planen endres ikke mens traden står på. Ser du en feil, skriver du den i journalen etterpå og lager en bedre plan til neste gang.",
+      "Og det siste, som vi kommer til å gjenta ofte: andres signal er ikke din plan. Blind tillit uten forståelse blir dyrt."
+    ],
+    "en": [
+      "A trading plan is just a piece of paper, but that paper protects you from yourself. The plan holds four things written before the trade: in what situation I enter, where the stop is, where the target is, what lot. Its power is that these choices are made with a cool head, while nothing is at stake.",
+      "Once the trade is open, the brain changes: in the red, the heart says move the stop a little further, in the green it says take the profit now. Both voices belong to the moment, the plan belongs to the calm before.",
+      "The rule is simple: the plan does not change while the trade is running. If you spot a flaw, write it in the journal afterwards and build a better plan for next time.",
+      "And the last thing, which we will repeat often in this group: someone else's signal is not your plan. Blind trust without understanding gets expensive."
+    ]
+  },
+  "rukna": {
+    "ur": [
+      "آج کا سبق سب سے چھوٹا ہے اور شاید سب سے قیمتی: کب trade نہیں کرنی۔ چار حالتیں یاد کر لیں۔ پہلی: بڑی news سے پندرہ منٹ پہلے اور بعد، وہاں spread اور جھٹکے آپ کے خلاف ہیں۔",
+      "دوسری: جب غصہ ہو، تھکن ہو، یا جلدی ہو، تھکا دماغ chart پر وہ دیکھتا ہے جو دیکھنا چاہتا ہے۔ تیسری: جب آپ کے plan والا setup موجود ہی نہیں، کچھ نہ ملنا بھی ایک جواب ہے۔ چوتھی: جب دل کہے سب لگا دو، وہ آواز سب سے خطرناک ہے۔",
+      "یاد رکھیں: trade نہ کرنا بھی ایک فیصلہ ہے، اور اکثر ہفتے کا بہترین فیصلہ۔ market کہیں نہیں بھاگ رہی، پیر سے جمعہ ہر ہفتے کھلی ہے۔",
+      "آپ کا سرمایہ صرف پیسہ نہیں، سکون بھی ہے۔ دونوں بچا کر چلیں گے تو سفر لمبا ہوگا۔"
+    ],
+    "no": [
+      "Dagens leksjon er den korteste og kanskje den mest verdifulle: når man ikke skal trade. Lær deg fire situasjoner. Den første: kvarteret før og etter store nyheter, der jobber spread og rykk mot deg.",
+      "Den andre: når du er sint, trøtt eller har det travelt, en sliten hjerne ser det den vil se på charten. Den tredje: når setupen fra planen din rett og slett ikke er der, ingenting funnet er også et svar. Den fjerde: når hjertet sier sats alt, det er den farligste stemmen av dem alle.",
+      "Husk: å ikke trade er også en beslutning, og ofte ukas beste. Markedet løper ingen steder, det er åpent mandag til fredag hver eneste uke.",
+      "Kapitalen din er ikke bare penger, den er også ro. Klarer du å verne begge, blir reisen lang."
+    ],
+    "en": [
+      "Today's lesson is the shortest and maybe the most valuable: when not to trade. Learn four situations. First: the fifteen minutes before and after big news, where spread and whipsaws work against you.",
+      "Second: when you are angry, tired or in a hurry, a tired brain sees what it wants to see on the chart. Third: when the setup from your plan simply is not there, finding nothing is also an answer. Fourth: when the heart says bet everything, that is the most dangerous voice of all.",
+      "Remember: not trading is also a decision, and often the best one of the week. The market is not running away, it is open Monday to Friday every single week.",
+      "Your capital is not only money, it is also calm. Protect both and the journey gets long."
+    ]
+  },
+  "_scener": "Leksjoner med animasjon (pip, lot, stop, candle, leverage) har manus som LISTE av scener (founder 23:34: stemme og bilde skal snakke i lag). Hver scene beskriver akkurat det som vises i den scenen i grafikk/<id>/animasjon.html, med animasjonens egne tall. lag_lyd.py skriver cue-tider per scene."
+}

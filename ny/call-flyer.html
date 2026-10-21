@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ur-Latn" dir="ltr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070B14">
+<title>Aimpire · Live Call</title>
+<!--
+  #249 shareable call flyer (Nesté). Self-hosted WOFF2 only (PK firewall).
+  Brand-first marine card for WhatsApp screenshot. Soft-fail Jitsi (B-050).
+  No deposit guides. B-030: learning, not advice.
+-->
+<style>
+/* Same-origin fonts (neste/skrift) — no Google Fonts CDN */
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(skrift/montserrat-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 900;font-display:swap;src:url(skrift/montserrat-latin-ext.woff2) format('woff2');unicode-range:U+0100-017F,U+02BF,U+1E24-1E25,U+1E6C-1E6D,U+2190-2199,U+21BB,U+2212,U+221E,U+2248,U+2260,U+22EE-22EF}
+@font-face{font-family:'Noto Nastaliq Urdu';font-style:normal;font-weight:400 700;font-display:swap;src:url(skrift/noto-nastaliq-urdu-arabic.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200F,U+2010-2011,U+204F,U+25CC}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:800;font-stretch:80%;font-display:swap;src:url(skrift/archivo-80-800-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{
+  --blekk:#070B14; --flate:rgba(255,255,255,.06); --linje:rgba(255,255,255,.14); --tekst:#F2F4F8; --dempet:#9AA3B5;
+  --aksent:#5EE6D6; --live:#FF4D6D;
+  --grad:linear-gradient(110deg,#15D8C4 0%,#5B8BFF 50%,#C21FBF 100%);
+  --grad-tekst:linear-gradient(115deg,#15D8C4 0%,#5B8BFF 38%,#C21FBF 72%,#FBE16B 100%);
+  --vis:'Archivo','Arial Narrow',system-ui,sans-serif; --kropp:'Montserrat',system-ui,sans-serif;
+  --nast:'Noto Nastaliq Urdu','Montserrat',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;background:var(--blekk)}
+body{
+  min-height:100dvh;background:var(--blekk);color:var(--tekst);font:600 15px/1.45 var(--kropp);
+  padding:max(12px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));
+  position:relative;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(420px 320px at 88% 8%,rgba(21,216,196,.22),transparent 60%),
+    radial-gradient(380px 360px at 8% 92%,rgba(27,79,216,.22),transparent 58%),
+    linear-gradient(180deg,#0A1220 0%,#070B14 45%,#070B14 100%);
+}
+.lang{
+  display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:10px;direction:ltr;
+}
+.lang button{
+  min-height:36px;padding:0 12px;border-radius:10px;border:1.5px solid var(--linje);
+  background:transparent;color:var(--dempet);font:700 12px/1 var(--kropp);cursor:pointer;
+}
+.lang button[aria-pressed="true"]{color:var(--tekst);border-color:var(--aksent);background:rgba(94,230,214,.1)}
+.card{
+  max-width:420px;margin:0 auto;padding:22px 20px 18px;border-radius:22px;
+  background:rgba(10,16,28,.92);border:1.5px solid var(--linje);
+  box-shadow:0 24px 60px -28px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,255,255,.06);
+  position:relative;overflow:hidden;isolation:isolate;
+}
+.card::after{
+  content:"";position:absolute;inset-inline-end:-160px;top:-140px;width:280px;height:280px;border-radius:50%;
+  background:conic-gradient(from 200deg,#1B4FD8,#15D8C4,#C21FBF,#FBE16B,#1B4FD8);opacity:.35;z-index:-1;
+  -webkit-mask:radial-gradient(closest-side,transparent calc(100% - 5px),#000 calc(100% - 4px));
+          mask:radial-gradient(closest-side,transparent calc(100% - 5px),#000 calc(100% - 4px));
+}
+.topp{display:flex;align-items:center;gap:10px;direction:ltr}
+.topp img{width:44px;height:44px;border-radius:10px}
+.merke{font:800 22px/1 var(--kropp);letter-spacing:.14em;color:var(--tekst)}
+.merke span{font-weight:600;opacity:.65}
+.live{
+  margin-inline-start:auto;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;
+  background:rgba(255,77,109,.12);border:1.5px solid rgba(255,77,109,.55);
+  font:800 11px/1 var(--kropp);letter-spacing:.06em;color:var(--tekst);white-space:nowrap;
+}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--live);box-shadow:0 0 0 4px rgba(255,77,109,.2);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+@media (prefers-reduced-motion:reduce){.live i{animation:none}}
+.kicker{margin-top:18px;font:700 14px/1.35 var(--kropp);color:var(--aksent)}
+h1{margin-top:6px;font:800 28px/1.15 var(--kropp);letter-spacing:-.02em;max-width:18ch;text-wrap:balance}
+.tid{
+  margin-top:16px;font:800 clamp(3.4rem,18vw,4.6rem)/.82 var(--vis);font-stretch:80%;letter-spacing:-.02em;direction:ltr;
+  background:var(--grad-tekst);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.sone{margin-top:8px;font:800 16px/1.35 var(--kropp)}
+.ærlig{margin-top:6px;font:600 12.5px/1.45 var(--kropp);color:var(--dempet);max-width:36ch}
+ol{list-style:none;margin-top:18px;display:grid;gap:10px}
+li{display:flex;align-items:flex-start;gap:12px;font:700 14.5px/1.35 var(--kropp)}
+.nr{
+  flex:0 0 28px;height:28px;margin-top:1px;border-radius:50%;display:grid;place-items:center;
+  font:800 12px/1 var(--kropp);background:linear-gradient(#0B0E1C,#0B0E1C) padding-box,var(--grad) border-box;border:2px solid transparent;
+}
+.host{margin-top:18px;padding:12px 14px;border-radius:14px;background:var(--flate);border-inline-start:4px solid var(--aksent);direction:ltr}
+.host small{display:block;font:700 11px/1.2 var(--kropp);color:var(--aksent);letter-spacing:.04em}
+.host b{display:block;margin-top:4px;font:800 18px/1 var(--kropp);letter-spacing:.28em;margin-inline-end:-.28em}
+.host em{display:block;margin-top:6px;font:600 12px/1.2 var(--kropp);font-style:normal;color:var(--dempet)}
+.soft{
+  display:none;margin-top:14px;padding:12px 14px;border-radius:12px;background:rgba(245,165,36,.12);
+  border:1.5px solid rgba(245,165,36,.45);font:600 13px/1.4 var(--kropp);color:var(--tekst);
+}
+.soft.on{display:block}
+.cta{margin-top:16px;display:grid;gap:8px}
+.cta a{
+  display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 16px;border-radius:999px;
+  text-decoration:none;font:800 14.5px/1 var(--kropp);text-align:center;
+}
+.cta a.prim{background:var(--grad);color:#070B14;box-shadow:0 10px 28px -14px rgba(21,216,196,.65)}
+.cta a.sek{background:var(--flate);color:var(--tekst);border:1.5px solid var(--linje)}
+.browser{margin-top:10px;font:600 12.5px/1.4 var(--kropp);color:var(--dempet)}
+.fot{margin-top:16px;font:600 12.5px/1.4 var(--kropp);color:#A9A6B8}
+.hint{margin-top:8px;font:600 11.5px/1.35 var(--kropp);color:var(--dempet);opacity:.85}
+.lat{font-family:var(--kropp);font-weight:800}
+html[lang="ur"] body{font-family:var(--nast)}
+html[lang="ur"] .kicker,html[lang="ur"] h1,html[lang="ur"] .sone,html[lang="ur"] .ærlig,
+html[lang="ur"] li,html[lang="ur"] .browser,html[lang="ur"] .fot,html[lang="ur"] .hint,html[lang="ur"] .soft{
+  font-family:var(--nast);line-height:1.75;
+}
+html[lang="ur"] h1{font-size:24px;font-weight:700}
+html[lang="ur"] .sone{font-size:17px}
+html[lang="ur"] li{font-size:15.5px}
+html[lang="ur"] .host small{font-family:var(--nast);font-size:13px;line-height:1.6}
+.back{display:block;max-width:420px;margin:14px auto 0;text-align:center;font:700 13px/1 var(--kropp);color:var(--dempet);text-decoration:none}
+.back:hover{color:var(--aksent)}
+</style>
+</head>
+<body>
+  <nav class="lang" id="lang" aria-label="Language"></nav>
+  <article class="card" id="card" aria-live="polite">
+    <header class="topp">
+      <img src="ap-gradient-96.png" width="44" height="44" alt="">
+      <div class="merke" id="merke">AIM<span>PIRE</span></div>
+      <div class="live" id="live"><i aria-hidden="true"></i><span id="live-t">LIVE CALL</span></div>
+    </header>
+    <p class="kicker" id="kicker"></p>
+    <h1 id="krok"></h1>
+    <div class="tid" id="tid" dir="ltr">10 PM</div>
+    <p class="sone" id="sone"></p>
+    <p class="ærlig" id="ærlig"></p>
+    <ol id="punkt"></ol>
+    <div class="host">
+      <small id="host-l"></small>
+      <b id="host-n">REHMAN</b>
+      <em id="host-r"></em>
+    </div>
+    <div class="soft" id="soft" role="status" hidden></div>
+    <div class="cta">
+      <a class="prim" id="join" href="#" target="_blank" rel="noopener noreferrer"></a>
+      <a class="sek" id="ics" href="call.ics" download="aimpire-call.ics"></a>
+      <a class="sek" id="grp" href="#" target="_blank" rel="noopener noreferrer"></a>
+    </div>
+    <p class="browser" id="browser"></p>
+    <p class="fot" id="fot"></p>
+    <p class="hint" id="hint"></p>
+  </article>
+  <a class="back" href="./">← Academy</a>
+<script>
+(function () {
+  const LANGS = ["ur_rm", "ur", "en"];
+  let C = null, T = null, L = "ur_rm";
+  let probe = { status: "pending", ms: null };
+
+  const $ = (id) => document.getElementById(id);
+
+  function latIslands(s) {
+    if (L !== "ur") return escapeHtml(s);
+    return escapeHtml(s).replace(/([A-Za-z0-9$%.,:+/-]+)/g, '<span class="lat">$1</span>');
+  }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+
+  function jitsiRom() {
+    const j = C.call || {};
+    const rom = String(j.jitsi_rom || "AimpireBudhLive").replace(/[^A-Za-z0-9]/g, "");
+    return rom || "AimpireBudhLive";
+  }
+  function jitsiUrl() {
+    const vert = String((C.call && C.call.jitsi_vert) || "meet.jit.si").replace(/[^A-Za-z0-9.-]/g, "") || "meet.jit.si";
+    const videoAv = !(C.call && C.call.jitsi_video_av === false);
+    const hash = videoAv ? "#config.startWithVideoMuted=true&config.startWithAudioMuted=false" : "";
+    return "https://" + vert + "/" + encodeURIComponent(jitsiRom()) + hash;
+  }
+
+  function tegnSoft() {
+    const soft = $("soft");
+    if (!soft || !T) return;
+    if (probe.status === "fail") {
+      soft.innerHTML = latIslands(T.blokk || "");
+      soft.classList.add("on");
+      soft.hidden = false;
+    } else {
+      soft.textContent = "";
+      soft.classList.remove("on");
+      soft.hidden = true;
+    }
+  }
+
+  function probeJitsi() {
+    const ms = (C.call && C.call.jitsi_probe_ms) || 4000;
+    const t0 = Date.now();
+    const ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+    const to = setTimeout(() => { try { if (ctrl) ctrl.abort(); } catch (e) {} }, ms);
+    const url = "https://" + String((C.call && C.call.jitsi_vert) || "meet.jit.si").replace(/[^A-Za-z0-9.-]/g, "") + "/";
+    const opts = { method: "GET", mode: "no-cors", cache: "no-store" };
+    if (ctrl) opts.signal = ctrl.signal;
+    return fetch(url, opts).then(() => {
+      clearTimeout(to);
+      probe = { status: "ok", ms: Date.now() - t0 };
+      tegnSoft();
+    }).catch(() => {
+      clearTimeout(to);
+      probe = { status: "fail", ms: Date.now() - t0 };
+      tegnSoft();
+    });
+  }
+
+  function setLang(next) {
+    L = LANGS.includes(next) ? next : "ur_rm";
+    T = C.ui[L];
+    const html = document.documentElement;
+    html.lang = T.lang;
+    html.dir = T.dir;
+    try { localStorage.setItem("neste.flyerLang", L); } catch (e) {}
+
+    document.querySelectorAll("#lang button").forEach((b) => {
+      b.setAttribute("aria-pressed", b.dataset.lang === L ? "true" : "false");
+    });
+
+    $("live-t").textContent = T.live;
+    $("kicker").textContent = T.kicker;
+    $("krok").textContent = T.krok;
+    $("tid").textContent = T.tid_stor;
+    $("sone").innerHTML = latIslands(T.tid_sone);
+    $("ærlig").innerHTML = latIslands(T.tid_ærlig);
+    $("host-l").textContent = T.host;
+    $("host-n").textContent = T.host_navn;
+    $("host-r").textContent = T.host_rolle;
+    $("join").textContent = T.join;
+    $("join").href = jitsiUrl();
+    $("ics").textContent = T.ics;
+    $("ics").href = (C.call && C.call.ics) || "call.ics";
+    $("grp").textContent = T.grp;
+    $("grp").href = (C.call && C.call.gruppe) || "#";
+    $("browser").innerHTML = latIslands(T.browser);
+    $("fot").textContent = T.fot;
+    $("hint").textContent = T.share_hint;
+    $("merke").setAttribute("aria-label", T.merke_alt || "Aimpire");
+
+    const ol = $("punkt");
+    ol.innerHTML = "";
+    (T.punkt || []).forEach((p, i) => {
+      const li = document.createElement("li");
+      li.innerHTML = '<span class="nr" aria-hidden="true">' + (i + 1) + "</span><span>" + latIslands(p) + "</span>";
+      ol.appendChild(li);
+    });
+    tegnSoft();
+  }
+
+  function wireJoin() {
+    const a = $("join");
+    a.addEventListener("click", () => {
+      if (probe.status === "fail") tegnSoft();
+    });
+  }
+
+  function buildLangNav() {
+    const nav = $("lang");
+    LANGS.forEach((code) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.dataset.lang = code;
+      b.textContent = (C.ui[code] && C.ui[code].lang_label) || code;
+      b.addEventListener("click", () => setLang(code));
+      nav.appendChild(b);
+    });
+  }
+
+  fetch("call-flyer.json", { cache: "no-store" })
+    .then((r) => r.json())
+    .then((data) => {
+      C = data;
+      buildLangNav();
+      wireJoin();
+      let start = "ur_rm";
+      try {
+        const q = new URLSearchParams(location.search).get("lang");
+        const saved = localStorage.getItem("neste.flyerLang");
+        if (q && LANGS.includes(q)) start = q;
+        else if (saved && LANGS.includes(saved)) start = saved;
+      } catch (e) {}
+      setLang(start);
+      probeJitsi();
+    })
+    .catch(() => {
+      $("krok").textContent = "Could not load flyer copy.";
+    });
+})();
+</script>
+</body>
+</html>

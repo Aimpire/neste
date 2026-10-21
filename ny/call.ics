@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Aimpire//Budh ki Live Call//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:Asia/Karachi
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0500
+TZOFFSETTO:+0500
+TZNAME:PKT
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:budh-live-call@aimpire.github.io
+DTSTAMP:20261020T180000Z
+DTSTART;TZID=Asia/Karachi:20261021T220000
+DTEND;TZID=Asia/Karachi:20261021T230000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Aimpire – Budh ki Live Call
+DESCRIPTION:Jitsi: https://meet.jit.si/AimpireCall-4bh36r – browser (Chrome/Safari) mein kholein\, Element app mein nahi. Video band. Hum mil kar seekhte hain – yeh financial advice nahi hai.
+URL:https://meet.jit.si/AimpireCall-4bh36r
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Aimpire Live Call 30 minute mein
+END:VALARM
+END:VEVENT
+END:VCALENDAR
